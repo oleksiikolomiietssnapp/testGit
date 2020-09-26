@@ -14,8 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // Please, do somnething
+        print(multiply(f: 2, s: 3))
     }
 
+    private func multiply(f: Int, s: Int) -> Int {
+        return f * s
+    }
 
 }
 

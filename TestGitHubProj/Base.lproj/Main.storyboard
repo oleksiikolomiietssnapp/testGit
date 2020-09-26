@@ -11,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -22,14 +21,75 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oAh-8A-eJt">
+                                <rect key="frame" x="32" y="273" width="350" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYa-dX-ZKE">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="75.5"/>
+                                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="0.56967037669999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="40"/>
+                                        <state key="normal" title="Svitlana"/>
+                                        <connections>
+                                            <segue destination="cAN-hw-8wG" kind="show" id="gkb-bC-eKh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W3-re-8Xl">
+                                        <rect key="frame" x="0.0" y="91.5" width="350" height="75.5"/>
+                                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="0.56967037669999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="40"/>
+                                        <state key="normal" title="Viacheslav"/>
+                                        <connections>
+                                            <segue destination="hnB-4D-P2s" kind="show" id="U1Q-Md-vTn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynS-Mc-wzI">
+                                        <rect key="frame" x="0.0" y="183" width="350" height="75.5"/>
+                                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="0.56967037669999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="40"/>
+                                        <state key="normal" title="Anastasia"/>
+                                        <connections>
+                                            <segue destination="Dpl-uh-2A8" kind="show" id="LHv-18-Ung"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-dH-DHW">
+                                        <rect key="frame" x="0.0" y="274.5" width="350" height="75.5"/>
+                                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="0.56967037669999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="40"/>
+                                        <state key="normal" title="Stepan"/>
+                                        <connections>
+                                            <segue destination="gf3-EB-7hh" kind="show" id="oJi-E4-l1N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="TMp-Au-y87"/>
+                                    <constraint firstAttribute="width" constant="350" id="yDg-Go-ogQ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oAh-8A-eJt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sFS-Om-vHF"/>
+                            <constraint firstItem="oAh-8A-eJt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wYs-6w-HPu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iEd-DF-cpn"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="-317"/>
+            <point key="canvasLocation" x="-549.27536231884062" y="-317.41071428571428"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="3Kp-R9-2rr">
+            <objects>
+                <viewControllerPlaceholder id="hnB-4D-P2s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Gsi-ur-dna"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dio-lx-8Mt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="-357"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VuQ-I3-oG9">
@@ -48,6 +108,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYS-T2-hSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1365.217391304348" y="-317.41071428571428"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="1ue-9E-Pin">
+            <objects>
+                <viewControllerPlaceholder id="cAN-hw-8wG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QzV-hU-X4E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBv-VM-gvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="-385"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="npu-gC-kLd">
+            <objects>
+                <viewControllerPlaceholder id="Dpl-uh-2A8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="g8Y-jb-Ecw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EW0-64-8fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="-325"/>
+        </scene>
+        <!--StepanStoryboard-->
+        <scene sceneID="klr-tz-g1C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Stepan" referencedIdentifier="StepanStoryboard" id="gf3-EB-7hh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="crt-MU-qCA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIA-VS-pnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="-281"/>
         </scene>
     </scenes>
     <resources>

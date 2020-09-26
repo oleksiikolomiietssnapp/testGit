@@ -14,7 +14,7 @@
 		495472F0251F191F0022AD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472EE251F191F0022AD8E /* Main.storyboard */; };
 		495472F2251F19260022AD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495472F1251F19260022AD8E /* Assets.xcassets */; };
 		495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472F3251F19260022AD8E /* LaunchScreen.storyboard */; };
-		84D5D2D8251F3E5400E854BD /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D5D2D7251F3E5400E854BD /* Stepan.storyboard */; };
+		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		495472F1251F19260022AD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495472F4251F19260022AD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D5D2D7251F3E5400E854BD /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
+		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -86,8 +86,8 @@
 		84D5D2DA251F3E5D00E854BD /* StepanStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				84D5D2D7251F3E5400E854BD /* Stepan.storyboard */,
 				84D5D2DC251F8DF300E854BD /* StepanViewController.swift */,
+				84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */,
 			);
 			path = StepanStoryboard;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
-				84D5D2D8251F3E5400E854BD /* Stepan.storyboard in Resources */,
+				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

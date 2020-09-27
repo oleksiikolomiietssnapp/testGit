@@ -13,6 +13,7 @@
 		495472F0251F191F0022AD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472EE251F191F0022AD8E /* Main.storyboard */; };
 		495472F2251F19260022AD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495472F1251F19260022AD8E /* Assets.xcassets */; };
 		495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472F3251F19260022AD8E /* LaunchScreen.storyboard */; };
+		648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		495472F1251F19260022AD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495472F4251F19260022AD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavViewController.swift; sourceTree = "<group>"; };
+		648425DD251FC9960039B1F1 /* ViacheslavStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViacheslavStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 				495472EA251F191F0022AD8E /* SceneDelegate.swift */,
 				495472EC251F191F0022AD8E /* ViewController.swift */,
 				495472EE251F191F0022AD8E /* Main.storyboard */,
+				648425DD251FC9960039B1F1 /* ViacheslavStoryboard.storyboard */,
+				648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */,
 				495472F1251F19260022AD8E /* Assets.xcassets */,
 				495472F3251F19260022AD8E /* LaunchScreen.storyboard */,
 				495472F6251F19260022AD8E /* Info.plist */,
@@ -139,6 +144,7 @@
 			files = (
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
+				648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

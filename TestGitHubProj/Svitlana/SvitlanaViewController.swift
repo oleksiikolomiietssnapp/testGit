@@ -14,11 +14,7 @@ class SvitlanaViewController: UIViewController{
   
     @IBAction func webPageShowButton(_ sender: UIButton) {
         if let url = URL(string: "https://intita.com") {
-//            let config = SFSafariViewController.Configuration()
-//            config.entersReaderIfAvailable = true
-
             let vc = SFSafariViewController(url: url)
-//                                            , configuration: config)
             vc.modalPresentationStyle = .popover
             present(vc, animated: true)
         }

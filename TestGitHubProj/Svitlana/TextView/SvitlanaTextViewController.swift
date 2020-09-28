@@ -25,9 +25,7 @@ class SvitlanaTextViewController: UIViewController {
             bottomConstraint.constant = 399
             showButton.setTitle("Show more", for: .normal)
         }
-        showText = !showText
-//        textView.isScrollEnabled = showText
-        
+        showText = !showText        
     }
     
     @IBOutlet weak var textView: UITextView!

@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="-1365.217391304348" y="-317.41071428571428"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Svitlana-->
         <scene sceneID="1ue-9E-Pin">
             <objects>
-                <viewControllerPlaceholder id="cAN-hw-8wG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Svitlana" referencedIdentifier="Svitlana" id="cAN-hw-8wG" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="QzV-hU-X4E"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBv-VM-gvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -15,6 +15,10 @@
 		495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472F3251F19260022AD8E /* LaunchScreen.storyboard */; };
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
+		BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9D525209335001C839F /* Svitlana.storyboard */; };
+		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
+		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
+		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
+		BA1AA9D525209335001C839F /* Svitlana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Svitlana.storyboard; sourceTree = "<group>"; };
+		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
+		BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaTextView.storyboard; sourceTree = "<group>"; };
+		BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaTextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		495472E7251F191F0022AD8E /* TestGitHubProj */ = {
 			isa = PBXGroup;
 			children = (
+				BA1AA9D82520934D001C839F /* Svitlana */,
 				495472E8251F191F0022AD8E /* AppDelegate.swift */,
 				495472EA251F191F0022AD8E /* SceneDelegate.swift */,
 				495472EC251F191F0022AD8E /* ViewController.swift */,
@@ -79,6 +88,25 @@
 				84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */,
 			);
 			path = StepanStoryboard;
+			sourceTree = "<group>";
+		};
+		BA1AA9D82520934D001C839F /* Svitlana */ = {
+			isa = PBXGroup;
+			children = (
+				BA1AA9E42520DE14001C839F /* TextView */,
+				BA1AA9D525209335001C839F /* Svitlana.storyboard */,
+				BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */,
+			);
+			path = Svitlana;
+			sourceTree = "<group>";
+		};
+		BA1AA9E42520DE14001C839F /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */,
+				BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */,
+			);
+			path = TextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +166,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
+				BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */,
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
@@ -152,7 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
+				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,
 				84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */,

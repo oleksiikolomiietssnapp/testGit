@@ -109,20 +109,20 @@
             </objects>
             <point key="canvasLocation" x="-1365.217391304348" y="-317.41071428571428"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Svitlana-->
         <scene sceneID="1ue-9E-Pin">
             <objects>
-                <viewControllerPlaceholder id="cAN-hw-8wG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Svitlana" referencedIdentifier="Svitlana" id="cAN-hw-8wG" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="QzV-hU-X4E"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBv-VM-gvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="59" y="-385"/>
         </scene>
-        <!--Anastasia-->
+        <!--Storyboard Reference-->
         <scene sceneID="npu-gC-kLd">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Anastasia" storyboardName="Anastasia" referencedIdentifier="Anastasia" id="Dpl-uh-2A8" sceneMemberID="viewController">
+                <viewControllerPlaceholder id="Dpl-uh-2A8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="g8Y-jb-Ecw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW0-64-8fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

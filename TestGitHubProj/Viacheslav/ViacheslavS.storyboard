@@ -11,28 +11,26 @@
         <!--Viacheslav View Controller-->
         <scene sceneID="2ie-bd-r1c">
             <objects>
-                <viewController storyboardIdentifier="ViacheslavStoryboard" id="sXI-Wp-ll0" customClass="ViacheslavViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViacheslavViewController" id="sXI-Wp-ll0" customClass="ViacheslavViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6F5-gj-1XP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-Kb-Y2J">
-                                <rect key="frame" x="24" y="44" width="366" height="46"/>
+                                <rect key="frame" x="24" y="128" width="366" height="46"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="google web page"/>
                                 <connections>
-                                    <action selector="touchButtonGoogle:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="7yx-8h-2W1"/>
                                     <segue destination="DHN-od-cMf" kind="show" id="Coy-q5-Cig"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deN-MS-H4Q">
-                                <rect key="frame" x="24" y="98" width="366" height="46"/>
+                                <rect key="frame" x="24" y="182" width="366" height="46"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="safari web page"/>
                                 <connections>
-                                    <action selector="touchButtonGoogle:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="4Lx-fD-Ink"/>
                                     <action selector="touchButtonSafari:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="mAt-Lt-dxK"/>
                                 </connections>
                             </button>
@@ -45,7 +43,7 @@
                             <constraint firstItem="kHO-Kb-Y2J" firstAttribute="leading" secondItem="6F5-gj-1XP" secondAttribute="leading" constant="24" id="DDt-Tu-23u"/>
                             <constraint firstAttribute="trailing" secondItem="kHO-Kb-Y2J" secondAttribute="trailing" constant="24" id="TQt-1h-Lla"/>
                             <constraint firstItem="deN-MS-H4Q" firstAttribute="top" secondItem="kHO-Kb-Y2J" secondAttribute="bottom" constant="8" id="acY-iq-yab"/>
-                            <constraint firstItem="kHO-Kb-Y2J" firstAttribute="top" secondItem="6F5-gj-1XP" secondAttribute="top" constant="44" id="dwd-gL-06b"/>
+                            <constraint firstItem="kHO-Kb-Y2J" firstAttribute="top" secondItem="6F5-gj-1XP" secondAttribute="top" constant="128" id="dwd-gL-06b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xGz-2i-bEI"/>
@@ -60,13 +58,13 @@
         <!--Viacheslav Web View Controller-->
         <scene sceneID="MGv-eE-DW1">
             <objects>
-                <viewController id="DHN-od-cMf" customClass="ViacheslavWebViewController" customModule="TestGitHubProj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="q" id="DHN-od-cMf" customClass="ViacheslavWebViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hy6-K0-wRE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raH-pT-ROM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fZ-hd-2C2">
+                                <rect key="frame" x="0.0" y="64" width="414" height="744"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -77,20 +75,20 @@
                         <viewLayoutGuide key="safeArea" id="9PH-46-kpc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9PH-46-kpc" firstAttribute="trailing" secondItem="raH-pT-ROM" secondAttribute="trailing" id="2b4-Jx-pra"/>
-                            <constraint firstItem="raH-pT-ROM" firstAttribute="top" secondItem="9PH-46-kpc" secondAttribute="top" id="QZr-1q-9p1"/>
-                            <constraint firstItem="9PH-46-kpc" firstAttribute="bottom" secondItem="raH-pT-ROM" secondAttribute="bottom" id="ZPd-Y4-sPl"/>
-                            <constraint firstItem="raH-pT-ROM" firstAttribute="leading" secondItem="9PH-46-kpc" secondAttribute="leading" id="cJL-Fr-xyC"/>
+                            <constraint firstItem="8fZ-hd-2C2" firstAttribute="top" secondItem="9PH-46-kpc" secondAttribute="top" constant="64" id="fSa-jf-d1a"/>
+                            <constraint firstItem="9PH-46-kpc" firstAttribute="bottom" secondItem="8fZ-hd-2C2" secondAttribute="bottom" id="i7S-fx-2Dd"/>
+                            <constraint firstItem="8fZ-hd-2C2" firstAttribute="leading" secondItem="9PH-46-kpc" secondAttribute="leading" id="qzD-3V-nK6"/>
+                            <constraint firstItem="9PH-46-kpc" firstAttribute="trailing" secondItem="8fZ-hd-2C2" secondAttribute="trailing" id="rN6-r6-aip"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="afS-b8-SH4"/>
                     <connections>
-                        <outlet property="webView" destination="raH-pT-ROM" id="sfv-2X-sLg"/>
+                        <outlet property="webView" destination="8fZ-hd-2C2" id="Wm5-Wx-qr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QU1-2g-qri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418.840579710145" y="130.58035714285714"/>
+            <point key="canvasLocation" x="1554" y="131"/>
         </scene>
     </scenes>
     <resources>

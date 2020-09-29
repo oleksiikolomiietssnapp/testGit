@@ -76,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				BA1AA9D82520934D001C839F /* Svitlana */,
+				84D5D2DA251F3E5D00E854BD /* StepanStoryboard */,
 				495472E8251F191F0022AD8E /* AppDelegate.swift */,
 				495472EA251F191F0022AD8E /* SceneDelegate.swift */,
 				495472EC251F191F0022AD8E /* ViewController.swift */,
@@ -83,7 +84,6 @@
 				648425DD251FC9960039B1F1 /* ViacheslavStoryboard.storyboard */,
 				648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */,
 				648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */,
-				84D5D2DA251F3E5D00E854BD /* StepanStoryboard */,
 				495472F1251F19260022AD8E /* Assets.xcassets */,
 				495472F3251F19260022AD8E /* LaunchScreen.storyboard */,
 				495472F6251F19260022AD8E /* Info.plist */,

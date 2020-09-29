@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stepan View Controller-->
+        <scene sceneID="UIe-yZ-AB1">
+            <objects>
+                <viewController storyboardIdentifier="StepanStoryboard" id="b9I-I9-8nd" customClass="StepanViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WkI-KC-39h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vgm-lQ-OsE">
+                                <rect key="frame" x="57" y="382" width="300" height="132"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-Wl-OKw">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.0" alpha="0.58660637839999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8u4-0q-KkZ"/>
+                                            <constraint firstAttribute="width" constant="300" id="ZEh-il-Vp1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="35"/>
+                                        <state key="normal" title="Google"/>
+                                        <connections>
+                                            <action selector="googleButton:" destination="b9I-I9-8nd" eventType="touchUpInside" id="VSh-Vv-fAU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-6r-VXR">
+                                        <rect key="frame" x="0.0" y="72" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.0" alpha="0.58660637839999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="CnO-qv-USY"/>
+                                            <constraint firstAttribute="height" constant="60" id="IuT-pr-bsN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="35"/>
+                                        <state key="normal" title="Text View"/>
+                                        <connections>
+                                            <segue destination="3Zh-RF-uuO" kind="show" id="L5k-ib-Aqk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pU9-uZ-RSM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vgm-lQ-OsE" firstAttribute="centerY" secondItem="WkI-KC-39h" secondAttribute="centerY" id="A45-3B-Cft"/>
+                            <constraint firstItem="vgm-lQ-OsE" firstAttribute="centerX" secondItem="WkI-KC-39h" secondAttribute="centerX" id="IHf-cj-lIV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x5U-tU-qki"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpr-e7-5pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571.0144927536232" y="47.544642857142854"/>
+        </scene>
+        <!--Text View View Controller-->
+        <scene sceneID="j0W-ZI-9NK">
+            <objects>
+                <viewController id="3Zh-RF-uuO" customClass="TextViewViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o2R-IU-NaV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" indicatorStyle="black" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-n8-XAP">
+                                <rect key="frame" x="57" y="348" width="300" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8gU-Ke-C9F"/>
+                                    <constraint firstAttribute="height" constant="200" id="bWz-td-rUN"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk6-t8-8R0">
+                                <rect key="frame" x="321" y="548" width="36" height="30"/>
+                                <state key="normal" title="more"/>
+                                <connections>
+                                    <action selector="moreLessButtonPressed:" destination="3Zh-RF-uuO" eventType="touchUpInside" id="i2g-ge-oML"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5JS-n6-Yux"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wk6-t8-8R0" firstAttribute="top" secondItem="Jc8-n8-XAP" secondAttribute="bottom" id="IdX-ry-WiC"/>
+                            <constraint firstItem="Jc8-n8-XAP" firstAttribute="centerX" secondItem="o2R-IU-NaV" secondAttribute="centerX" id="oBY-d2-PXZ"/>
+                            <constraint firstItem="Jc8-n8-XAP" firstAttribute="centerY" secondItem="o2R-IU-NaV" secondAttribute="centerY" id="okf-8x-f6m"/>
+                            <constraint firstItem="Wk6-t8-8R0" firstAttribute="trailing" secondItem="Jc8-n8-XAP" secondAttribute="trailing" id="y3d-FE-w1P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TFd-5S-I5e"/>
+                    <connections>
+                        <outlet property="textView" destination="Jc8-n8-XAP" id="hVj-4G-X3V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dN-AQ-xGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378" y="48"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yxr-pC-mP5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9U-0Y-2iL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ghb-B2-ysA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b9I-I9-8nd" kind="relationship" relationship="rootViewController" id="agV-qB-xjE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMf-9T-Abx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660.86956521739137" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

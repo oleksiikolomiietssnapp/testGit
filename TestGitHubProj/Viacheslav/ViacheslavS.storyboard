@@ -34,6 +34,16 @@
                                     <action selector="touchButtonSafari:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="mAt-Lt-dxK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N39-rQ-y7y">
+                                <rect key="frame" x="24" y="236" width="366" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="to image screen"/>
+                                <connections>
+                                    <action selector="touchButtonSafari:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="35W-v3-qhN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q17-uG-B3S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

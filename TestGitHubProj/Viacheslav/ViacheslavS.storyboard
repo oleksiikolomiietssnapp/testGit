@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sXI-Wp-ll0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Viacheslav View Controller-->
+        <scene sceneID="2ie-bd-r1c">
+            <objects>
+                <viewController storyboardIdentifier="ViacheslavViewController" id="sXI-Wp-ll0" customClass="ViacheslavViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6F5-gj-1XP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-Kb-Y2J">
+                                <rect key="frame" x="24" y="128" width="366" height="46"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="google web page"/>
+                                <connections>
+                                    <segue destination="DHN-od-cMf" kind="show" id="Coy-q5-Cig"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deN-MS-H4Q">
+                                <rect key="frame" x="24" y="182" width="366" height="46"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="safari web page"/>
+                                <connections>
+                                    <action selector="touchButtonSafari:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="mAt-Lt-dxK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q17-uG-B3S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q17-uG-B3S" firstAttribute="trailing" secondItem="deN-MS-H4Q" secondAttribute="trailing" constant="24" id="3rC-4S-9fP"/>
+                            <constraint firstItem="deN-MS-H4Q" firstAttribute="leading" secondItem="Q17-uG-B3S" secondAttribute="leading" constant="24" id="Cte-g2-yQX"/>
+                            <constraint firstItem="kHO-Kb-Y2J" firstAttribute="leading" secondItem="6F5-gj-1XP" secondAttribute="leading" constant="24" id="DDt-Tu-23u"/>
+                            <constraint firstAttribute="trailing" secondItem="kHO-Kb-Y2J" secondAttribute="trailing" constant="24" id="TQt-1h-Lla"/>
+                            <constraint firstItem="deN-MS-H4Q" firstAttribute="top" secondItem="kHO-Kb-Y2J" secondAttribute="bottom" constant="8" id="acY-iq-yab"/>
+                            <constraint firstItem="kHO-Kb-Y2J" firstAttribute="top" secondItem="6F5-gj-1XP" secondAttribute="top" constant="128" id="dwd-gL-06b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xGz-2i-bEI"/>
+                    <connections>
+                        <outlet property="safariButton" destination="deN-MS-H4Q" id="cw7-wj-ZWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzO-bS-sLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718.84057971014499" y="130.58035714285714"/>
+        </scene>
+        <!--Viacheslav Web View Controller-->
+        <scene sceneID="MGv-eE-DW1">
+            <objects>
+                <viewController storyboardIdentifier="q" id="DHN-od-cMf" customClass="ViacheslavWebViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hy6-K0-wRE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fZ-hd-2C2">
+                                <rect key="frame" x="0.0" y="64" width="414" height="744"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9PH-46-kpc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8fZ-hd-2C2" firstAttribute="top" secondItem="9PH-46-kpc" secondAttribute="top" constant="64" id="fSa-jf-d1a"/>
+                            <constraint firstItem="9PH-46-kpc" firstAttribute="bottom" secondItem="8fZ-hd-2C2" secondAttribute="bottom" id="i7S-fx-2Dd"/>
+                            <constraint firstItem="8fZ-hd-2C2" firstAttribute="leading" secondItem="9PH-46-kpc" secondAttribute="leading" id="qzD-3V-nK6"/>
+                            <constraint firstItem="9PH-46-kpc" firstAttribute="trailing" secondItem="8fZ-hd-2C2" secondAttribute="trailing" id="rN6-r6-aip"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="afS-b8-SH4"/>
+                    <connections>
+                        <outlet property="webView" destination="8fZ-hd-2C2" id="Wm5-Wx-qr8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QU1-2g-qri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

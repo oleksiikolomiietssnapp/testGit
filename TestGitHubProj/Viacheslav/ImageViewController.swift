@@ -9,6 +9,16 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
+//    var imageZoomView: ImageScrollView?
+//
+//    func setup() {
+//        imageZoomView?.translatesAutoresizingMaskIntoConstraints = false
+//        imageZoomView?.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        imageZoomView?.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        imageZoomView?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        imageZoomView?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//    }
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var closedButton: UIButton!
@@ -19,6 +29,11 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        imageZoomView = ImageScrollView(frame: view.bounds)
+//        guard let image = imageZoomView else { return }
+//        view.addSubview(image)
+//        setup()
 
         closedButton.isHidden = true
         
@@ -48,3 +63,4 @@ extension ImageViewController: UIScrollViewDelegate {
         }
     }
 }
+

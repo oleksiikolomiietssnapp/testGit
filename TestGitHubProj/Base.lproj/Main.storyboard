@@ -39,7 +39,7 @@
                                         <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="40"/>
                                         <state key="normal" title="Viacheslav"/>
                                         <connections>
-                                            <segue destination="hnB-4D-P2s" kind="show" id="U1Q-Md-vTn"/>
+                                            <action selector="tapViacheslavButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMu-SH-bMS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynS-Mc-wzI">
@@ -81,16 +81,6 @@
             </objects>
             <point key="canvasLocation" x="-549.27536231884062" y="-317.41071428571428"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="3Kp-R9-2rr">
-            <objects>
-                <viewControllerPlaceholder id="hnB-4D-P2s" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Gsi-ur-dna"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dio-lx-8Mt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="59" y="-357"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="VuQ-I3-oG9">
             <objects>
@@ -117,7 +107,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBv-VM-gvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="-385"/>
+            <point key="canvasLocation" x="104" y="-540"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="npu-gC-kLd">
@@ -127,7 +117,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW0-64-8fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="-325"/>
+            <point key="canvasLocation" x="104" y="-240"/>
         </scene>
         <!--StepanStoryboard-->
         <scene sceneID="klr-tz-g1C">
@@ -137,7 +127,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIA-VS-pnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="-281"/>
+            <point key="canvasLocation" x="43" y="-56"/>
         </scene>
     </scenes>
     <resources>

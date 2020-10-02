@@ -16,47 +16,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="jew-9w-MI7">
-                                <rect key="frame" x="16" y="60" width="382" height="357"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntk-so-lVO">
-                                <rect key="frame" x="16" y="433" width="382" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-Vp-mnx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="jew-9w-MI7">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="409"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntk-so-lVO">
+                                        <rect key="frame" x="134.5" y="445" width="145" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="esP-uh-Mhi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Show more"/>
+                                        <connections>
+                                            <action selector="showMoreOrLess:" destination="Sy1-eQ-z4N" eventType="touchUpInside" id="w44-G9-0L6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="esP-uh-Mhi"/>
+                                    <constraint firstItem="jew-9w-MI7" firstAttribute="width" secondItem="Bey-Vp-mnx" secondAttribute="width" id="8GP-vB-mU5"/>
+                                    <constraint firstItem="jew-9w-MI7" firstAttribute="top" secondItem="Bey-Vp-mnx" secondAttribute="top" constant="20" id="Eaa-1M-gnz"/>
+                                    <constraint firstItem="jew-9w-MI7" firstAttribute="trailing" secondItem="Bey-Vp-mnx" secondAttribute="trailing" id="cyv-CA-xQK"/>
+                                    <constraint firstItem="ntk-so-lVO" firstAttribute="top" secondItem="jew-9w-MI7" secondAttribute="bottom" constant="16" id="hbi-xO-0J6"/>
+                                    <constraint firstItem="jew-9w-MI7" firstAttribute="centerX" secondItem="Bey-Vp-mnx" secondAttribute="centerX" id="luJ-9D-aB5"/>
+                                    <constraint firstItem="jew-9w-MI7" firstAttribute="leading" secondItem="Bey-Vp-mnx" secondAttribute="leading" id="ncS-Wp-R7m"/>
+                                    <constraint firstItem="ntk-so-lVO" firstAttribute="centerX" secondItem="jew-9w-MI7" secondAttribute="centerX" id="u0P-TX-Fws"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Show more"/>
-                                <connections>
-                                    <action selector="showMoreOrLess:" destination="Sy1-eQ-z4N" eventType="touchUpInside" id="w44-G9-0L6"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AUM-aM-bX8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jew-9w-MI7" firstAttribute="leading" secondItem="AUM-aM-bX8" secondAttribute="leading" constant="16" id="8e4-Fh-yjc"/>
-                            <constraint firstItem="ntk-so-lVO" firstAttribute="leading" secondItem="AUM-aM-bX8" secondAttribute="leading" constant="16" id="EHc-wa-0AI"/>
-                            <constraint firstItem="AUM-aM-bX8" firstAttribute="trailing" secondItem="ntk-so-lVO" secondAttribute="trailing" constant="16" id="e07-Hk-srZ"/>
-                            <constraint firstItem="AUM-aM-bX8" firstAttribute="trailing" secondItem="jew-9w-MI7" secondAttribute="trailing" constant="16" id="er4-xd-5lT"/>
-                            <constraint firstItem="jew-9w-MI7" firstAttribute="top" secondItem="AUM-aM-bX8" secondAttribute="top" constant="16" id="mG7-Al-hPH"/>
-                            <constraint firstItem="AUM-aM-bX8" firstAttribute="bottom" secondItem="ntk-so-lVO" secondAttribute="bottom" constant="399" id="oUS-Hf-TjJ"/>
-                            <constraint firstItem="ntk-so-lVO" firstAttribute="top" secondItem="jew-9w-MI7" secondAttribute="bottom" constant="16" id="qKs-3C-KqW"/>
+                            <constraint firstItem="Bey-Vp-mnx" firstAttribute="bottom" secondItem="ntk-so-lVO" secondAttribute="bottom" constant="16" id="1yA-YM-8P6"/>
+                            <constraint firstItem="Bey-Vp-mnx" firstAttribute="leading" secondItem="AUM-aM-bX8" secondAttribute="leading" id="FMZ-T1-VoO"/>
+                            <constraint firstItem="Bey-Vp-mnx" firstAttribute="top" secondItem="AUM-aM-bX8" secondAttribute="top" id="PGY-dH-WoH"/>
+                            <constraint firstItem="AUM-aM-bX8" firstAttribute="bottom" secondItem="Bey-Vp-mnx" secondAttribute="bottom" id="VnR-hu-uoW"/>
+                            <constraint firstItem="jew-9w-MI7" firstAttribute="height" secondItem="AUM-aM-bX8" secondAttribute="height" multiplier="0.5" id="Yvu-Yn-jeN"/>
+                            <constraint firstAttribute="trailing" secondItem="Bey-Vp-mnx" secondAttribute="trailing" id="kLM-92-IMv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bottomConstraint" destination="oUS-Hf-TjJ" id="Sng-2N-GOd"/>
+                        <outlet property="heightOfTextView" destination="Yvu-Yn-jeN" id="mEA-JM-AOk"/>
                         <outlet property="showButton" destination="ntk-so-lVO" id="oe6-DP-duj"/>
                         <outlet property="textView" destination="jew-9w-MI7" id="Mws-Gn-kvS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdI-Ow-Y6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.144927536231885" y="10.714285714285714"/>
+            <point key="canvasLocation" x="599" y="-11"/>
         </scene>
     </scenes>
     <resources>

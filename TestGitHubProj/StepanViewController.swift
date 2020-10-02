@@ -7,17 +7,19 @@
 
 import UIKit
 import SafariServices
+import Firebase
 
 class StepanViewController: UIViewController {
 
-
+    @IBOutlet weak var signInButtonPressed: UIButton!
+    
+    
     @IBAction func googleButton(_ sender: UIButton) {
         showSafari("https://www.google.com/?client=safari")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -27,5 +29,7 @@ class StepanViewController: UIViewController {
         let safariViewController = SFSafariViewController(url: url)
         present(safariViewController, animated: true, completion: nil)
     }
+    
+    
 
 }

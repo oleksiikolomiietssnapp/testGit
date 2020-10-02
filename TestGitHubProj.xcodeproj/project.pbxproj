@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,11 +17,20 @@
 		648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */; };
 		648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */; };
 		64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */; };
+ stepanFirebase
+ stepanFirebase
+		7F55EB9C9889EE633C7348B6 /* libPods-TestGitHubProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 430BC038319DB5412E20AF3B /* libPods-TestGitHubProj.a */; };
+
+
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
+ main
 		64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C992632523BCDA00676069 /* ImageStoryboard.storyboard */; };
 		64C992672523BD0700676069 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C992662523BD0700676069 /* ImageViewController.swift */; };
+ main
 		84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */; };
+		849134782527332100935DC7 /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849134772527332100935DC7 /* FirebaseViewController.swift */; };
+		849ED8F22524FB0500F8DC4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849ED8F12524FB0500F8DC4E /* GoogleService-Info.plist */; };
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
 		BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9D525209335001C839F /* Svitlana.storyboard */; };
@@ -31,7 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+ stepanFirebase
+		3DA2744A0B617CEFD835A442 /* Pods-TestGitHubProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.debug.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.debug.xcconfig"; sourceTree = "<group>"; };
+		430BC038319DB5412E20AF3B /* libPods-TestGitHubProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestGitHubProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+
 		3F7E41DE251F40160020F715 /* Anastasia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Anastasia.storyboard; sourceTree = "<group>"; };
+ main
 		495472E5251F191F0022AD8E /* TestGitHubProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGitHubProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495472E8251F191F0022AD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		495472EA251F191F0022AD8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +62,11 @@
 		64C992632523BCDA00676069 /* ImageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageStoryboard.storyboard; sourceTree = "<group>"; };
 		64C992662523BD0700676069 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
+		849134772527332100935DC7 /* FirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
+		849ED8F12524FB0500F8DC4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
+		8FD7F680613B3F264DBCEE8D /* Pods-TestGitHubProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.release.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.release.xcconfig"; sourceTree = "<group>"; };
 		BA1AA9D525209335001C839F /* Svitlana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Svitlana.storyboard; sourceTree = "<group>"; };
 		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
 		BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaTextView.storyboard; sourceTree = "<group>"; };
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F55EB9C9889EE633C7348B6 /* libPods-TestGitHubProj.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +98,8 @@
 			children = (
 				495472E7251F191F0022AD8E /* TestGitHubProj */,
 				495472E6251F191F0022AD8E /* Products */,
+				99C917268490877682BC163B /* Pods */,
+				5223214F62D93C8A63268BEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,8 +125,17 @@
 				495472F1251F19260022AD8E /* Assets.xcassets */,
 				495472F3251F19260022AD8E /* LaunchScreen.storyboard */,
 				495472F6251F19260022AD8E /* Info.plist */,
+				849ED8F12524FB0500F8DC4E /* GoogleService-Info.plist */,
 			);
 			path = TestGitHubProj;
+			sourceTree = "<group>";
+		};
+		5223214F62D93C8A63268BEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				430BC038319DB5412E20AF3B /* libPods-TestGitHubProj.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		641CA5DE25238FC700AC0769 /* Viacheslav */ = {
@@ -127,8 +156,18 @@
 				84D5D2DC251F8DF300E854BD /* StepanViewController.swift */,
 				84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */,
 				84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */,
+				849134772527332100935DC7 /* FirebaseViewController.swift */,
 			);
 			path = StepanStoryboard;
+			sourceTree = "<group>";
+		};
+		99C917268490877682BC163B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DA2744A0B617CEFD835A442 /* Pods-TestGitHubProj.debug.xcconfig */,
+				8FD7F680613B3F264DBCEE8D /* Pods-TestGitHubProj.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
@@ -157,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 495472F9251F19260022AD8E /* Build configuration list for PBXNativeTarget "TestGitHubProj" */;
 			buildPhases = (
+				2A1468265D340BE704CF5A0B /* [CP] Check Pods Manifest.lock */,
 				495472E1251F191E0022AD8E /* Sources */,
 				495472E2251F191E0022AD8E /* Frameworks */,
 				495472E3251F191E0022AD8E /* Resources */,
+				62C5F7D835FC001991522B3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +250,7 @@
 			files = (
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
+				849ED8F22524FB0500F8DC4E /* GoogleService-Info.plist in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
 				BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */,
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
@@ -221,12 +263,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A1468265D340BE704CF5A0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestGitHubProj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62C5F7D835FC001991522B3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		495472E1251F191E0022AD8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
+				849134782527332100935DC7 /* FirebaseViewController.swift in Sources */,
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
@@ -379,6 +464,7 @@
 		};
 		495472FA251F19260022AD8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA2744A0B617CEFD835A442 /* Pods-TestGitHubProj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +484,7 @@
 		};
 		495472FB251F19260022AD8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FD7F680613B3F264DBCEE8D /* Pods-TestGitHubProj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

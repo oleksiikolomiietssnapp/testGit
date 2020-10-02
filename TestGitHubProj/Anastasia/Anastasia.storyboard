@@ -39,6 +39,7 @@
                             <constraint firstItem="DCj-qW-RRi" firstAttribute="centerX" secondItem="zem-gx-pdw" secondAttribute="centerX" id="vtr-C9-qFc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="O1l-lM-Mte"/>
                     <connections>
                         <outlet property="wikiButton" destination="DCj-qW-RRi" id="Xvs-Hm-tD8"/>
                     </connections>
@@ -46,6 +47,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMo-7b-DKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-39.130434782608695" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TSS-8H-OI2">
+            <objects>
+                <navigationController id="uM0-1t-gou" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BBO-AE-xfQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v0q-xC-YCh" kind="relationship" relationship="rootViewController" id="UzQ-im-Wa1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wd7-wC-Ksb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1164" y="47"/>
         </scene>
     </scenes>
     <resources>

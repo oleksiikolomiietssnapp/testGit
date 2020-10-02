@@ -14,6 +14,8 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
     
     let button = UIButton(type: UIButton.ButtonType.custom)
     
+    let childViewController = TextViewController()
+    
     @IBOutlet var textViewController: UIView!
     
     @IBOutlet weak var wikiButton: UIButton!
@@ -23,7 +25,8 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
         if sender == wikiButton {
             showSafari(k_wikiUrl)
         } else {
-            present(TextViewController(), animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.pushViewController(childViewController, animated: true)
         }
     }
     
@@ -58,6 +61,8 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
         addButton(button)
         customizeBtn(button)
         button.addTarget(self, action: #selector(btnPressed), for: .touchUpInside)
+        self.edgesForExtendedLayout = UIRectEdge.all
+        childViewController.isModalInPresentation = true
     }
     
     override func viewDidLayoutSubviews() {

@@ -13,6 +13,7 @@
 		495472F0251F191F0022AD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472EE251F191F0022AD8E /* Main.storyboard */; };
 		495472F2251F19260022AD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495472F1251F19260022AD8E /* Assets.xcassets */; };
 		495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472F3251F19260022AD8E /* LaunchScreen.storyboard */; };
+		642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */; };
 		648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */; };
 		648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */; };
 		64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */; };
@@ -39,6 +40,7 @@
 		495472F1251F19260022AD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495472F4251F19260022AD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPinchViewViewController.swift; sourceTree = "<group>"; };
 		648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavViewController.swift; sourceTree = "<group>"; };
 		648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViacheslavS.storyboard; sourceTree = "<group>"; };
 		648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavWebViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				64C9927A25260B8C00676069 /* ImageScrollView.swift */,
 				64C9926B252604F000676069 /* PinchStoryboard.storyboard */,
 				64C9926E2526050900676069 /* PinchViewController.swift */,
+				642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */,
 			);
 			path = Viacheslav;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				64C9926F2526050900676069 /* PinchViewController.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
+				642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,

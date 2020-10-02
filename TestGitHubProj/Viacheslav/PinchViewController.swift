@@ -16,9 +16,9 @@ class PinchViewController: UIViewController {
     let maxScale: CGFloat = 4.0
     let minScale: CGFloat = 0.5
     
+//    let closedButtonTwo = UIButton()
     
     @IBOutlet var closedButton: UIButton!
-    //    let closedButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,25 +26,25 @@ class PinchViewController: UIViewController {
         closedButton.isHidden = true
         closedButton.window?.windowLevel = UIWindow.Level(rawValue: CGFloat.greatestFiniteMagnitude)
         
-//        closedButton.frame = CGRect(x: 16, y: 96, width: 32, height: 32)
-//        closedButton.setTitle("X", for: .normal)
-//        closedButton.setTitleColor(.black, for: .normal)
-//        closedButton.titleLabel?.font = UIFont(name: "Heiti TC", size: 32)
+//        closedButtonTwo.frame = CGRect(x: 16, y: 96, width: 32, height: 32)
+//        closedButtonTwo.setTitle("X", for: .normal)
+//        closedButtonTwo.setTitleColor(.black, for: .normal)
+//        closedButtonTwo.titleLabel?.font = UIFont(name: "Heiti TC", size: 32)
 //
-//        self.view.addSubview(closedButton)
+//        self.view.addSubview(closedButtonTwo)
 
-        imageView.frame = CGRect(x: 0, y: 0, width: 400, height: 300)
-        imageView.image = #imageLiteral(resourceName: "avatar")
-        imageView.isUserInteractionEnabled = true
-        
-        self.view.addSubview(imageView)
-        
-        imageView.center = view.center
-        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        imageView.addGestureRecognizer(pinchGesture)
-        pinchGesture.addTarget(self, action: #selector(pinchAction))
+//        imageView.frame = CGRect(x: 16, y: 64, width: 400, height: 300)
+//        imageView.image = #imageLiteral(resourceName: "avatar")
+//        imageView.isUserInteractionEnabled = true
+//        
+//        self.view.addSubview(imageView)
+//        
+//        imageView.center = view.center
+//        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        
+//        imageView.addGestureRecognizer(pinchGesture)
+//        pinchGesture.addTarget(self, action: #selector(pinchAction))
         
 //        let height = imageView.frame.height
 //        print(height)

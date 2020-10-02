@@ -31,7 +31,8 @@ class ViacheslavViewController: UIViewController {
     @IBAction func touchPinchButton(_ sender: UIButton) {
         
         let storybord = UIStoryboard(name: "PinchStoryboard", bundle: nil)
-        let vc = storybord.instantiateViewController(identifier: "PinchViewController") as! PinchViewController
+//        let vc = storybord.instantiateViewController(identifier: "PinchViewController") as! PinchViewController
+        let vc = storybord.instantiateViewController(identifier: "SecondPinchViewViewController") as! SecondPinchViewViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

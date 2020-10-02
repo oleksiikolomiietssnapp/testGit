@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vgm-lQ-OsE">
-                                <rect key="frame" x="57" y="382" width="300" height="132"/>
+                                <rect key="frame" x="57" y="346" width="300" height="204"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-Wl-OKw">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
@@ -45,6 +45,19 @@
                                             <segue destination="3Zh-RF-uuO" kind="show" id="L5k-ib-Aqk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opC-aj-dGd">
+                                        <rect key="frame" x="0.0" y="144" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.0" alpha="0.58660637839999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="ORh-8l-Qhj"/>
+                                            <constraint firstAttribute="height" constant="60" id="P3v-qt-fQp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="35"/>
+                                        <state key="normal" title="Firebase"/>
+                                        <connections>
+                                            <segue destination="gUb-P5-h54" kind="show" id="kLD-zH-0to"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -56,10 +69,91 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x5U-tU-qki"/>
+                    <connections>
+                        <outlet property="signInButtonPressed" destination="opC-aj-dGd" id="Z4Y-cm-fVy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpr-e7-5pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1571.0144927536232" y="47.544642857142854"/>
+        </scene>
+        <!--Firebase View Controller-->
+        <scene sceneID="tUp-V5-Noq">
+            <objects>
+                <viewController id="gUb-P5-h54" customClass="FirebaseViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eyk-wX-7mO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Syc-dl-R3N">
+                                <rect key="frame" x="77" y="328" width="260" height="240"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRx-2l-zX3">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.87058823529999996" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="dzE-vW-Sre"/>
+                                            <constraint firstAttribute="height" constant="60" id="mpr-Db-xIM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min 6 symbols" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eeo-iR-kCx">
+                                        <rect key="frame" x="0.0" y="60" width="260" height="60"/>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.87058823529999996" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="PYB-Y6-1gh"/>
+                                            <constraint firstAttribute="width" constant="260" id="Xav-es-F6m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmB-Tg-6Vk">
+                                        <rect key="frame" x="0.0" y="120" width="260" height="60"/>
+                                        <state key="normal" title="Create New User"/>
+                                        <connections>
+                                            <action selector="createNewUser:" destination="gUb-P5-h54" eventType="touchUpInside" id="ET6-zi-zux"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-gw-u2C">
+                                        <rect key="frame" x="0.0" y="180" width="260" height="60"/>
+                                        <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInButtonPressed:" destination="gUb-P5-h54" eventType="touchUpInside" id="QCr-OL-mIm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBo-pn-hmz">
+                                <rect key="frame" x="107" y="120" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ilL-vG-Dgp"/>
+                                    <constraint firstAttribute="width" constant="200" id="nBP-dD-t4A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ote-94-mGK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Syc-dl-R3N" firstAttribute="top" secondItem="RBo-pn-hmz" secondAttribute="bottom" constant="8" id="6zP-3U-gQ0"/>
+                            <constraint firstItem="Syc-dl-R3N" firstAttribute="centerY" secondItem="Eyk-wX-7mO" secondAttribute="centerY" id="E4p-jr-Sv2"/>
+                            <constraint firstItem="Syc-dl-R3N" firstAttribute="centerX" secondItem="Eyk-wX-7mO" secondAttribute="centerX" id="Vij-W6-9HI"/>
+                            <constraint firstItem="RBo-pn-hmz" firstAttribute="centerX" secondItem="Eyk-wX-7mO" secondAttribute="centerX" id="VuR-93-saH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ElB-kp-tPt"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="cRx-2l-zX3" id="K3C-X6-eaj"/>
+                        <outlet property="passwordTextField" destination="Eeo-iR-kCx" id="N52-8p-nSN"/>
+                        <outlet property="resultLabel" destination="RBo-pn-hmz" id="auj-Ct-RpW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VZ-uG-P9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569.5652173913045" y="726.5625"/>
         </scene>
         <!--Text View View Controller-->
         <scene sceneID="j0W-ZI-9NK">
@@ -76,7 +170,7 @@
                                     <constraint firstAttribute="width" constant="300" id="8gU-Ke-C9F"/>
                                     <constraint firstAttribute="height" constant="200" id="bWz-td-rUN"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -132,6 +226,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

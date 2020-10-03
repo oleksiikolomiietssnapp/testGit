@@ -10,7 +10,7 @@ import SafariServices
 
 class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    let k_wikiUrl = "https://www.wikipedia.org"
+    let kWikiUrl = "https://www.wikipedia.org"
     
     let button = UIButton(type: UIButton.ButtonType.custom)
     
@@ -21,7 +21,7 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
      
     @IBAction func btnPressed(_ sender: UIButton) {
         if sender == wikiButton {
-            showSafari(k_wikiUrl)
+            showSafari(kWikiUrl)
         } else {
             self.navigationController?.pushViewController(TextViewController(), animated: true)
         }

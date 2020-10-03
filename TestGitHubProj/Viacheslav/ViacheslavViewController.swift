@@ -32,7 +32,7 @@ class ViacheslavViewController: UIViewController {
         
         let storybord = UIStoryboard(name: "PinchStoryboard", bundle: nil)
 //        let vc = storybord.instantiateViewController(identifier: "PinchViewController") as! PinchViewController
-        let vc = storybord.instantiateViewController(identifier: "SecondPinchViewViewController") as! SecondPinchViewViewController
+        guard let vc = storybord.instantiateViewController(identifier: "SecondPinchViewViewController") as? SecondPinchViewViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

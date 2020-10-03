@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,12 +25,14 @@
 		64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */; };
 		64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C992632523BCDA00676069 /* ImageStoryboard.storyboard */; };
 		64C992672523BD0700676069 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C992662523BD0700676069 /* ImageViewController.swift */; };
+		8434B4AB2528705C002FEA2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8434B4AA2528705C002FEA2D /* GoogleService-Info.plist */; };
 		64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C9926B252604F000676069 /* PinchStoryboard.storyboard */; };
 		64C9926F2526050900676069 /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9926E2526050900676069 /* PinchViewController.swift */; };
 		64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9927A25260B8C00676069 /* ImageScrollView.swift */; };
 		84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */; };
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
+		84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F91E3925286BC6002CD19A /* FirebaseViewController.swift */; };
 		BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9D525209335001C839F /* Svitlana.storyboard */; };
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
 		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
@@ -61,12 +63,14 @@
 		648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavWebViewController.swift; sourceTree = "<group>"; };
 		64C992632523BCDA00676069 /* ImageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageStoryboard.storyboard; sourceTree = "<group>"; };
 		64C992662523BD0700676069 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		8434B4AA2528705C002FEA2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64C9926B252604F000676069 /* PinchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PinchStoryboard.storyboard; sourceTree = "<group>"; };
 		64C9926E2526050900676069 /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		64C9927A25260B8C00676069 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
+		84F91E3925286BC6002CD19A /* FirebaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
 		9FD3F08BAD193EFD517D7B8A /* Pods-TestGitHubProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.release.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.release.xcconfig"; sourceTree = "<group>"; };
 		BA1AA9D525209335001C839F /* Svitlana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Svitlana.storyboard; sourceTree = "<group>"; };
 		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				495472F1251F19260022AD8E /* Assets.xcassets */,
 				495472F3251F19260022AD8E /* LaunchScreen.storyboard */,
 				495472F6251F19260022AD8E /* Info.plist */,
+				8434B4AA2528705C002FEA2D /* GoogleService-Info.plist */,
 			);
 			path = TestGitHubProj;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				84D5D2DC251F8DF300E854BD /* StepanViewController.swift */,
 				84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */,
 				84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */,
+				84F91E3925286BC6002CD19A /* FirebaseViewController.swift */,
 			);
 			path = StepanStoryboard;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 				495472E1251F191E0022AD8E /* Sources */,
 				495472E2251F191E0022AD8E /* Frameworks */,
 				495472E3251F191E0022AD8E /* Resources */,
+				9EB227251A65B80E1215F91E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +272,7 @@
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
 				64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
+				8434B4AB2528705C002FEA2D /* GoogleService-Info.plist in Resources */,
 				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
 				3FF531D325274C8F00B4959A /* text.txt in Resources */,
 			);
@@ -295,6 +303,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9EB227251A65B80E1215F91E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -312,6 +337,7 @@
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
 				642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
+				84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */,
 				648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,
 				3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */,

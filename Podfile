@@ -4,5 +4,6 @@ target 'TestGitHubProj' do
   use_frameworks!
 
   pod 'SwiftLint'
+  pod 'Firebase/Auth'
 
 end

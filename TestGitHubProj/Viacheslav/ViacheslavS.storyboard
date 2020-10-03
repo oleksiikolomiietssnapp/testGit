@@ -16,44 +16,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-Kb-Y2J">
-                                <rect key="frame" x="24" y="128" width="366" height="46"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="google web page"/>
-                                <connections>
-                                    <segue destination="DHN-od-cMf" kind="show" id="Coy-q5-Cig"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deN-MS-H4Q">
-                                <rect key="frame" x="24" y="182" width="366" height="46"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="safari web page"/>
-                                <connections>
-                                    <action selector="touchButtonSafari:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="mAt-Lt-dxK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N39-rQ-y7y">
-                                <rect key="frame" x="24" y="236" width="366" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="to image screen"/>
-                                <connections>
-                                    <segue destination="lHe-7j-279" kind="show" id="Kpl-wW-9Iu"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-gv-gVa">
+                                <rect key="frame" x="24" y="128" width="366" height="208"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-Kb-Y2J">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="46"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="google web page"/>
+                                        <connections>
+                                            <segue destination="DHN-od-cMf" kind="show" id="Coy-q5-Cig"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deN-MS-H4Q">
+                                        <rect key="frame" x="0.0" y="54" width="366" height="46"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="safari web page"/>
+                                        <connections>
+                                            <action selector="touchButtonSafari:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="mAt-Lt-dxK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOM-Ut-PYV">
+                                        <rect key="frame" x="0.0" y="108" width="366" height="46"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="to pinch image screen"/>
+                                        <connections>
+                                            <action selector="touchPinchButton:" destination="sXI-Wp-ll0" eventType="touchUpInside" id="tEH-x9-euy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N39-rQ-y7y">
+                                        <rect key="frame" x="0.0" y="162" width="366" height="46"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="to image screen"/>
+                                        <connections>
+                                            <segue destination="lHe-7j-279" kind="show" id="Kpl-wW-9Iu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q17-uG-B3S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Q17-uG-B3S" firstAttribute="trailing" secondItem="deN-MS-H4Q" secondAttribute="trailing" constant="24" id="3rC-4S-9fP"/>
-                            <constraint firstItem="deN-MS-H4Q" firstAttribute="leading" secondItem="Q17-uG-B3S" secondAttribute="leading" constant="24" id="Cte-g2-yQX"/>
-                            <constraint firstItem="kHO-Kb-Y2J" firstAttribute="leading" secondItem="6F5-gj-1XP" secondAttribute="leading" constant="24" id="DDt-Tu-23u"/>
-                            <constraint firstAttribute="trailing" secondItem="kHO-Kb-Y2J" secondAttribute="trailing" constant="24" id="TQt-1h-Lla"/>
-                            <constraint firstItem="deN-MS-H4Q" firstAttribute="top" secondItem="kHO-Kb-Y2J" secondAttribute="bottom" constant="8" id="acY-iq-yab"/>
-                            <constraint firstItem="kHO-Kb-Y2J" firstAttribute="top" secondItem="6F5-gj-1XP" secondAttribute="top" constant="128" id="dwd-gL-06b"/>
+                            <constraint firstItem="EdA-gv-gVa" firstAttribute="top" secondItem="Q17-uG-B3S" secondAttribute="top" constant="84" id="PwD-6f-DVr"/>
+                            <constraint firstItem="Q17-uG-B3S" firstAttribute="trailing" secondItem="EdA-gv-gVa" secondAttribute="trailing" constant="24" id="cet-j4-fNX"/>
+                            <constraint firstItem="EdA-gv-gVa" firstAttribute="leading" secondItem="Q17-uG-B3S" secondAttribute="leading" constant="24" id="uB8-VR-ivR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xGz-2i-bEI"/>
@@ -73,7 +83,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Twu-8S-pJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="649"/>
+            <point key="canvasLocation" x="719" y="549"/>
         </scene>
         <!--Viacheslav Web View Controller-->
         <scene sceneID="MGv-eE-DW1">

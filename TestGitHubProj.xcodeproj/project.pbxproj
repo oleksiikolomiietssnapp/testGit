@@ -18,11 +18,16 @@
 		495472F0251F191F0022AD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472EE251F191F0022AD8E /* Main.storyboard */; };
 		495472F2251F19260022AD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495472F1251F19260022AD8E /* Assets.xcassets */; };
 		495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472F3251F19260022AD8E /* LaunchScreen.storyboard */; };
+		642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */; };
+		6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6420892B252870A800B9A1E1 /* avatar2.jpg */; };
 		648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */; };
 		648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */; };
 		64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */; };
 		64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C992632523BCDA00676069 /* ImageStoryboard.storyboard */; };
 		64C992672523BD0700676069 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C992662523BD0700676069 /* ImageViewController.swift */; };
+		64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C9926B252604F000676069 /* PinchStoryboard.storyboard */; };
+		64C9926F2526050900676069 /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9926E2526050900676069 /* PinchViewController.swift */; };
+		64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9927A25260B8C00676069 /* ImageScrollView.swift */; };
 		84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */; };
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
@@ -49,11 +54,16 @@
 		495472F4251F19260022AD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61D304654E3675D56752DB61 /* Pods_TestGitHubProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGitHubProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPinchViewViewController.swift; sourceTree = "<group>"; };
+		6420892B252870A800B9A1E1 /* avatar2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar2.jpg; sourceTree = "<group>"; };
 		648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavViewController.swift; sourceTree = "<group>"; };
 		648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViacheslavS.storyboard; sourceTree = "<group>"; };
 		648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavWebViewController.swift; sourceTree = "<group>"; };
 		64C992632523BCDA00676069 /* ImageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageStoryboard.storyboard; sourceTree = "<group>"; };
 		64C992662523BD0700676069 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		64C9926B252604F000676069 /* PinchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PinchStoryboard.storyboard; sourceTree = "<group>"; };
+		64C9926E2526050900676069 /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
+		64C9927A25260B8C00676069 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -82,7 +92,6 @@
 				2EECAD94DBB74B58A88AFFE1 /* Pods-TestGitHubProj.debug.xcconfig */,
 				9FD3F08BAD193EFD517D7B8A /* Pods-TestGitHubProj.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,6 +151,11 @@
 				648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */,
 				64C992632523BCDA00676069 /* ImageStoryboard.storyboard */,
 				64C992662523BD0700676069 /* ImageViewController.swift */,
+				6420892B252870A800B9A1E1 /* avatar2.jpg */,
+				64C9927A25260B8C00676069 /* ImageScrollView.swift */,
+				64C9926B252604F000676069 /* PinchStoryboard.storyboard */,
+				64C9926E2526050900676069 /* PinchViewController.swift */,
+				642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */,
 			);
 			path = Viacheslav;
 			sourceTree = "<group>";
@@ -244,6 +258,8 @@
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
+				64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */,
+				6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */,
 				BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */,
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
@@ -289,9 +305,12 @@
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
+				64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */,
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
+				64C9926F2526050900676069 /* PinchViewController.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
+				642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,

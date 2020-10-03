@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152AB1E134BD6C2443D805B5 /* Pods_TestGitHubProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D4F64EC17AE20B2CB5D389 /* Pods_TestGitHubProj.framework */; };
 		3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E41DE251F40160020F715 /* Anastasia.storyboard */; };
 		3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF531CD25274C8F00B4959A /* TextViewController.swift */; };
 		3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF531CE25274C8F00B4959A /* MoreButtonState.swift */; };
@@ -37,7 +38,6 @@
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
 		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
-		DDC646A4EBBC4DF129EEEC1B /* Pods_TestGitHubProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D304654E3675D56752DB61 /* Pods_TestGitHubProj.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +55,6 @@
 		495472F1251F19260022AD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495472F4251F19260022AD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61D304654E3675D56752DB61 /* Pods_TestGitHubProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGitHubProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPinchViewViewController.swift; sourceTree = "<group>"; };
 		6420892B252870A800B9A1E1 /* avatar2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar2.jpg; sourceTree = "<group>"; };
 		648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		64C9926B252604F000676069 /* PinchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PinchStoryboard.storyboard; sourceTree = "<group>"; };
 		64C9926E2526050900676069 /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		64C9927A25260B8C00676069 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		66D4F64EC17AE20B2CB5D389 /* Pods_TestGitHubProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGitHubProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8434B4AA2528705C002FEA2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDC646A4EBBC4DF129EEEC1B /* Pods_TestGitHubProj.framework in Frameworks */,
+				152AB1E134BD6C2443D805B5 /* Pods_TestGitHubProj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +168,7 @@
 		74B29CB454077D45E9B58BC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				61D304654E3675D56752DB61 /* Pods_TestGitHubProj.framework */,
+				66D4F64EC17AE20B2CB5D389 /* Pods_TestGitHubProj.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,8 +214,8 @@
 				495472E1251F191E0022AD8E /* Sources */,
 				495472E2251F191E0022AD8E /* Frameworks */,
 				495472E3251F191E0022AD8E /* Resources */,
-				9EB227251A65B80E1215F91E /* [CP] Embed Pods Frameworks */,
 				4988D935252899F0009A7EA8 /* ShellScript */,
+				3D60BE68D3EE3D72904069A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +282,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D60BE68D3EE3D72904069A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		412AD814E6A10C55E3E1E292 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,23 +337,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		9EB227251A65B80E1215F91E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -512,6 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAJ4V9RHA6;
 				INFOPLIST_FILE = TestGitHubProj/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,6 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAJ4V9RHA6;
 				INFOPLIST_FILE = TestGitHubProj/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

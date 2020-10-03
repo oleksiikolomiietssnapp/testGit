@@ -56,9 +56,10 @@ class SecondPinchViewViewController: UIViewController {
 
                 if imageView.transform.a >= (maxScale - 0.1) {
                     closedButton.isHidden = false
+                } else {
+                    closedButton.isHidden = true
                 }
             }
-            
             recognizer.scale = 1.0
         }
     }

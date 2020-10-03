@@ -83,7 +83,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Twu-8S-pJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="552"/>
+            <point key="canvasLocation" x="719" y="549"/>
         </scene>
         <!--Viacheslav Web View Controller-->
         <scene sceneID="MGv-eE-DW1">

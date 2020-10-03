@@ -79,28 +79,29 @@ class TextViewController: UIViewController {
         saveBtn.setTitle("Save", for: UIControl.State.normal)
         saveBtn.setTitleColor(UIColor.black, for: UIControl.State.normal)
         
-        let filePath = Bundle.main.path(forResource: "text", ofType: "txt")
-        guard let path = filePath else {
-            return
-        }
-        textView.text = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
         textView.font = UIFont.systemFont(ofSize: kFontSize, weight: UIFont.Weight.light)
         textView.textAlignment = NSTextAlignment.justified
         textView.textContainer.lineBreakMode = .byTruncatingTail
         textView.isScrollEnabled = false
         textView.isEditable = false
         
+        let filePath = Bundle.main.path(forResource: "text", ofType: "txt")
+        guard let path = filePath else {
+            return
+        }
+        textView.text = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        customiseSubviews()
+        customizeSubviews()
     }
     
     @objc func switchScrollViewMode() {
         scrollView.isScrollEnabled.toggle()
         moreButtonState = moreButtonState.switchState
-        customiseSubviews()
+        customizeSubviews()
     }
     
     @objc func appendTextToTextView() {
@@ -108,11 +109,11 @@ class TextViewController: UIViewController {
             return
         }
         textView.text.append("\n\(text)")
-        customiseSubviews()
+        customizeSubviews()
         textField.text = nil
     }
     
-    func customiseSubviews() {
+    func customizeSubviews() {
         textView.textContainer.maximumNumberOfLines = moreButtonState == MoreButtonState.more ? maxLines : 999
         textView.frame = CGRect(x: kOffset, y: kOffset, width: safeAreaWidth - kOffset * 2, height: safeAreaHeight - kOffset * 2)
         textView.sizeToFit()

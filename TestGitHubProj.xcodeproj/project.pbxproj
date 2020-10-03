@@ -30,9 +30,11 @@
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
 		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
+		DDC646A4EBBC4DF129EEEC1B /* Pods_TestGitHubProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D304654E3675D56752DB61 /* Pods_TestGitHubProj.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EECAD94DBB74B58A88AFFE1 /* Pods-TestGitHubProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.debug.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.debug.xcconfig"; sourceTree = "<group>"; };
 		3F7E41DE251F40160020F715 /* Anastasia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Anastasia.storyboard; sourceTree = "<group>"; };
 		3FF531CD25274C8F00B4959A /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		3FF531CE25274C8F00B4959A /* MoreButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreButtonState.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		495472F1251F19260022AD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495472F4251F19260022AD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61D304654E3675D56752DB61 /* Pods_TestGitHubProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGitHubProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavViewController.swift; sourceTree = "<group>"; };
 		648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViacheslavS.storyboard; sourceTree = "<group>"; };
 		648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavWebViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
+		9FD3F08BAD193EFD517D7B8A /* Pods-TestGitHubProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.release.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.release.xcconfig"; sourceTree = "<group>"; };
 		BA1AA9D525209335001C839F /* Svitlana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Svitlana.storyboard; sourceTree = "<group>"; };
 		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
 		BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaTextView.storyboard; sourceTree = "<group>"; };
@@ -65,12 +69,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC646A4EBBC4DF129EEEC1B /* Pods_TestGitHubProj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16E12D7E9918DD6FFFF349D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EECAD94DBB74B58A88AFFE1 /* Pods-TestGitHubProj.debug.xcconfig */,
+				9FD3F08BAD193EFD517D7B8A /* Pods-TestGitHubProj.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3F7E41E1251F401C0020F715 /* Anastasia */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +103,8 @@
 			children = (
 				495472E7251F191F0022AD8E /* TestGitHubProj */,
 				495472E6251F191F0022AD8E /* Products */,
+				16E12D7E9918DD6FFFF349D3 /* Pods */,
+				74B29CB454077D45E9B58BC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +146,14 @@
 			path = Viacheslav;
 			sourceTree = "<group>";
 		};
+		74B29CB454077D45E9B58BC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61D304654E3675D56752DB61 /* Pods_TestGitHubProj.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84D5D2DA251F3E5D00E854BD /* StepanStoryboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 495472F9251F19260022AD8E /* Build configuration list for PBXNativeTarget "TestGitHubProj" */;
 			buildPhases = (
+				412AD814E6A10C55E3E1E292 /* [CP] Check Pods Manifest.lock */,
 				495472E1251F191E0022AD8E /* Sources */,
 				495472E2251F191E0022AD8E /* Frameworks */,
 				495472E3251F191E0022AD8E /* Resources */,
@@ -229,6 +255,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		412AD814E6A10C55E3E1E292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestGitHubProj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		495472E1251F191E0022AD8E /* Sources */ = {
@@ -391,6 +442,7 @@
 		};
 		495472FA251F19260022AD8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EECAD94DBB74B58A88AFFE1 /* Pods-TestGitHubProj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -410,6 +462,7 @@
 		};
 		495472FB251F19260022AD8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FD3F08BAD193EFD517D7B8A /* Pods-TestGitHubProj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

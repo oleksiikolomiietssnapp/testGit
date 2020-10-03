@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>273348847455-c7iqhl0ri4tbgpve1hbt7839v6q63bll.apps.googleusercontent.com</string>
+	<string>161426387700-ajncn6ucqrugdhfh8oud70cdrcl462tm.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.273348847455-c7iqhl0ri4tbgpve1hbt7839v6q63bll</string>
+	<string>com.googleusercontent.apps.161426387700-ajncn6ucqrugdhfh8oud70cdrcl462tm</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDcL8f4B7iyM3eLdzKrJ556-6ZGFSmF06Q</string>
+	<string>AIzaSyDUcdY0LRiZEmuLd2kXlreMFr0UBCMoMtA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>273348847455</string>
+	<string>161426387700</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.oleksii.kolomiiets.TestGitHubProj</string>
 	<key>PROJECT_ID</key>
-	<string>testgit-36f07</string>
+	<string>testgit-b0038</string>
 	<key>STORAGE_BUCKET</key>
-	<string>testgit-36f07.appspot.com</string>
+	<string>testgit-b0038.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:273348847455:ios:c14b8bcb21b6bac6f538ea</string>
+	<string>1:161426387700:ios:4de6c6ba358d43a5a6e4a1</string>
 	<key>DATABASE_URL</key>
-	<string>https://testgit-36f07.firebaseio.com</string>
+	<string>https://testgit-b0038.firebaseio.com</string>
 </dict>
 </plist>

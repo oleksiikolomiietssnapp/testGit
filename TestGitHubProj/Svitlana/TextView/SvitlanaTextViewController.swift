@@ -11,6 +11,7 @@ import UIKit
 
 
 class SvitlanaTextViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var showButton: UIButton!
     @IBOutlet weak var heightOfTextView: NSLayoutConstraint!
     @IBOutlet weak var textView: UITextView!
@@ -32,6 +33,8 @@ class SvitlanaTextViewController: UIViewController {
         if showText {
             heightOfTextView.priority = .defaultLow
             showButton.setTitle("Show less", for: .normal)
+            
+            scrollView.becomeFirstResponder()
         } else {
             heightOfTextView.priority = .required
             showButton.setTitle("Show more", for: .normal)

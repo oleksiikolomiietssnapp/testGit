@@ -98,7 +98,6 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         
         imageZoomView?.frame = frameToCenter
         
-//        print(imageZoomView?.frame.width, imageZoomView?.frame.height)
     }
     
     @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
@@ -134,10 +133,6 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         
         return zoomRect
     }
-    
-    
-    
-    //------
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageZoomView

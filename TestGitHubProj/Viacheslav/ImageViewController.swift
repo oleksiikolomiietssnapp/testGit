@@ -43,11 +43,6 @@ class ImageViewController: UIViewController {
         imageScrollView?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         imageScrollView?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-
-        
-//        closedButton.isHidden = true
-//        scrollView.zoomScale = minSize * 2
-
     
 }
 

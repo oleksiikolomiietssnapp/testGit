@@ -86,10 +86,12 @@ class TextViewController: UIViewController {
         textView.isEditable = false
         
         let filePath = Bundle.main.path(forResource: "text", ofType: "txt")
-        guard let path = filePath else {
+        guard let path = filePath,
+              let text = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
+        else {
             return
         }
-        textView.text = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
+        textView.text = text
         
     }
     

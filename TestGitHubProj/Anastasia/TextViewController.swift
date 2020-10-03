@@ -91,7 +91,7 @@ class TextViewController: UIViewController {
         else {
             return
         }
-        textView.text = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
+        textView.text = text
         
     }
     

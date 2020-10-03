@@ -23,7 +23,7 @@
 		64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */; };
 		64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C992632523BCDA00676069 /* ImageStoryboard.storyboard */; };
 		64C992672523BD0700676069 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C992662523BD0700676069 /* ImageViewController.swift */; };
-		8434B4AB2528705C002FEA2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8434B4AA2528705C002FEA2D /* GoogleService-Info.plist */; };
+		8434B4AE2528B72A002FEA2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8434B4AD2528B72A002FEA2D /* GoogleService-Info.plist */; };
 		84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */; };
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
@@ -56,7 +56,7 @@
 		648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavWebViewController.swift; sourceTree = "<group>"; };
 		64C992632523BCDA00676069 /* ImageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageStoryboard.storyboard; sourceTree = "<group>"; };
 		64C992662523BD0700676069 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		8434B4AA2528705C002FEA2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8434B4AD2528B72A002FEA2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -133,7 +133,7 @@
 				495472F1251F19260022AD8E /* Assets.xcassets */,
 				495472F3251F19260022AD8E /* LaunchScreen.storyboard */,
 				495472F6251F19260022AD8E /* Info.plist */,
-				8434B4AA2528705C002FEA2D /* GoogleService-Info.plist */,
+				8434B4AD2528B72A002FEA2D /* GoogleService-Info.plist */,
 			);
 			path = TestGitHubProj;
 			sourceTree = "<group>";
@@ -249,13 +249,13 @@
 			files = (
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
+				8434B4AE2528B72A002FEA2D /* GoogleService-Info.plist in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
 				BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */,
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
 				64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
-				8434B4AB2528705C002FEA2D /* GoogleService-Info.plist in Resources */,
 				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
 				3FF531D325274C8F00B4959A /* text.txt in Resources */,
 			);

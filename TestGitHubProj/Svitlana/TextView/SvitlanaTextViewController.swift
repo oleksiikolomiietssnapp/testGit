@@ -11,30 +11,34 @@ import UIKit
 
 
 class SvitlanaTextViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var showButton: UIButton!
-    
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-    var showText = true
-    @IBAction func showMoreOrLess(_ sender: UIButton) {
-        if showText {
-            textView.isScrollEnabled = true
-            bottomConstraint.constant = 16
-            showButton.setTitle("Show less", for: .normal)
-        } else {
-            textView.isScrollEnabled = false
-            bottomConstraint.constant = 399
-            showButton.setTitle("Show more", for: .normal)
-        }
-        showText = !showText        
-    }
-    
+    @IBOutlet weak var heightOfTextView: NSLayoutConstraint!
     @IBOutlet weak var textView: UITextView!
+    
+    var showText = false
+    
+    @IBAction func showMoreOrLess(_ sender: UIButton) {
+        showText = !showText
+        setupConstraints()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         textView.textContainer.lineBreakMode = .byTruncatingTail
-        
     }
-
+    
+    fileprivate func setupConstraints() {
+        textView.isScrollEnabled = showText
+        if showText {
+            heightOfTextView.priority = .defaultLow
+            showButton.setTitle("Show less", for: .normal)
+            
+            scrollView.becomeFirstResponder()
+        } else {
+            heightOfTextView.priority = .required
+            showButton.setTitle("Show more", for: .normal)
+        }
+    }
+    
 }

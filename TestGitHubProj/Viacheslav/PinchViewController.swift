@@ -14,7 +14,7 @@ class PinchViewController: UIViewController {
     
     var imageViewScale: CGFloat = 1.0
     let maxScale: CGFloat = 4.0
-    let minScale: CGFloat = 0.5
+    let minScale: CGFloat = 1
     
 //    let closedButtonTwo = UIButton()
     

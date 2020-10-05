@@ -38,6 +38,9 @@
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
 		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
+		BAB3BBC32528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3BBC22528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift */; };
+		BAB3BBC72528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB3BBC62528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard */; };
+		BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
 		BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaTextView.storyboard; sourceTree = "<group>"; };
 		BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaTextViewController.swift; sourceTree = "<group>"; };
+		BAB3BBC22528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaDataBaseFirebaseViewController.swift; sourceTree = "<group>"; };
+		BAB3BBC62528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaDataBaseFirebase.storyboard; sourceTree = "<group>"; };
+		BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 		495472E7251F191F0022AD8E /* TestGitHubProj */ = {
 			isa = PBXGroup;
 			children = (
+				BAB3BBCA252A33470087DDD9 /* Services */,
 				BA1AA9D82520934D001C839F /* Svitlana */,
 				84D5D2DA251F3E5D00E854BD /* StepanStoryboard */,
 				641CA5DE25238FC700AC0769 /* Viacheslav */,
@@ -187,6 +194,7 @@
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
 			isa = PBXGroup;
 			children = (
+				BAB3BBC12528DAF80087DDD9 /* DBFirebase */,
 				BA1AA9E42520DE14001C839F /* TextView */,
 				BA1AA9D525209335001C839F /* Svitlana.storyboard */,
 				BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */,
@@ -201,6 +209,23 @@
 				BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */,
 			);
 			path = TextView;
+			sourceTree = "<group>";
+		};
+		BAB3BBC12528DAF80087DDD9 /* DBFirebase */ = {
+			isa = PBXGroup;
+			children = (
+				BAB3BBC22528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift */,
+				BAB3BBC62528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard */,
+			);
+			path = DBFirebase;
+			sourceTree = "<group>";
+		};
+		BAB3BBCA252A33470087DDD9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +291,7 @@
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
+				BAB3BBC72528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
 				64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */,
 				6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */,
@@ -345,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */,
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
@@ -353,6 +380,7 @@
 				64C9926F2526050900676069 /* PinchViewController.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
+				BAB3BBC32528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift in Sources */,
 				642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */,

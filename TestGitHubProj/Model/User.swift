@@ -6,8 +6,8 @@
 //
 
 struct User: Codable {
-    let name: String
-    let age, count: Int
+    var name: String
+    var age, count: Int
     
     init(name: String, age: Int, count: Int) {
         self.name = name

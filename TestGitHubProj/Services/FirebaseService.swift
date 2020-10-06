@@ -10,17 +10,6 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
-struct User {
-    var name: String
-    var age: Int
-    var count: Int
-    init(name: String, age: Int, count: Int) {
-        self.name = name
-        self.age = age
-        self.count = count
-    }
-}
-
 
 final class FirebaseService {
     private static let db = Firestore.firestore()

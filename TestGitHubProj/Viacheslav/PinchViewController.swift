@@ -16,7 +16,11 @@ class PinchViewController: UIViewController {
     let maxScale: CGFloat = 4.0
     let minScale: CGFloat = 1
     
-//    let closedButtonTwo = UIButton()
+    lazy var zoomingTap: UITapGestureRecognizer = {
+        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
+        zoomingTap.numberOfTapsRequired = 2
+        return zoomingTap
+    }()
     
     @IBOutlet var closedButton: UIButton!
 
@@ -26,28 +30,6 @@ class PinchViewController: UIViewController {
         closedButton.isHidden = true
         closedButton.window?.windowLevel = UIWindow.Level(rawValue: CGFloat.greatestFiniteMagnitude)
         
-//        closedButtonTwo.frame = CGRect(x: 16, y: 96, width: 32, height: 32)
-//        closedButtonTwo.setTitle("X", for: .normal)
-//        closedButtonTwo.setTitleColor(.black, for: .normal)
-//        closedButtonTwo.titleLabel?.font = UIFont(name: "Heiti TC", size: 32)
-//
-//        self.view.addSubview(closedButtonTwo)
-
-//        imageView.frame = CGRect(x: 16, y: 64, width: 400, height: 300)
-//        imageView.image = #imageLiteral(resourceName: "avatar")
-//        imageView.isUserInteractionEnabled = true
-//        
-//        self.view.addSubview(imageView)
-//        
-//        imageView.center = view.center
-//        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//        
-//        imageView.addGestureRecognizer(pinchGesture)
-//        pinchGesture.addTarget(self, action: #selector(pinchAction))
-        
-//        let height = imageView.frame.height
-//        print(height)
     }
     
     @IBAction func touchClosedButton(_ sender: UIButton) {
@@ -76,6 +58,21 @@ class PinchViewController: UIViewController {
         }
     }
     
+    @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
+        let location = sender.location(in: sender.view)
+        self.zoom(point: location, animated: true)
+        
+    }
+    
+    func zoom(point: CGPoint, animated: Bool) {
 
+    }
+    
+    func zoomRect(scale: CGFloat, center: CGPoint) -> CGRect {
+        
+        let zoomRect = CGRect.zero
+        
+        return zoomRect
+    }
 
 }

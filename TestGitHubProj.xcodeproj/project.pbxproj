@@ -20,8 +20,15 @@
 		495472F2251F19260022AD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495472F1251F19260022AD8E /* Assets.xcassets */; };
 		495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495472F3251F19260022AD8E /* LaunchScreen.storyboard */; };
 		4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4988DA152528BA40009A7EA8 /* GoogleService-Info.plist */; };
+		640B02FA252CE4A600B9D530 /* ShowImageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640B02F9252CE4A600B9D530 /* ShowImageStoryboard.storyboard */; };
+		640B02FD252CE4B700B9D530 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B02FC252CE4B700B9D530 /* ShowImageViewController.swift */; };
 		642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */; };
 		6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6420892B252870A800B9A1E1 /* avatar2.jpg */; };
+		647A9F65252B8C7800E340D1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A9F63252B8C7800E340D1 /* ImageCollectionViewCell.swift */; };
+		647A9F66252B8C7800E340D1 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647A9F64252B8C7800E340D1 /* ImageCollectionViewCell.xib */; };
+		647A9F69252B8CC800E340D1 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A9F68252B8CC800E340D1 /* ImageListViewController.swift */; };
+		647A9F6C252B8CE000E340D1 /* ImageListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647A9F6B252B8CE000E340D1 /* ImageListStoryboard.storyboard */; };
+		647A9F72252C951400E340D1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A9F71252C951400E340D1 /* List.swift */; };
 		648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */; };
 		648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */; };
 		64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */; };
@@ -56,8 +63,15 @@
 		495472F4251F19260022AD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		495472F6251F19260022AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4988DA152528BA40009A7EA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		640B02F9252CE4A600B9D530 /* ShowImageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowImageStoryboard.storyboard; sourceTree = "<group>"; };
+		640B02FC252CE4B700B9D530 /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 		642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPinchViewViewController.swift; sourceTree = "<group>"; };
 		6420892B252870A800B9A1E1 /* avatar2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar2.jpg; sourceTree = "<group>"; };
+		647A9F63252B8C7800E340D1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		647A9F64252B8C7800E340D1 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		647A9F68252B8CC800E340D1 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		647A9F6B252B8CE000E340D1 /* ImageListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageListStoryboard.storyboard; sourceTree = "<group>"; };
+		647A9F71252C951400E340D1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavViewController.swift; sourceTree = "<group>"; };
 		648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViacheslavS.storyboard; sourceTree = "<group>"; };
 		648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViacheslavWebViewController.swift; sourceTree = "<group>"; };
@@ -161,8 +175,31 @@
 				64C9926B252604F000676069 /* PinchStoryboard.storyboard */,
 				64C9926E2526050900676069 /* PinchViewController.swift */,
 				642089242527489D00B9A1E1 /* SecondPinchViewViewController.swift */,
+				647A9F62252B8BDE00E340D1 /* ImageCell */,
 			);
 			path = Viacheslav;
+			sourceTree = "<group>";
+		};
+		647A9F62252B8BDE00E340D1 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				647A9F68252B8CC800E340D1 /* ImageListViewController.swift */,
+				647A9F6B252B8CE000E340D1 /* ImageListStoryboard.storyboard */,
+				647A9F71252C951400E340D1 /* List.swift */,
+				647A9F70252C94E100E340D1 /* Cell */,
+				640B02F9252CE4A600B9D530 /* ShowImageStoryboard.storyboard */,
+				640B02FC252CE4B700B9D530 /* ShowImageViewController.swift */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		647A9F70252C94E100E340D1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				647A9F63252B8C7800E340D1 /* ImageCollectionViewCell.swift */,
+				647A9F64252B8C7800E340D1 /* ImageCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		74B29CB454077D45E9B58BC9 /* Frameworks */ = {
@@ -265,6 +302,7 @@
 			files = (
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
+				640B02FA252CE4A600B9D530 /* ShowImageStoryboard.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
 				64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */,
@@ -273,8 +311,10 @@
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
 				64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */,
+				647A9F66252B8C7800E340D1 /* ImageCollectionViewCell.xib in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
 				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
+				647A9F6C252B8CE000E340D1 /* ImageListStoryboard.storyboard in Resources */,
 				3FF531D325274C8F00B4959A /* text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,16 +391,20 @@
 				64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */,
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
 				64C9926F2526050900676069 /* PinchViewController.swift in Sources */,
+				647A9F65252B8C7800E340D1 /* ImageCollectionViewCell.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
 				642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */,
 				648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */,
+				647A9F72252C951400E340D1 /* List.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,
 				3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */,
 				648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */,
 				84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */,
+				647A9F69252B8CC800E340D1 /* ImageListViewController.swift in Sources */,
+				640B02FD252CE4B700B9D530 /* ShowImageViewController.swift in Sources */,
 				84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(image: UIImage) -> Void {
+    func set(image: UIImage) {
         
         imageZoomView?.removeFromSuperview()
         imageZoomView = nil
@@ -39,10 +39,13 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         guard let image = imageZoomView else { return }
         self.addSubview(image)
         
+//        changeSizeAfterOrientation()
+        
         configurateFor(imageSize: image.intrinsicContentSize)
+
     }
     
-    func configurateFor(imageSize: CGSize) -> Void {
+    func configurateFor(imageSize: CGSize) {
         self.contentSize = imageSize
         
         setCurrentMaxAndMinZoomScale()
@@ -70,13 +73,12 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         
         var maxScale: CGFloat = 1
         
-        if minScale < 0.1 { maxScale = 0.3 }
-        if minScale >= 0.3 && minScale < 0.5 { maxScale = 0.7 }
+        if minScale < 0.1 { maxScale = 0.5 }
+        if minScale >= 0.3 && minScale < 0.5 { maxScale = 1 }
         if minScale >= 0.5 { maxScale = max(1, minScale) }
         
         self.minimumZoomScale = minScale
         self.maximumZoomScale = maxScale
-        
     }
     
     func centerImage() {
@@ -100,19 +102,29 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         
     }
     
+    func changeSizeAfterOrientation() {
+        
+        if ImageViewController.Orientation.portrait.rotate != 1 {
+            
+//            setCurrentMaxAndMinZoomScale()
+            print(ImageViewController.Orientation.portrait.rotate)
+//            guard let image = imageZoomView?.image else { return }
+//            configurateFor(imageSize: image.size)
+        }
+    }
+    
     @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
         let location = sender.location(in: sender.view)
         self.zoom(point: location, animated: true)
         
-        
     }
     
-    func zoom(point: CGPoint, animated: Bool) -> Void {
+    func zoom(point: CGPoint, animated: Bool) {
         let currentScale = self.zoomScale
         let minScale = self.minimumZoomScale
         let maxScale = self.maximumZoomScale
         
-        if (minScale == maxScale && minScale > 1) { return }
+        if minScale == maxScale && minScale > 1 { return }
         
         let toScale = maxScale
         let finalScale = (currentScale == minScale) ? toScale : minScale

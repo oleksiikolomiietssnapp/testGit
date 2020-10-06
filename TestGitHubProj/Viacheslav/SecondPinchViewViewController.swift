@@ -63,6 +63,5 @@ class SecondPinchViewViewController: UIViewController {
             recognizer.scale = 1.0
         }
     }
-    
 
 }

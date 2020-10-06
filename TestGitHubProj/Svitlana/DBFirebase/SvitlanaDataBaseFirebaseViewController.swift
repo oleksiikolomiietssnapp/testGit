@@ -9,12 +9,18 @@ import Foundation
 import UIKit
 
 class SvitlanaDataBaseFirebaseViewController: UIViewController {
+    func showUsers(users: [User]) {
+        textView.text = "\(users)"
+    }
+    @IBOutlet weak var textView: UITextView!
     //it will be button save
     @IBAction func runDataToFirebase(_ sender: UIButton) {
         // for reading, not to writing below (test)
-        FirebaseService.readUsersFromDB(collectionName: "Users") { (users) in
+        FirebaseService.readUsersFromDB(callback: { users in
             print(users)
-        }
+            self.textView.text = "\(users)"
+        })
+//        FirebaseService.readDataFromDB(collectionName: "Users", documentName: "AH-34")
     }
 
 }

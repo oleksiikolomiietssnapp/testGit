@@ -72,13 +72,17 @@ final class FirebaseService {
     }
     
     /// Get data from collection "Users"
-    class func readUsersFromDB(collectionName: String, callback: @escaping ([User]) -> Void) -> [User] {
-        var arrOfUsers: [User] = []
-        db.collection(collectionName).getDocuments() { (querySnapshot, err) in
+    class func readUsersFromDB(callback: @escaping ([User]) -> Void) {
+        db.collection("Users").getDocuments() { (querySnapshot, err) in
+            var users: [User] = []
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                for document in querySnapshot!.documents {
+                guard let documents = querySnapshot?.documents else {
+                    print("Empty response")
+                    return
+                }
+                for document in documents {
                     let parsedData = document.data()
                     var user = User(name: "", age: 0, count: 0)
                     for (key, value) in parsedData {
@@ -92,12 +96,11 @@ final class FirebaseService {
                             user.count = value as! Int
                         }
                     }
-                    arrOfUsers.append(user)
+                    users.append(user)
                 }
             }
-            callback(arrOfUsers)
+            callback(users)
         }
-        return arrOfUsers
     }
     
     /// Retrieve the contents of a single document

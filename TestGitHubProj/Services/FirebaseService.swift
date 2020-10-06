@@ -10,6 +10,18 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
+struct User {
+    var name: String
+    var age: Int
+    var count: Int
+    init(name: String, age: Int, count: Int) {
+        self.name = name
+        self.age = age
+        self.count = count
+    }
+}
+
+
 final class FirebaseService {
     private static let db = Firestore.firestore()
     
@@ -56,6 +68,7 @@ final class FirebaseService {
             }
         }
     }
+    
     /// Get all documents in a collection
     class func readDataFromDB(collectionName: String) {
         db.collection(collectionName).getDocuments() { (querySnapshot, err) in
@@ -67,6 +80,35 @@ final class FirebaseService {
                 }
             }
         }
+    }
+    
+    /// Get data from collection "Users"
+    class func readUsersFromDB(collectionName: String, callback: @escaping ([User]) -> Void) -> [User] {
+        var arrOfUsers: [User] = []
+        db.collection(collectionName).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let parsedData = document.data()
+                    var user = User(name: "", age: 0, count: 0)
+                    for (key, value) in parsedData {
+                        if key == "name"{
+                            user.name = value as! String
+                        }
+                        if key == "age"{
+                            user.age = value as! Int
+                        }
+                        if key == "count"{
+                            user.count = value as! Int
+                        }
+                    }
+                    arrOfUsers.append(user)
+                }
+            }
+            callback(arrOfUsers)
+        }
+        return arrOfUsers
     }
     
     /// Retrieve the contents of a single document

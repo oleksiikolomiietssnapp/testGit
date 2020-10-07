@@ -59,10 +59,13 @@ final class FirebaseService {
     /// Get all documents in a collection
     class func readDataFromDB(collectionName: String) {
         db.collection(collectionName).getDocuments() { (querySnapshot, err) in
+            var names = [String]()
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
+                    let name = document.get("name") as! String
+                    names.append(name)
                     print("\(document.documentID) => \(document.data())")
                 }
             }

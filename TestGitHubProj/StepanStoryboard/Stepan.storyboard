@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="47.544642857142854"/>
         </scene>
-        <!--Firebase View Controller-->
+        <!--TITLEEE-->
         <scene sceneID="q0n-io-fnU">
             <objects>
                 <viewController id="uZz-u1-DHJ" customClass="FirebaseViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nr6-Gi-DHH">
-                                <rect key="frame" x="77" y="328" width="260" height="240"/>
+                                <rect key="frame" x="77" y="298" width="260" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-aA-pgr">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
@@ -167,7 +167,7 @@
                                             <constraint firstAttribute="height" constant="60" id="sgF-sw-F1R"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pL8-ZQ-cyD">
                                         <rect key="frame" x="0.0" y="120" width="260" height="60"/>
@@ -183,10 +183,20 @@
                                             <action selector="signInButtonPressed:" destination="uZz-u1-DHJ" eventType="touchUpInside" id="xaJ-sB-ijP"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soU-ic-mmj">
+                                        <rect key="frame" x="0.0" y="240" width="260" height="60"/>
+                                        <state key="normal" title="Get all users"/>
+                                        <connections>
+                                            <action selector="signInButtonPressed:" destination="uZz-u1-DHJ" eventType="touchUpInside" id="VGB-zL-2FQ"/>
+                                            <segue destination="bQU-20-2ke" kind="popoverPresentation" popoverAnchorView="soU-ic-mmj" id="yCe-ns-Vae">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3E-uz-kFc">
-                                <rect key="frame" x="107" y="120" width="200" height="200"/>
+                                <rect key="frame" x="107" y="90" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="cW9-Tu-0d2"/>
                                     <constraint firstAttribute="height" constant="200" id="qcY-WV-lQ7"/>
@@ -205,8 +215,9 @@
                             <constraint firstItem="nr6-Gi-DHH" firstAttribute="centerX" secondItem="ZXT-Qg-sMK" secondAttribute="centerX" id="qZF-fb-tgL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lma-qC-WTY"/>
+                    <navigationItem key="navigationItem" title="TITLEEE" id="lma-qC-WTY"/>
                     <connections>
+                        <outlet property="centralStackView" destination="nr6-Gi-DHH" id="Utj-NU-ich"/>
                         <outlet property="emailTextField" destination="xBE-aA-pgr" id="vJ5-i7-tas"/>
                         <outlet property="passwordTextField" destination="ast-G2-U9j" id="SbQ-Rt-dhZ"/>
                         <outlet property="resultLabel" destination="l3E-uz-kFc" id="J0t-9h-Ing"/>
@@ -215,6 +226,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Xk-yx-CP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1569.5652173913045" y="726.5625"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="tTQ-br-xKY">
+            <objects>
+                <tableViewController title="Users" id="bQU-20-2ke" customClass="UsersTableViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WN3-MJ-jjT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fMl-th-CBR">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fMl-th-CBR" id="ESK-Xu-2nT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bQU-20-2ke" id="EQt-Rk-blC"/>
+                            <outlet property="delegate" destination="bQU-20-2ke" id="4AB-W5-n2M"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jcw-vX-LG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2341" y="727"/>
         </scene>
     </scenes>
     <resources>

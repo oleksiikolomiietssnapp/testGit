@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class TextViewController: UIViewController {
     private let textView = UITextView()
     private let showMoreBtn = UIButton()
@@ -22,34 +21,24 @@ class TextViewController: UIViewController {
     var moreButtonState = MoreButtonState.more
     
     var safeAreaHeight: CGFloat {
-        get {
-            return self.view.safeAreaLayoutGuide.layoutFrame.size.height
-        }
+        return self.view.safeAreaLayoutGuide.layoutFrame.size.height
     }
     
     var safeAreaWidth: CGFloat {
-        get {
-            return self.view.safeAreaLayoutGuide.layoutFrame.size.width
-        }
+        return self.view.safeAreaLayoutGuide.layoutFrame.size.width
     }
     
     var safeAreaMinX: CGFloat {
-        get {
-            return self.view.safeAreaLayoutGuide.layoutFrame.minX
-        }
+        return self.view.safeAreaLayoutGuide.layoutFrame.minX
     }
     
     var safeAreaMinY: CGFloat {
-        get {
-            return self.view.safeAreaLayoutGuide.layoutFrame.minY
-        }
+        return self.view.safeAreaLayoutGuide.layoutFrame.minY
     }
     
     var maxLines: Int {
-        get {
-            let devider = kFontSize + 3.3
-            return Int((safeAreaHeight - 5 * kOffset - 3 * kBtnHeight) / devider)
-        }
+        let devider = kFontSize + 3.3
+        return Int((safeAreaHeight - 5 * kOffset - 3 * kBtnHeight) / devider)
     }
     
     override func viewDidLoad() {

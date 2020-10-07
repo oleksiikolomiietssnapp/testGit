@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-
-
 class SvitlanaTextViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var showButton: UIButton!

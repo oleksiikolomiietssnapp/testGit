@@ -10,6 +10,7 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
+
 final class FirebaseService {
     private static let db = Firestore.firestore()
     
@@ -56,6 +57,7 @@ final class FirebaseService {
             }
         }
     }
+    
     /// Get all documents in a collection
     class func readDataFromDB(collectionName: String) {
         db.collection(collectionName).getDocuments() { (querySnapshot, err) in
@@ -69,6 +71,38 @@ final class FirebaseService {
                     print("\(document.documentID) => \(document.data())")
                 }
             }
+        }
+    }
+    
+    /// Get data from collection "Users"
+    class func readUsersFromDB(callback: @escaping ([User]) -> Void) {
+        db.collection("Users").getDocuments() { (querySnapshot, err) in
+            var users: [User] = []
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                guard let documents = querySnapshot?.documents else {
+                    print("Empty response")
+                    return
+                }
+                for document in documents {
+                    let parsedData = document.data()
+                    var user = User(name: "", age: 0, count: 0)
+                    for (key, value) in parsedData {
+                        if key == "name"{
+                            user.name = value as! String
+                        }
+                        if key == "age"{
+                            user.age = value as! Int
+                        }
+                        if key == "count"{
+                            user.count = value as! Int
+                        }
+                    }
+                    users.append(user)
+                }
+            }
+            callback(users)
         }
     }
     

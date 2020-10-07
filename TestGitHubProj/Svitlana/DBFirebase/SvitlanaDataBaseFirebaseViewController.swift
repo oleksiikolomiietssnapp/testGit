@@ -9,18 +9,29 @@ import Foundation
 import UIKit
 
 class SvitlanaDataBaseFirebaseViewController: UIViewController {
-    func showUsers(users: [User]) {
-        textView.text = "\(users)"
+    @IBOutlet weak var count: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var age: UITextField!
+    
+    @IBAction func save(_ sender: UIButton) {
+        let countValue = Int(count.text!)
+        let ageValue = Int(age.text!)
+        let nameValue = name.text!
+        FirebaseService.addDataToDB(collectionName: "Users", dictionaryData: ["name" : nameValue, "age" : ageValue!, "count": countValue!])
+        
+//                FirebaseService.readUsersFromDB(callback: { users in
+//                    print(users)
+//                })
+//
+        
+        //        FirebaseService.readUsersFromDB { (users) in
+        //            print(users)
+        //        }
     }
-    @IBOutlet weak var textView: UITextView!
-    //it will be button save
-    @IBAction func runDataToFirebase(_ sender: UIButton) {
-        // for reading, not to writing below (test)
-        FirebaseService.readUsersFromDB(callback: { users in
-            print(users)
-            self.textView.text = "\(users)"
-        })
-//        FirebaseService.readDataFromDB(collectionName: "Users", documentName: "AH-34")
-    }
+
+
+        
+
+    
 
 }

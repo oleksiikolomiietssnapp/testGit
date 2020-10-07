@@ -1,19 +1,19 @@
+////
+////  UsersModel.swift
+////  TestGitHubProj
+////
+////  Created by Stepan Niemykin on 06.10.2020.
+////
 //
-//  UsersModel.swift
-//  TestGitHubProj
+//import Foundation
 //
-//  Created by Stepan Niemykin on 06.10.2020.
+//struct User: Codable {
+//    let name: String
+//    let age, count: Int
 //
-
-import Foundation
-
-struct User: Codable {
-    let name: String
-    let age, count: Int
-    
-    init(name: String, age: Int, count: Int) {
-        self.name = name
-        self.age = age
-        self.count = count
-    }
-}
+//    init(name: String, age: Int, count: Int) {
+//        self.name = name
+//        self.age = age
+//        self.count = count
+//    }
+//}

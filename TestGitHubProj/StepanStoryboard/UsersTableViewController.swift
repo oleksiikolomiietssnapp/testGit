@@ -18,7 +18,6 @@ class UsersTableViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "reuse")
     }
-    let valera = User(name: <#T##String#>, age: <#T##Int#>, count: <#T##Int#>)
     
     var users = [User(name: "Valera", age: 20, count: 1000), User(name: "Step", age: 30, count: 12), User(name: "Sveta", age: 25, count: 123124)]
     // MARK: - Table view data source

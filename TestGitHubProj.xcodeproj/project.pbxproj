@@ -113,14 +113,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3F0D8B1A252DE67D00C090D4 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				3FF531CE25274C8F00B4959A /* MoreButtonState.swift */,
+				3FF531CF25274C8F00B4959A /* text.txt */,
+				3FF531CD25274C8F00B4959A /* TextViewController.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
 		3F7E41E1251F401C0020F715 /* Anastasia */ = {
 			isa = PBXGroup;
 			children = (
 				3F7E41DE251F40160020F715 /* Anastasia.storyboard */,
 				3FF531D025274C8F00B4959A /* AnastasiaViewController.swift */,
-				3FF531CE25274C8F00B4959A /* MoreButtonState.swift */,
-				3FF531CF25274C8F00B4959A /* text.txt */,
-				3FF531CD25274C8F00B4959A /* TextViewController.swift */,
+				3F0D8B1A252DE67D00C090D4 /* TextView */,
 				3F805226252B1DF9001B7FF7 /* RequestViewController.swift */,
 			);
 			path = Anastasia;
@@ -129,7 +137,6 @@
 		3F80522C252B1EEF001B7FF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3F80522E252B20AE001B7FF7 /* NetworkingService.swift */,
 				3F805229252B1EE8001B7FF7 /* User.swift */,
 			);
 			path = Model;
@@ -243,6 +250,7 @@
 		BAB3BBCA252A33470087DDD9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3F80522E252B20AE001B7FF7 /* NetworkingService.swift */,
 				BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */,
 			);
 			path = Services;

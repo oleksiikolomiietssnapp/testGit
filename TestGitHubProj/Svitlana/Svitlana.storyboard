@@ -24,7 +24,7 @@
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OYV-N2-ZLG" kind="show" id="ZvO-ID-lpX"/>
+                                    <segue destination="8gN-rl-CXn" kind="show" id="g3o-eS-3oY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
@@ -37,6 +37,9 @@
                                 <state key="normal" title="Show text view">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="elp-UP-2ey" kind="show" id="Tbe-8p-UAk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wz7-ko-N9f"/>
@@ -80,6 +83,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTu-bx-ZM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="88"/>
+        </scene>
+        <!--SvitlanaDataBaseFirebase-->
+        <scene sceneID="G5V-xd-vDL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SvitlanaDataBaseFirebase" referencedIdentifier="SvitlanaDataBaseFirebase" id="8gN-rl-CXn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UDE-sF-QCi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QS6-it-NAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027" y="142"/>
         </scene>
     </scenes>
     <resources>

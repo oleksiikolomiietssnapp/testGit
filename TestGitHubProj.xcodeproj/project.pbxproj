@@ -44,6 +44,8 @@
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
 		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
+		BA54C314252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C312252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift */; };
+		BA54C315252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA54C313252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard */; };
 		BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
 		BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaTextView.storyboard; sourceTree = "<group>"; };
 		BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaTextViewController.swift; sourceTree = "<group>"; };
+		BA54C312252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvitlanaDataBaseFirebaseViewController.swift; sourceTree = "<group>"; };
+		BA54C313252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SvitlanaDataBaseFirebase.storyboard; sourceTree = "<group>"; };
 		BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +235,7 @@
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
 			isa = PBXGroup;
 			children = (
+				BA54C311252F7A480067E4B4 /* DBFirebase */,
 				BA1AA9E42520DE14001C839F /* TextView */,
 				BA1AA9D525209335001C839F /* Svitlana.storyboard */,
 				BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */,
@@ -245,6 +250,15 @@
 				BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */,
 			);
 			path = TextView;
+			sourceTree = "<group>";
+		};
+		BA54C311252F7A480067E4B4 /* DBFirebase */ = {
+			isa = PBXGroup;
+			children = (
+				BA54C312252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift */,
+				BA54C313252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard */,
+			);
+			path = DBFirebase;
 			sourceTree = "<group>";
 		};
 		BAB3BBCA252A33470087DDD9 /* Services */ = {
@@ -318,6 +332,7 @@
 			files = (
 				849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */,
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
+				BA54C315252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard in Resources */,
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
@@ -413,6 +428,7 @@
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */,
 				648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */,
+				BA54C314252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,
 				3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */,
 				3F805227252B1DF9001B7FF7 /* RequestViewController.swift in Sources */,

@@ -36,9 +36,6 @@
                                 <state key="normal" title="Add user">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="OYV-N2-ZLG" kind="show" id="ZvO-ID-lpX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wz7-ko-N9f"/>
@@ -73,16 +70,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTu-bx-ZM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="88"/>
-        </scene>
-        <!--SvitlanaDataBaseFirebase-->
-        <scene sceneID="fbm-TU-5ET">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SvitlanaDataBaseFirebase" referencedIdentifier="SvitlanaDataBaseFirebase" id="OYV-N2-ZLG" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="6XS-BF-Zce"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D7w-Wj-mwo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1049" y="140"/>
         </scene>
     </scenes>
     <resources>

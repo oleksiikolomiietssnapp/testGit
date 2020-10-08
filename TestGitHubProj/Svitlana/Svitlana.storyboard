@@ -16,30 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
-                                <rect key="frame" x="110" y="244" width="220" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Show text view">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="elp-UP-2ey" kind="show" id="0eD-Tn-Z2v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
-                                <rect key="frame" x="110" y="391" width="220" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
+                                <rect key="frame" x="64" y="428" width="286" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Add user">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="OYV-N2-ZLG" kind="show" id="ZvO-ID-lpX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
+                                <rect key="frame" x="64" y="300" width="286" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pSQ-du-3hd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Show text view">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wz7-ko-N9f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="top" secondItem="UWd-Zv-Pph" secondAttribute="bottom" constant="78" id="VGp-aD-mS0"/>
+                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="centerX" secondItem="oot-m5-Y8s" secondAttribute="centerX" id="ZWW-ch-Oo0"/>
+                            <constraint firstItem="UWd-Zv-Pph" firstAttribute="top" secondItem="wz7-ko-N9f" secondAttribute="top" constant="256" id="buA-ll-GGJ"/>
+                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="leading" secondItem="UWd-Zv-Pph" secondAttribute="leading" id="htE-J3-EPw"/>
+                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="trailing" secondItem="UWd-Zv-Pph" secondAttribute="trailing" id="oui-jI-d8f"/>
+                            <constraint firstItem="wz7-ko-N9f" firstAttribute="bottom" secondItem="lOE-XZ-uvz" secondAttribute="bottom" constant="384" id="vFg-hN-PAZ"/>
+                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="leading" secondItem="wz7-ko-N9f" secondAttribute="leading" constant="64" id="zOK-pf-iPH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZiD-IV-fLO">
                         <barButtonItem key="rightBarButtonItem" id="6On-wF-vzT">

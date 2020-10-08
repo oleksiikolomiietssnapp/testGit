@@ -65,6 +65,8 @@ final class FirebaseService {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
+                    let name = document.get("name") as! String
+                    names.append(name)
                     print("\(document.documentID) => \(document.data())")
                 }
             }

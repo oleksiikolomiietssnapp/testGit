@@ -1,9 +1,7 @@
-
 //  User.swift
 //  TestGitHubProj
 //
 //  Created by Anastasiia Spiridonova on 05.10.2020.
-
 
 struct User: Codable {
     var name: String

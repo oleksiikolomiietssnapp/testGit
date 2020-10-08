@@ -75,62 +75,62 @@ final class FirebaseService {
     }
     
     /// Get data from collection "Users"
-//    class func readUsersFromDB(callback: @escaping ([User]) -> Void) {
-//        db.collection("Users").getDocuments() { (querySnapshot, err) in
-//            var users: [User] = []
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                guard let documents = querySnapshot?.documents else {
-//                    print("Empty response")
-//                    return
-//                }
-//                for document in documents {
-//                    let parsedData = document.data()
-//                    var user = User(name: "", age: 0, count: 0)
-//                    for (key, value) in parsedData {
-//                        if key == "name"{
-//                            user.name = value as! String
-//                        }
-//                        if key == "age"{
-//                            user.age = value as! Int
-//                        }
-//                        if key == "count"{
-//                            user.count = value as! Int
-//                        }
-//                    }
-//                    users.append(user)
-//                }
-//            }
-//            callback(users)
-//        }
+    class func readUsersFromDB(callback: @escaping ([User]) -> Void) {
+        db.collection("Users").getDocuments() { (querySnapshot, err) in
+            var users: [User] = []
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                guard let documents = querySnapshot?.documents else {
+                    print("Empty response")
+                    return
+                }
+                for document in documents {
+                    let parsedData = document.data()
+                    var user = User(name: "", age: 0, count: 0)
+                    for (key, value) in parsedData {
+                        if key == "name"{
+                            user.name = value as! String
+                        }
+                        if key == "age"{
+                            user.age = value as! Int
+                        }
+                        if key == "count"{
+                            user.count = value as! Int
+                        }
+                    }
+                    users.append(user)
+                }
+            }
+            callback(users)
+        }
     }
-//    
-//    /// Retrieve the contents of a single document
-//    class func readDataFromDB(collectionName: String, documentName: String) {
-//        let docRef = db.collection(collectionName).document(documentName)
-//        
-//        docRef.getDocument { (document, error) in
-//            if let document = document, document.exists {
-//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                print("Document data: \(dataDescription)")
-//            } else {
-//                print("Document does not exist")
-//            }
-//        }
-//    }
-//    
-//    /// Get multiple documents from a collection by selected value
-//    class func selectDataFromDBbyValue (collectionName: String, fieldName: String, value: Any) {
-//        db.collection(collectionName).whereField(fieldName, isEqualTo: value)
-//            .getDocuments() { (querySnapshot, err) in
-//                if let err = err {
-//                    print("Error getting documents: \(err)")
-//                } else {
-//                    for document in querySnapshot!.documents {
-//                        print("\(document.documentID) => \(document.data())")
-//                    }
-//                }
-//            }
-//    }
-//}
+    
+    /// Retrieve the contents of a single document
+    class func readDataFromDB(collectionName: String, documentName: String) {
+        let docRef = db.collection(collectionName).document(documentName)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    /// Get multiple documents from a collection by selected value
+    class func selectDataFromDBbyValue (collectionName: String, fieldName: String, value: Any) {
+        db.collection(collectionName).whereField(fieldName, isEqualTo: value)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                }
+            }
+    }
+}

@@ -20,6 +20,7 @@ class UsersTableViewController: UITableViewController {
     }
     
     var users = [User(name: "Valera", age: 20, count: 1000), User(name: "Step", age: 30, count: 12), User(name: "Sveta", age: 25, count: 123124)]
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         title = "USERS"

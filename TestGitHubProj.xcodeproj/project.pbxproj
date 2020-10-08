@@ -39,7 +39,6 @@
 		849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849019D3252B97B1000D8037 /* UsersTableViewCell.xib */; };
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
-		84E9FBCD252C707D00516F2C /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9FBCC252C707D00516F2C /* UsersModel.swift */; };
 		84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F91E3925286BC6002CD19A /* FirebaseViewController.swift */; };
 		BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9D525209335001C839F /* Svitlana.storyboard */; };
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
@@ -84,7 +83,6 @@
 		849019D3252B97B1000D8037 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
-		84E9FBCC252C707D00516F2C /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		84F91E3925286BC6002CD19A /* FirebaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
 		9FD3F08BAD193EFD517D7B8A /* Pods-TestGitHubProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.release.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.release.xcconfig"; sourceTree = "<group>"; };
 		BA1AA9D525209335001C839F /* Svitlana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Svitlana.storyboard; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			children = (
 				3F80522C252B1EEF001B7FF7 /* Model */,
 				3F7E41E1251F401C0020F715 /* Anastasia */,
-				84E9FBCB252C706800516F2C /* Models */,
 				BAB3BBCA252A33470087DDD9 /* Services */,
 				BA1AA9D82520934D001C839F /* Svitlana */,
 				84D5D2DA251F3E5D00E854BD /* StepanStoryboard */,
@@ -222,14 +219,6 @@
 				846F3D55252B89380061E242 /* UsersTableViewController.swift */,
 			);
 			path = StepanStoryboard;
-			sourceTree = "<group>";
-		};
-		84E9FBCB252C706800516F2C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				84E9FBCC252C707D00516F2C /* UsersModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
@@ -425,7 +414,6 @@
 				846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */,
 				84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */,
 				3F80522A252B1EE8001B7FF7 /* User.swift in Sources */,
-				84E9FBCD252C707D00516F2C /* UsersModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

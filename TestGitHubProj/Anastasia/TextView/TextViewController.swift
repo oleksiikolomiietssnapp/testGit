@@ -8,35 +8,35 @@
 import UIKit
 
 class TextViewController: UIViewController {
-    private let textView = UITextView()
-    private let showMoreBtn = UIButton()
-    private let scrollView = UIScrollView()
-    private let textField = UITextField()
-    private let saveBtn = UIButton()
+    lazy private var textView = { return UITextView() }()
+    lazy private var showMoreBtn = { return UIButton() }()
+    lazy private var scrollView = { return UIScrollView() }()
+    lazy private var textField = { return UITextField() }()
+    lazy private var saveBtn = {return UIButton() }()
     
     private let kOffset: CGFloat = 16
     private let kFontSize: CGFloat = 18
     private let kBtnHeight: CGFloat = 40
     
-    var moreButtonState = MoreButtonState.more
+    private var moreButtonState = MoreButtonState.more
     
-    var safeAreaHeight: CGFloat {
+    private var safeAreaHeight: CGFloat {
         return self.view.safeAreaLayoutGuide.layoutFrame.size.height
     }
     
-    var safeAreaWidth: CGFloat {
+    private var safeAreaWidth: CGFloat {
         return self.view.safeAreaLayoutGuide.layoutFrame.size.width
     }
     
-    var safeAreaMinX: CGFloat {
+    private var safeAreaMinX: CGFloat {
         return self.view.safeAreaLayoutGuide.layoutFrame.minX
     }
     
-    var safeAreaMinY: CGFloat {
+    private var safeAreaMinY: CGFloat {
         return self.view.safeAreaLayoutGuide.layoutFrame.minY
     }
     
-    var maxLines: Int {
+    private var maxLines: Int {
         let devider = kFontSize + 3.3
         return Int((safeAreaHeight - 5 * kOffset - 3 * kBtnHeight) / devider)
     }
@@ -89,13 +89,13 @@ class TextViewController: UIViewController {
         customizeSubviews()
     }
     
-    @objc func switchScrollViewMode() {
+    @objc private func switchScrollViewMode() {
         scrollView.isScrollEnabled.toggle()
         moreButtonState = moreButtonState.switchState
         customizeSubviews()
     }
     
-    @objc func appendTextToTextView() {
+    @objc private func appendTextToTextView() {
         guard let text = textField.text else {
             return
         }
@@ -104,8 +104,8 @@ class TextViewController: UIViewController {
         textField.text = nil
     }
     
-    func customizeSubviews() {
-        textView.textContainer.maximumNumberOfLines = moreButtonState == MoreButtonState.more ? maxLines : 999
+    private func customizeSubviews() {
+        textView.textContainer.maximumNumberOfLines = moreButtonState == MoreButtonState.more ? maxLines : 999999
         textView.frame = CGRect(x: kOffset, y: kOffset, width: safeAreaWidth - kOffset * 2, height: safeAreaHeight - kOffset * 2)
         textView.sizeToFit()
         

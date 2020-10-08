@@ -13,17 +13,22 @@ class FirebaseViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var centralStackView: UIStackView!
     
     var email: String?
     var password: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        centralStackView.layer.borderWidth = 10
+        centralStackView.layer.borderColor = UIColor.red.cgColor
+    }
+    
     @IBAction func createNewUser(_ sender: UIButton) {
 
         if let email = emailTextField.text, let password = passwordTextField.text {
@@ -53,7 +58,6 @@ class FirebaseViewController: UIViewController {
         }
         clearTextFields()
     }
-    
     
     func clearTextFields() {
         emailTextField.text = ""

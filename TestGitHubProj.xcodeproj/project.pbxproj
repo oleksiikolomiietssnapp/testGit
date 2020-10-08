@@ -16,7 +16,6 @@
 		3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF531CE25274C8F00B4959A /* MoreButtonState.swift */; };
 		3FF531D325274C8F00B4959A /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FF531CF25274C8F00B4959A /* text.txt */; };
 		3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF531D025274C8F00B4959A /* AnastasiaViewController.swift */; };
-		3FFE36C3252C720700DDAEC6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFE36C2252C720700DDAEC6 /* TableViewCell.swift */; };
 		495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495472E8251F191F0022AD8E /* AppDelegate.swift */; };
 		495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495472EA251F191F0022AD8E /* SceneDelegate.swift */; };
 		495472ED251F191F0022AD8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495472EC251F191F0022AD8E /* ViewController.swift */; };
@@ -34,7 +33,10 @@
 		64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C9926B252604F000676069 /* PinchStoryboard.storyboard */; };
 		64C9926F2526050900676069 /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9926E2526050900676069 /* PinchViewController.swift */; };
 		64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9927A25260B8C00676069 /* ImageScrollView.swift */; };
+		846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F3D55252B89380061E242 /* UsersTableViewController.swift */; };
 		84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */; };
+		849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849019D2252B97B1000D8037 /* UsersTableViewCell.swift */; };
+		849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849019D3252B97B1000D8037 /* UsersTableViewCell.xib */; };
 		84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */; };
 		84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5D2DC251F8DF300E854BD /* StepanViewController.swift */; };
 		84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F91E3925286BC6002CD19A /* FirebaseViewController.swift */; };
@@ -42,8 +44,6 @@
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
 		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
-		BAB3BBC32528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3BBC22528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift */; };
-		BAB3BBC72528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB3BBC62528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard */; };
 		BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,6 @@
 		3FF531CE25274C8F00B4959A /* MoreButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreButtonState.swift; sourceTree = "<group>"; };
 		3FF531CF25274C8F00B4959A /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
 		3FF531D025274C8F00B4959A /* AnastasiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnastasiaViewController.swift; sourceTree = "<group>"; };
-		3FFE36C2252C720700DDAEC6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		495472E5251F191F0022AD8E /* TestGitHubProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGitHubProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495472E8251F191F0022AD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		495472EA251F191F0022AD8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +77,10 @@
 		64C9926E2526050900676069 /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		64C9927A25260B8C00676069 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		66D4F64EC17AE20B2CB5D389 /* Pods_TestGitHubProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGitHubProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		846F3D55252B89380061E242 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
+		849019D2252B97B1000D8037 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		849019D3252B97B1000D8037 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stepan.storyboard; sourceTree = "<group>"; };
 		84D5D2DC251F8DF300E854BD /* StepanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepanViewController.swift; path = TestGitHubProj/StepanViewController.swift; sourceTree = SOURCE_ROOT; };
 		84F91E3925286BC6002CD19A /* FirebaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +89,6 @@
 		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
 		BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaTextView.storyboard; sourceTree = "<group>"; };
 		BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaTextViewController.swift; sourceTree = "<group>"; };
-		BAB3BBC22528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaDataBaseFirebaseViewController.swift; sourceTree = "<group>"; };
-		BAB3BBC62528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaDataBaseFirebase.storyboard; sourceTree = "<group>"; };
 		BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,16 +113,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3F0D8B1A252DE67D00C090D4 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				3FF531CE25274C8F00B4959A /* MoreButtonState.swift */,
+				3FF531CF25274C8F00B4959A /* text.txt */,
+				3FF531CD25274C8F00B4959A /* TextViewController.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
 		3F7E41E1251F401C0020F715 /* Anastasia */ = {
 			isa = PBXGroup;
 			children = (
 				3F7E41DE251F40160020F715 /* Anastasia.storyboard */,
 				3FF531D025274C8F00B4959A /* AnastasiaViewController.swift */,
-				3FF531CE25274C8F00B4959A /* MoreButtonState.swift */,
-				3FF531CF25274C8F00B4959A /* text.txt */,
-				3FF531CD25274C8F00B4959A /* TextViewController.swift */,
+				3F0D8B1A252DE67D00C090D4 /* TextView */,
 				3F805226252B1DF9001B7FF7 /* RequestViewController.swift */,
-				3FFE36C2252C720700DDAEC6 /* TableViewCell.swift */,
 			);
 			path = Anastasia;
 			sourceTree = "<group>";
@@ -130,7 +137,6 @@
 		3F80522C252B1EEF001B7FF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3F80522E252B20AE001B7FF7 /* NetworkingService.swift */,
 				3F805229252B1EE8001B7FF7 /* User.swift */,
 			);
 			path = Model;
@@ -200,13 +206,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		846F3D48252B885C0061E242 /* UsersTableView */ = {
+			isa = PBXGroup;
+			children = (
+				849019D2252B97B1000D8037 /* UsersTableViewCell.swift */,
+				849019D3252B97B1000D8037 /* UsersTableViewCell.xib */,
+			);
+			path = UsersTableView;
+			sourceTree = "<group>";
+		};
 		84D5D2DA251F3E5D00E854BD /* StepanStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				846F3D48252B885C0061E242 /* UsersTableView */,
 				84D5D2DC251F8DF300E854BD /* StepanViewController.swift */,
 				84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */,
 				84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */,
 				84F91E3925286BC6002CD19A /* FirebaseViewController.swift */,
+				846F3D55252B89380061E242 /* UsersTableViewController.swift */,
 			);
 			path = StepanStoryboard;
 			sourceTree = "<group>";
@@ -214,7 +231,6 @@
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
 			isa = PBXGroup;
 			children = (
-				BAB3BBC12528DAF80087DDD9 /* DBFirebase */,
 				BA1AA9E42520DE14001C839F /* TextView */,
 				BA1AA9D525209335001C839F /* Svitlana.storyboard */,
 				BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */,
@@ -231,18 +247,10 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
-		BAB3BBC12528DAF80087DDD9 /* DBFirebase */ = {
-			isa = PBXGroup;
-			children = (
-				BAB3BBC22528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift */,
-				BAB3BBC62528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard */,
-			);
-			path = DBFirebase;
-			sourceTree = "<group>";
-		};
 		BAB3BBCA252A33470087DDD9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3F80522E252B20AE001B7FF7 /* NetworkingService.swift */,
 				BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */,
 			);
 			path = Services;
@@ -308,10 +316,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */,
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
-				BAB3BBC72528E1050087DDD9 /* SvitlanaDataBaseFirebase.storyboard in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
 				64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */,
 				6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */,
@@ -395,23 +403,23 @@
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
+				849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */,
 				64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */,
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
 				64C9926F2526050900676069 /* PinchViewController.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
-				BAB3BBC32528DB5C0087DDD9 /* SvitlanaDataBaseFirebaseViewController.swift in Sources */,
 				642089252527489D00B9A1E1 /* SecondPinchViewViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */,
 				648425DB251FC9900039B1F1 /* ViacheslavViewController.swift in Sources */,
-				3FFE36C3252C720700DDAEC6 /* TableViewCell.swift in Sources */,
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,
 				3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */,
 				3F805227252B1DF9001B7FF7 /* RequestViewController.swift in Sources */,
 				3F80522F252B20AE001B7FF7 /* NetworkingService.swift in Sources */,
 				648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */,
 				84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */,
+				846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */,
 				84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */,
 				3F80522A252B1EE8001B7FF7 /* User.swift in Sources */,
 			);

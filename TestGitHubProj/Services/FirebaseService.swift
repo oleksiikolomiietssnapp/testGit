@@ -18,7 +18,7 @@ final class FirebaseService {
     class func addDataToDB(collectionName: String, documentName: String, dictionaryData: [String:Any]) {
         db.collection(collectionName).document(documentName).setData(dictionaryData)
         db.collection(collectionName).document(documentName).updateData([
-            "lastUpdated": FieldValue.serverTimestamp(), //by whom (username)
+            "lastUpdated": FieldValue.serverTimestamp() //by whom (username)
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -48,7 +48,7 @@ final class FirebaseService {
     class func updateDataToDB(collectionName: String, documentName: String, fieldName: String, value: Any) {
         db.collection(collectionName).document(documentName).setData([ fieldName: value ], merge: true)
         db.collection(collectionName).document(documentName).updateData([
-            "lastUpdated": FieldValue.serverTimestamp(), //by whom (username)
+            "lastUpdated": FieldValue.serverTimestamp() //by whom (username)
         ]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
@@ -60,7 +60,7 @@ final class FirebaseService {
     
     /// Get all documents in a collection
     class func readDataFromDB(collectionName: String) {
-        db.collection(collectionName).getDocuments() { (querySnapshot, err) in
+        db.collection(collectionName).getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -73,8 +73,8 @@ final class FirebaseService {
     
     /// Get data from collection "Users"
     class func readUsersFromDB(callback: @escaping ([User]) -> Void) {
-        db.collection("Users").getDocuments() { (querySnapshot, err) in
-            var users: [User] = []
+        db.collection("Users").getDocuments { (querySnapshot, err) in
+            var users = [User]()
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -84,19 +84,12 @@ final class FirebaseService {
                 }
                 for document in documents {
                     let parsedData = document.data()
-                    var user = User(name: "", age: 0, count: 0)
-                    for (key, value) in parsedData {
-                        if key == "name"{
-                            user.name = value as! String
-                        }
-                        if key == "age"{
-                            user.age = value as! Int
-                        }
-                        if key == "count"{
-                            user.count = value as! Int
-                        }
+                    guard let name = parsedData["name"] as? String,
+                          let age = parsedData["age"] as? Int,
+                          let count = parsedData["count"] as? Int else {
+                        continue
                     }
-                    users.append(user)
+                    users.append(User(name: name, age: age, count: count))
                 }
             }
             callback(users)
@@ -114,13 +107,16 @@ final class FirebaseService {
             } else {
                 print("Document does not exist")
             }
+            if let error = error {
+                print(error.localizedDescription)
+            }
         }
     }
     
     /// Get multiple documents from a collection by selected value
     class func selectDataFromDBbyValue (collectionName: String, fieldName: String, value: Any) {
         db.collection(collectionName).whereField(fieldName, isEqualTo: value)
-            .getDocuments() { (querySnapshot, err) in
+            .getDocuments { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {

@@ -8,8 +8,8 @@
 import UIKit
 
 class RequestViewController: UIViewController {
-    let tableView = UITableView()
-    let navBar = UINavigationBar()
+    lazy private var tableView = { return UITableView() }()
+    lazy private var navBar = { return UINavigationBar() }()
     var users: [User]?
     
     override func viewDidLoad() {
@@ -31,22 +31,22 @@ class RequestViewController: UIViewController {
     }
 }
 extension RequestViewController: UITableViewDataSource, UITableViewDelegate {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    guard let users = users else {
-        print("tableView")
-        return 0
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let users = users else {
+            return 0
+        }
+        return users.count
     }
-    return users.count
-  }
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
-    guard let textLabel = cell.textLabel, let users = users else {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        guard let textLabel = cell.textLabel, let users = users else {
+            return cell
+        }
+        textLabel.text = users[indexPath.row].name
+        cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
         return cell
     }
-    textLabel.text = users[indexPath.row].name
-    cell.accessoryType = .disclosureIndicator
-    return cell
-  }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users![indexPath.item]
         

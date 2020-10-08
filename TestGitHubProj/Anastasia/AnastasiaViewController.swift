@@ -10,17 +10,17 @@ import SafariServices
 
 class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    let kWikiUrl = "https://www.wikipedia.org"
+    lazy private var kWikiUrl = { return "https://www.wikipedia.org" }()
     
-    let button = UIButton(type: UIButton.ButtonType.custom)
+    lazy private var  button = { return UIButton(type: UIButton.ButtonType.custom) }()
     
-    let requestBtn = UIButton(type: UIButton.ButtonType.custom)
+    lazy private var requestBtn = { return UIButton(type: UIButton.ButtonType.custom) }()
     
-    @IBOutlet var textViewController: UIView!
+    @IBOutlet private var textViewController: UIView!
     
-    @IBOutlet weak var wikiButton: UIButton!
-         
-    @IBAction func btnPressed(_ sender: UIButton) {
+    @IBOutlet weak private var wikiButton: UIButton!
+    
+    @IBAction private func btnPressed(_ sender: UIButton) {
         if sender == wikiButton {
             showSafari(kWikiUrl)
         } else if sender == button {
@@ -31,11 +31,9 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
                 return
             }
             NetworkingService.request(url: url, completitionHandler: {(data, _, error) in
-                
                 if error != nil {
                     return
                 }
-                
                 do {
                     vc.users = try JSONDecoder().decode([User].self, from: data!)
                     DispatchQueue.main.async {
@@ -48,7 +46,7 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
         }
     }
     
-    func showSafari(_ url: String) {
+    private func showSafari(_ url: String) {
         guard let url = URL(string: url) else {
             return
         }
@@ -58,22 +56,22 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
         present(vc, animated: true)
     }
     
-    func addButton(_ button: UIButton) {
+    private func addButton(_ button: UIButton) {
         view.addSubview(button)
     }
     
-    func changeButtonFrame(_ button: UIButton, frameY: CGFloat) {
+    private func changeButtonFrame(_ button: UIButton, frameY: CGFloat) {
         button.frame = CGRect(x: wikiButton.frame.minX, y: frameY, width: wikiButton.frame.width, height: wikiButton.frame.height / 2)
     }
     
-    func customizeBtn(_ button: UIButton, frameY: CGFloat, title: String) {
+    private func customizeBtn(_ button: UIButton, frameY: CGFloat, title: String) {
         changeButtonFrame(button, frameY: frameY)
         button.setTitle(title, for: UIControl.State.normal)
         button.backgroundColor = wikiButton.backgroundColor
         button.setTitleColor(wikiButton.currentTitleColor, for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: UIFont.Weight.light)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addButton(button)

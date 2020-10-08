@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ImageTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="77" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="TestGitHubProj" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-3e-zON">
+                        <rect key="frame" x="100" y="26.5" width="48" height="24"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZR-bZ-CRk">
+                        <rect key="frame" x="280" y="27.5" width="24" height="22"/>
+                        <state key="normal" image="arrowshape.zigzag.forward" catalog="system"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="CZH-xE-SiJ">
+                        <rect key="frame" x="4" y="4" width="80" height="65"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                <constraints>
+                    <constraint firstItem="Zki-3e-zON" firstAttribute="leading" secondItem="CZH-xE-SiJ" secondAttribute="trailing" constant="16" id="58d-57-Mj5"/>
+                    <constraint firstAttribute="bottom" secondItem="CZH-xE-SiJ" secondAttribute="bottom" constant="8" id="80J-Bx-hg6"/>
+                    <constraint firstItem="uZR-bZ-CRk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MYg-zT-XkI"/>
+                    <constraint firstItem="CZH-xE-SiJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="TOH-3Q-cHh"/>
+                    <constraint firstItem="Zki-3e-zON" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U0h-uk-8xk"/>
+                    <constraint firstItem="CZH-xE-SiJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="a9F-Ot-g5t"/>
+                    <constraint firstAttribute="trailing" secondItem="uZR-bZ-CRk" secondAttribute="trailing" constant="16" id="rae-Vd-kHZ"/>
+                    <constraint firstItem="Zki-3e-zON" firstAttribute="width" secondItem="CZH-xE-SiJ" secondAttribute="width" multiplier="0.6" id="yrr-PP-YLL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageCellView" destination="CZH-xE-SiJ" id="tZr-JM-eHr"/>
+                <outlet property="titleLabel" destination="Zki-3e-zON" id="r5S-A7-d6S"/>
+            </connections>
+            <point key="canvasLocation" x="-39.130434782608695" y="1.0044642857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowshape.zigzag.forward" catalog="system" width="128" height="93"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

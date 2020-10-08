@@ -16,6 +16,7 @@ struct List {
 class ListImages {
     
     var list = [List]()
+    var image: UIImage?
     
     init() {
         setup()

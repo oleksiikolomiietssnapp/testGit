@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		152AB1E134BD6C2443D805B5 /* Pods_TestGitHubProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D4F64EC17AE20B2CB5D389 /* Pods_TestGitHubProj.framework */; };
+		3F74499E252F141800352A78 /* FirebaseUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74499D252F141800352A78 /* FirebaseUsersViewController.swift */; };
+		3F7449AA252F296F00352A78 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7449A9252F296F00352A78 /* UserViewController.swift */; };
 		3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E41DE251F40160020F715 /* Anastasia.storyboard */; };
 		3F805227252B1DF9001B7FF7 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F805226252B1DF9001B7FF7 /* RequestViewController.swift */; };
 		3F80522A252B1EE8001B7FF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F805229252B1EE8001B7FF7 /* User.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		2EECAD94DBB74B58A88AFFE1 /* Pods-TestGitHubProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.debug.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.debug.xcconfig"; sourceTree = "<group>"; };
+		3F74499D252F141800352A78 /* FirebaseUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUsersViewController.swift; sourceTree = "<group>"; };
+		3F7449A9252F296F00352A78 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		3F7E41DE251F40160020F715 /* Anastasia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Anastasia.storyboard; sourceTree = "<group>"; };
 		3F805226252B1DF9001B7FF7 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		3F805229252B1EE8001B7FF7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				3FF531D025274C8F00B4959A /* AnastasiaViewController.swift */,
 				3F0D8B1A252DE67D00C090D4 /* TextView */,
 				3F805226252B1DF9001B7FF7 /* RequestViewController.swift */,
+				3F74499D252F141800352A78 /* FirebaseUsersViewController.swift */,
+				3F7449A9252F296F00352A78 /* UserViewController.swift */,
 			);
 			path = Anastasia;
 			sourceTree = "<group>";
@@ -417,8 +423,10 @@
 				3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */,
 				3F805227252B1DF9001B7FF7 /* RequestViewController.swift in Sources */,
 				3F80522F252B20AE001B7FF7 /* NetworkingService.swift in Sources */,
+				3F74499E252F141800352A78 /* FirebaseUsersViewController.swift in Sources */,
 				648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */,
 				84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */,
+				3F7449AA252F296F00352A78 /* UserViewController.swift in Sources */,
 				846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */,
 				84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */,
 				3F80522A252B1EE8001B7FF7 /* User.swift in Sources */,

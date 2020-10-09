@@ -9,13 +9,11 @@ import UIKit
 
 class RequestViewController: UIViewController {
     lazy private var tableView = { return UITableView() }()
-    lazy private var navBar = { return UINavigationBar() }()
     var users: [User]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(navBar)
         view.addSubview(tableView)
         tableView.frame = view.safeAreaLayoutGuide.layoutFrame
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")

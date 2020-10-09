@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,50 +17,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
-                                <rect key="frame" x="110" y="428" width="194" height="48"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Add user">
-                                    <color key="titleColor" systemColor="systemIndigoColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8gN-rl-CXn" kind="show" id="g3o-eS-3oY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
-                                <rect key="frame" x="110" y="300" width="194" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="pSQ-du-3hd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Show text view">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="elp-UP-2ey" kind="show" id="Tbe-8p-UAk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-rL-dCo">
-                                <rect key="frame" x="122" y="516" width="170" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Show users"/>
-                                <connections>
-                                    <segue destination="yIJ-fT-qcX" kind="show" id="Y5f-en-Ivi"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-yw-e88">
+                                <rect key="frame" x="0.0" y="244" width="414" height="418"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="92.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Show text view">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="elp-UP-2ey" kind="show" id="Tbe-8p-UAk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
+                                        <rect key="frame" x="0.0" y="162.5" width="414" height="93"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Add user">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="8gN-rl-CXn" kind="show" id="g3o-eS-3oY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-rL-dCo">
+                                        <rect key="frame" x="0.0" y="325.5" width="414" height="92.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Show users"/>
+                                        <connections>
+                                            <segue destination="yIJ-fT-qcX" kind="show" id="CzA-tE-BP0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wz7-ko-N9f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="top" secondItem="UWd-Zv-Pph" secondAttribute="bottom" constant="78" id="VGp-aD-mS0"/>
-                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="centerX" secondItem="oot-m5-Y8s" secondAttribute="centerX" id="ZWW-ch-Oo0"/>
-                            <constraint firstItem="UWd-Zv-Pph" firstAttribute="top" secondItem="wz7-ko-N9f" secondAttribute="top" constant="256" id="buA-ll-GGJ"/>
-                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="leading" secondItem="UWd-Zv-Pph" secondAttribute="leading" id="htE-J3-EPw"/>
-                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="trailing" secondItem="UWd-Zv-Pph" secondAttribute="trailing" id="oui-jI-d8f"/>
+                            <constraint firstItem="eXw-yw-e88" firstAttribute="top" secondItem="wz7-ko-N9f" secondAttribute="top" constant="200" id="ALh-zP-Z1b"/>
+                            <constraint firstItem="wz7-ko-N9f" firstAttribute="trailing" secondItem="eXw-yw-e88" secondAttribute="trailing" id="Gb6-6w-Z1c"/>
+                            <constraint firstItem="wz7-ko-N9f" firstAttribute="bottom" secondItem="eXw-yw-e88" secondAttribute="bottom" constant="200" id="drR-sw-Dpe"/>
+                            <constraint firstItem="eXw-yw-e88" firstAttribute="leading" secondItem="wz7-ko-N9f" secondAttribute="leading" id="ee5-Hr-nXt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZiD-IV-fLO">
@@ -133,17 +134,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -14,7 +14,14 @@ class PinchViewController: UIViewController {
     
     var imageViewScale: CGFloat = 1.0
     let maxScale: CGFloat = 4.0
-    let minScale: CGFloat = 0.5
+    let minScale: CGFloat = 1
+    
+    var isTap = false
+    lazy var zoomingTap: UITapGestureRecognizer = {
+        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
+        zoomingTap.numberOfTapsRequired = 2
+        return zoomingTap
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +33,7 @@ class PinchViewController: UIViewController {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchAction))
 
         imageView.addGestureRecognizer(pinchGesture)
+        imageView.addGestureRecognizer(zoomingTap)
         
     }
     
@@ -53,6 +61,24 @@ class PinchViewController: UIViewController {
                 }
             }
             recognizer.scale = 1.0
+        }
+    }
+    
+    @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
+        let location = sender.location(in: sender.view)
+        self.zoom(point: location, animated: true)
+        
+    }
+    
+    func zoom(point: CGPoint, animated: Bool) {
+       
+        if !isTap {
+            imageView.transform = imageView.transform.scaledBy(x: maxScale, y: maxScale)
+            isTap = true
+        } else {
+            imageView.transform.a = minScale
+            imageView.transform.d = minScale
+            isTap = false
         }
     }
 

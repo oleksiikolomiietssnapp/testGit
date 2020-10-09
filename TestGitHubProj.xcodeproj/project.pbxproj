@@ -56,6 +56,7 @@
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
 		BA54C314252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C312252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift */; };
 		BA54C315252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA54C313252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard */; };
+		BA54C33225302BD70067E4B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C33125302BD60067E4B4 /* TableViewController.swift */; };
 		BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaTextViewController.swift; sourceTree = "<group>"; };
 		BA54C312252F7A480067E4B4 /* SvitlanaDataBaseFirebaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvitlanaDataBaseFirebaseViewController.swift; sourceTree = "<group>"; };
 		BA54C313252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SvitlanaDataBaseFirebase.storyboard; sourceTree = "<group>"; };
+		BA54C33125302BD60067E4B4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,6 +291,7 @@
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
 			isa = PBXGroup;
 			children = (
+				BA54C33025302B980067E4B4 /* TableView */,
 				BA54C311252F7A480067E4B4 /* DBFirebase */,
 				BA1AA9E42520DE14001C839F /* TextView */,
 				BA1AA9D525209335001C839F /* Svitlana.storyboard */,
@@ -313,6 +316,14 @@
 				BA54C313252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard */,
 			);
 			path = DBFirebase;
+			sourceTree = "<group>";
+		};
+		BA54C33025302B980067E4B4 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BA54C33125302BD60067E4B4 /* TableViewController.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		BAB3BBCA252A33470087DDD9 /* Services */ = {
@@ -501,6 +512,7 @@
 				640B02FD252CE4B700B9D530 /* ShowImageViewController.swift in Sources */,
 				846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */,
 				84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */,
+				BA54C33225302BD70067E4B4 /* TableViewController.swift in Sources */,
 				3F80522A252B1EE8001B7FF7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

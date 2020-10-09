@@ -12,6 +12,7 @@ class SvitlanaDataBaseFirebaseViewController: UIViewController {
     @IBOutlet weak var count: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var age: UITextField!
+    private var urlValue = ""
     
     @IBAction func save(_ sender: UIButton) {
         if let dataName = name.text, let dataCount = count.text, let dataAge = age.text {
@@ -29,5 +30,14 @@ class SvitlanaDataBaseFirebaseViewController: UIViewController {
             print("unexpected nil")
             return
         }
+    }
+    
+    @IBAction func uploadImg(_ sender: UIButton) {
+        guard let currentImg = UIImage(named: "avatar") else {return}
+        FirebaseService.uploadUserImageToDB(image: currentImg) { [weak self] url in
+            self?.urlValue = "\(url)"
+            FirebaseService.updateDataToDB(collectionName: "Users", documentName: "JNUYliBO4e4wsT5ILioG", fieldName: "avatar", value: self?.urlValue)
+            }
+        print(urlValue)
     }
 }

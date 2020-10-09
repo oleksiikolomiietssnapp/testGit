@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add new user form-->
+        <scene sceneID="0uL-hU-Kgu">
+            <objects>
+                <viewController storyboardIdentifier="SvitlanaDataBaseFirebase" id="wDt-TH-uaa" customClass="SvitlanaDataBaseFirebaseViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w94-bX-1ia">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-4U-GZI">
+                                <rect key="frame" x="-8" y="52" width="430" height="802"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJY-qt-gRe">
+                                        <rect key="frame" x="16" y="380" width="398" height="48"/>
+                                        <color key="backgroundColor" red="1" green="0.90346324600000005" blue="0.80426357029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="save:" destination="wDt-TH-uaa" eventType="touchUpInside" id="xSt-Fm-Tzt"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IKn-Oc-pR3">
+                                        <rect key="frame" x="16" y="164" width="398" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOT-Pq-HbG">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter age..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-Vo-01b">
+                                                <rect key="frame" x="0.0" y="42" width="398" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oT5-fp-wkB">
+                                        <rect key="frame" x="16" y="56" width="398" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMK-UX-0rK">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wB0-7s-O3R">
+                                                <rect key="frame" x="0.0" y="42" width="398" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.90346324600000005" blue="0.80426357029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PLV-oc-Np2">
+                                        <rect key="frame" x="16" y="272" width="398" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-QA-Uc5">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter count..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d0b-4Z-Snk">
+                                                <rect key="frame" x="0.0" y="42" width="398" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.90346324600000005" blue="0.80426357029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PLV-oc-Np2" secondAttribute="trailing" constant="16" id="2cn-QG-e5S"/>
+                                    <constraint firstAttribute="trailing" secondItem="IKn-Oc-pR3" secondAttribute="trailing" constant="16" id="2f8-5u-SxE"/>
+                                    <constraint firstItem="IKn-Oc-pR3" firstAttribute="top" secondItem="oT5-fp-wkB" secondAttribute="bottom" constant="32" id="6Jh-Pc-Lcv"/>
+                                    <constraint firstItem="PLV-oc-Np2" firstAttribute="leading" secondItem="zwf-4U-GZI" secondAttribute="leading" constant="16" id="8xm-sa-0ky"/>
+                                    <constraint firstItem="oT5-fp-wkB" firstAttribute="leading" secondItem="zwf-4U-GZI" secondAttribute="leading" constant="16" id="RaJ-2G-0Zc"/>
+                                    <constraint firstItem="DJY-qt-gRe" firstAttribute="top" secondItem="PLV-oc-Np2" secondAttribute="bottom" constant="32" id="XG9-MS-ldG"/>
+                                    <constraint firstItem="PLV-oc-Np2" firstAttribute="top" secondItem="IKn-Oc-pR3" secondAttribute="bottom" constant="32" id="bHs-gk-rlb"/>
+                                    <constraint firstAttribute="trailing" secondItem="oT5-fp-wkB" secondAttribute="trailing" constant="16" id="lur-Td-kKd"/>
+                                    <constraint firstItem="IKn-Oc-pR3" firstAttribute="leading" secondItem="zwf-4U-GZI" secondAttribute="leading" constant="16" id="vbf-I3-3JF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Syu-Fr-vf2"/>
+                        <color key="backgroundColor" red="1" green="0.90346324596572702" blue="0.80426357026602702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zwf-4U-GZI" firstAttribute="trailing" secondItem="Syu-Fr-vf2" secondAttribute="trailing" constant="8" id="4Tm-Ye-xQy"/>
+                            <constraint firstItem="DJY-qt-gRe" firstAttribute="leading" secondItem="Syu-Fr-vf2" secondAttribute="leading" constant="8" id="Ir6-z2-gZi"/>
+                            <constraint firstItem="Syu-Fr-vf2" firstAttribute="trailing" secondItem="DJY-qt-gRe" secondAttribute="trailing" constant="8" id="Lzu-UE-CXG"/>
+                            <constraint firstItem="Syu-Fr-vf2" firstAttribute="leading" secondItem="zwf-4U-GZI" secondAttribute="leading" constant="8" id="cma-Dq-TKC"/>
+                            <constraint firstItem="oT5-fp-wkB" firstAttribute="top" secondItem="Syu-Fr-vf2" secondAttribute="top" constant="64" id="g6c-oW-Wrf"/>
+                            <constraint firstItem="zwf-4U-GZI" firstAttribute="top" secondItem="Syu-Fr-vf2" secondAttribute="top" constant="8" id="oQd-k2-irK"/>
+                            <constraint firstItem="Syu-Fr-vf2" firstAttribute="bottom" secondItem="zwf-4U-GZI" secondAttribute="bottom" constant="8" id="xgi-PO-bPs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add new user form" id="dke-qb-e3A"/>
+                    <connections>
+                        <outlet property="age" destination="Mb2-Vo-01b" id="wd5-l2-mg1"/>
+                        <outlet property="count" destination="d0b-4Z-Snk" id="b1U-Pb-VYf"/>
+                        <outlet property="name" destination="wB0-7s-O3R" id="b5l-5a-bO7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gq-No-dQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="-29.464285714285712"/>
+        </scene>
+    </scenes>
+</document>

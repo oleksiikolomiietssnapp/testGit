@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 import SafariServices
 
-
-class SvitlanaViewController: UIViewController{
+class SvitlanaViewController: UIViewController {
   
     @IBAction func webPageShowButton(_ sender: UIButton) {
         if let url = URL(string: "https://intita.com") {

@@ -10,24 +10,43 @@ import SafariServices
 
 class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    let kWikiUrl = "https://www.wikipedia.org"
+    lazy private var kWikiUrl = { return "https://www.wikipedia.org" }()
     
-    let button = UIButton(type: UIButton.ButtonType.custom)
+    lazy private var  button = { return UIButton(type: UIButton.ButtonType.custom) }()
     
-    @IBOutlet var textViewController: UIView!
+    lazy private var requestBtn = { return UIButton(type: UIButton.ButtonType.custom) }()
     
-    @IBOutlet weak var wikiButton: UIButton!
+    @IBOutlet private var textViewController: UIView!
     
-     
-    @IBAction func btnPressed(_ sender: UIButton) {
+    @IBOutlet weak private var wikiButton: UIButton!
+    
+    @IBAction private func btnPressed(_ sender: UIButton) {
         if sender == wikiButton {
             showSafari(kWikiUrl)
-        } else {
+        } else if sender == button {
             self.navigationController?.pushViewController(TextViewController(), animated: true)
+        } else {
+            let vc = RequestViewController()
+            guard let url = URL(string: "https://api.agify.io/?name%5B%5D=michael&name%5B%5D=matthew&name%5B%5D=jane") else {
+                return
+            }
+            NetworkingService.request(url: url, completitionHandler: {(data, _, error) in
+                if error != nil {
+                    return
+                }
+                do {
+                    vc.users = try JSONDecoder().decode([User].self, from: data!)
+                    DispatchQueue.main.async {
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
         }
     }
     
-    func showSafari(_ url: String) {
+    private func showSafari(_ url: String) {
         guard let url = URL(string: url) else {
             return
         }
@@ -37,17 +56,17 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
         present(vc, animated: true)
     }
     
-    func addButton(_ button: UIButton) {
+    private func addButton(_ button: UIButton) {
         view.addSubview(button)
     }
     
-    func changeButtonFrame(_ button: UIButton) {
-        button.frame = CGRect(x: view.frame.midX - wikiButton.frame.width / 2, y: view.frame.midY + wikiButton.frame.height / 2 + 8, width: wikiButton.frame.width, height: wikiButton.frame.height / 2)
+    private func changeButtonFrame(_ button: UIButton, frameY: CGFloat) {
+        button.frame = CGRect(x: wikiButton.frame.minX, y: frameY, width: wikiButton.frame.width, height: wikiButton.frame.height / 2)
     }
     
-    func customizeBtn(_ button: UIButton) {
-        changeButtonFrame(button)
-        button.setTitle("Text", for: UIControl.State.normal)
+    private func customizeBtn(_ button: UIButton, frameY: CGFloat, title: String) {
+        changeButtonFrame(button, frameY: frameY)
+        button.setTitle(title, for: UIControl.State.normal)
         button.backgroundColor = wikiButton.backgroundColor
         button.setTitleColor(wikiButton.currentTitleColor, for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: UIFont.Weight.light)
@@ -56,12 +75,16 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         addButton(button)
-        customizeBtn(button)
+        addButton(requestBtn)
+        customizeBtn(button, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8, title: "Text")
+        customizeBtn(requestBtn, frameY: view.frame.midY - wikiButton.frame.height - 8, title: "Request")
         button.addTarget(self, action: #selector(btnPressed), for: .touchUpInside)
+        requestBtn.addTarget(self, action: #selector(btnPressed), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        changeButtonFrame(button)
+        changeButtonFrame(button, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8)
+        changeButtonFrame(requestBtn, frameY: view.frame.midY - wikiButton.frame.height - 8)
     }
 }

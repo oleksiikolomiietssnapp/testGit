@@ -2,55 +2,42 @@
 //  PinchViewController.swift
 //  TestGitHubProj
 //
-//  Created by Viacheslav Markov on 01.10.2020.
+//  Created by Viacheslav Markov on 02.10.2020.
 //
 
 import UIKit
 
 class PinchViewController: UIViewController {
     
-    let imageView = UIImageView()
-    let pinchGesture = UIPinchGestureRecognizer()
+    @IBOutlet var closedButton: UIButton!
+    @IBOutlet var imageView: UIImageView!
     
     var imageViewScale: CGFloat = 1.0
     let maxScale: CGFloat = 4.0
     let minScale: CGFloat = 1
     
-//    let closedButtonTwo = UIButton()
-    
-    @IBOutlet var closedButton: UIButton!
+    var isTap = false
+    lazy var zoomingTap: UITapGestureRecognizer = {
+        let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
+        zoomingTap.numberOfTapsRequired = 2
+        return zoomingTap
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         closedButton.isHidden = true
-        closedButton.window?.windowLevel = UIWindow.Level(rawValue: CGFloat.greatestFiniteMagnitude)
         
-//        closedButtonTwo.frame = CGRect(x: 16, y: 96, width: 32, height: 32)
-//        closedButtonTwo.setTitle("X", for: .normal)
-//        closedButtonTwo.setTitleColor(.black, for: .normal)
-//        closedButtonTwo.titleLabel?.font = UIFont(name: "Heiti TC", size: 32)
-//
-//        self.view.addSubview(closedButtonTwo)
+        imageView.isUserInteractionEnabled = true
+        
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchAction))
 
-//        imageView.frame = CGRect(x: 16, y: 64, width: 400, height: 300)
-//        imageView.image = #imageLiteral(resourceName: "avatar")
-//        imageView.isUserInteractionEnabled = true
-//        
-//        self.view.addSubview(imageView)
-//        
-//        imageView.center = view.center
-//        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//        
-//        imageView.addGestureRecognizer(pinchGesture)
-//        pinchGesture.addTarget(self, action: #selector(pinchAction))
+        imageView.addGestureRecognizer(pinchGesture)
+        imageView.addGestureRecognizer(zoomingTap)
         
-//        let height = imageView.frame.height
-//        print(height)
     }
     
-    @IBAction func touchClosedButton(_ sender: UIButton) {
+    @IBAction func touchClosedButtom(_ sender: Any) {
         
         closedButton.isHidden = true
         imageView.transform.a = minScale * 2
@@ -69,13 +56,30 @@ class PinchViewController: UIViewController {
 
                 if imageView.transform.a >= (maxScale - 0.1) {
                     closedButton.isHidden = false
+                } else {
+                    closedButton.isHidden = true
                 }
             }
-            
             recognizer.scale = 1.0
         }
     }
     
-
+    @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
+        let location = sender.location(in: sender.view)
+        self.zoom(point: location, animated: true)
+        
+    }
+    
+    func zoom(point: CGPoint, animated: Bool) {
+       
+        if !isTap {
+            imageView.transform = imageView.transform.scaledBy(x: maxScale, y: maxScale)
+            isTap = true
+        } else {
+            imageView.transform.a = minScale
+            imageView.transform.d = minScale
+            isTap = false
+        }
+    }
 
 }

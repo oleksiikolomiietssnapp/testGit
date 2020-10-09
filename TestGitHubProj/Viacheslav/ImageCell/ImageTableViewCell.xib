@@ -29,6 +29,9 @@
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="CZH-xE-SiJ">
                         <rect key="frame" x="4" y="4" width="80" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="VEd-ro-evW"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -40,7 +43,6 @@
                     <constraint firstItem="Zki-3e-zON" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U0h-uk-8xk"/>
                     <constraint firstItem="CZH-xE-SiJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="a9F-Ot-g5t"/>
                     <constraint firstAttribute="trailing" secondItem="uZR-bZ-CRk" secondAttribute="trailing" constant="16" id="rae-Vd-kHZ"/>
-                    <constraint firstItem="Zki-3e-zON" firstAttribute="width" secondItem="CZH-xE-SiJ" secondAttribute="width" multiplier="0.6" id="yrr-PP-YLL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -48,7 +50,7 @@
                 <outlet property="imageCellView" destination="CZH-xE-SiJ" id="tZr-JM-eHr"/>
                 <outlet property="titleLabel" destination="Zki-3e-zON" id="r5S-A7-d6S"/>
             </connections>
-            <point key="canvasLocation" x="-39.130434782608695" y="1.0044642857142856"/>
+            <point key="canvasLocation" x="74" y="-4"/>
         </tableViewCell>
     </objects>
     <resources>

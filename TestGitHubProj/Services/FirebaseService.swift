@@ -10,9 +10,42 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
-
 final class FirebaseService {
     private static let db = Firestore.firestore()
+    private static let storage = Storage.storage()
+    
+    class func getImage(){
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("images")
+        var spaceRef = storageRef.child("images/1.jpg")
+    }
+    class func uploadImage() {
+        let storageRef = storage.reference()
+        // Data in memory
+        guard let data = UIImage(named: "avatar")?.jpegData(compressionQuality: 1) else { print("error"); return }
+        
+        // Create a reference to the file you want to upload
+        let riversRef = storageRef.child("images/1.jpg")
+        
+        // Upload the file to the path "images/rivers.jpg"
+        let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
+            }
+            // Metadata contains file metadata such as size, content-type.
+            let size = metadata.size
+            // You can also access to download URL after upload.
+            riversRef.downloadURL { (url, error) in
+                guard let downloadURL = url else {
+                    // Uh-oh, an error occurred!
+                    return
+                }
+                print(downloadURL)
+            }
+//            print(link)
+        }
+    }
     
     /// Add a new document with own ID
     class func addDataToDB(collectionName: String, documentName: String, dictionaryData: [String:Any]) {

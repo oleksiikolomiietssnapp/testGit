@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
-                                <rect key="frame" x="64" y="428" width="286" height="50"/>
+                                <rect key="frame" x="110" y="428" width="194" height="48"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Add user">
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
-                                <rect key="frame" x="64" y="300" width="286" height="50"/>
+                                <rect key="frame" x="110" y="300" width="194" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pSQ-du-3hd"/>
@@ -41,6 +41,16 @@
                                     <segue destination="elp-UP-2ey" kind="show" id="Tbe-8p-UAk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-rL-dCo">
+                                <rect key="frame" x="122" y="516" width="170" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Show users"/>
+                                <connections>
+                                    <segue destination="yIJ-fT-qcX" kind="show" id="Y5f-en-Ivi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wz7-ko-N9f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,8 +60,6 @@
                             <constraint firstItem="UWd-Zv-Pph" firstAttribute="top" secondItem="wz7-ko-N9f" secondAttribute="top" constant="256" id="buA-ll-GGJ"/>
                             <constraint firstItem="lOE-XZ-uvz" firstAttribute="leading" secondItem="UWd-Zv-Pph" secondAttribute="leading" id="htE-J3-EPw"/>
                             <constraint firstItem="lOE-XZ-uvz" firstAttribute="trailing" secondItem="UWd-Zv-Pph" secondAttribute="trailing" id="oui-jI-d8f"/>
-                            <constraint firstItem="wz7-ko-N9f" firstAttribute="bottom" secondItem="lOE-XZ-uvz" secondAttribute="bottom" constant="384" id="vFg-hN-PAZ"/>
-                            <constraint firstItem="lOE-XZ-uvz" firstAttribute="leading" secondItem="wz7-ko-N9f" secondAttribute="leading" constant="64" id="zOK-pf-iPH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZiD-IV-fLO">
@@ -83,6 +91,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTu-bx-ZM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="88"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="DWO-Kq-UXe">
+            <objects>
+                <tableViewController id="yIJ-fT-qcX" customClass="TableViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="trB-du-xMB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Pxb-KF-5rW">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pxb-KF-5rW" id="ry1-ZV-3cB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yIJ-fT-qcX" id="gOq-o4-zW5"/>
+                            <outlet property="delegate" destination="yIJ-fT-qcX" id="dGS-2u-ll6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="agd-An-m2c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHj-Qt-4Eg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="96"/>
         </scene>
         <!--SvitlanaDataBaseFirebase-->
         <scene sceneID="G5V-xd-vDL">

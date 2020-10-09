@@ -29,5 +29,16 @@ class SvitlanaDataBaseFirebaseViewController: UIViewController {
             print("unexpected nil")
             return
         }
+//        FirebaseService.uploadImage()
+//                FirebaseService.readUsersFromDB { users in
+//                      let newArr: [User] = users
+//                      print(newArr[0].name)
+//                      for user in users {
+//                          self.count.text = String(user.count)
+//                          self.age.text = String(user.age)
+//                          self.name.text = user.name
+//                      }
+//                  }
     }
+    
 }

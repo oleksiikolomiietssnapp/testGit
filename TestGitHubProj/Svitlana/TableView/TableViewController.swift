@@ -1,0 +1,37 @@
+//
+//  TableViewController.swift
+//  TestGitHubProj
+//
+//  Created by Svitlana Korostelova on 09.10.2020.
+//
+
+import UIKit
+
+class TableViewController: UITableViewController {
+    var users: [User] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        FirebaseService.readUsersFromDB(callback: { [weak self] users in
+            self?.users = users
+        })
+    }
+
+    // MARK: - Table view data source
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.users.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        cell.textLabel?.text = self.users[indexPath.row].name
+
+        return cell
+    }
+}

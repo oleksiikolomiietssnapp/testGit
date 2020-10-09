@@ -25,4 +25,10 @@ class UsersTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setLabels(for user: User) {
+        nameLabel.text = user.name
+        ageLabel.text = "\(user.age)"
+        countLabel.text = "\(user.count)"
+    }
+    
 }

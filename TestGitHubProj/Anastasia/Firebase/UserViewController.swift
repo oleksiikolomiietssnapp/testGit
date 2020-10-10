@@ -8,24 +8,26 @@
 import UIKit
 
 class UserViewController: UIViewController {
-    let user: User?
-    lazy private var tableView = { return UITableView() }()
+    var user: User?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.layoutSubviews()
         view.backgroundColor = .systemBackground
-        view.addSubview(tableView)
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         guard let user = user else {
             return
         }
         navigationItem.title = user.name
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "infoCell")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "imageCell")
         tableView.dataSource = self
-    }
-    
-    override func viewWillLayoutSubviews() {
-        tableView.frame = view.safeAreaLayoutGuide.layoutFrame
+        
+        let imageCellNib = UINib(nibName: "ImageCell", bundle: .main)
+        tableView.register(imageCellNib, forCellReuseIdentifier: "imageCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "infoCell")
     }
     
     init(user: User) {
@@ -41,10 +43,10 @@ class UserViewController: UIViewController {
 
 extension UserViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let user = user else {
+        guard user != nil else {
             return 0
         }
-        return Mirror(reflecting: user).children.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

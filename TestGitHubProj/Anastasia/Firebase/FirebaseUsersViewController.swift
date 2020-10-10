@@ -53,6 +53,8 @@ extension FirebaseUsersViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(UserViewController(user: users[indexPath.row]), animated: true)
+        let storyboard = UIStoryboard(name: "UserInfoStoryboard", bundle: .main)
+        let vc = storyboard.instantiateViewController(identifier: "userViewController", creator: {_ in UserViewController(user: self.users[indexPath.row])})
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

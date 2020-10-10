@@ -18,7 +18,5 @@ class ViacheslavWebViewController: UIViewController {
         guard let url = URL(string: "https://www.google.com") else { return }
         let request = URLRequest(url: url)
         webView.load(request)
-        
     }
-
 }

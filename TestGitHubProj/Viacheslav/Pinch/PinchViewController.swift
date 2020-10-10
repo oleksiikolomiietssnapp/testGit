@@ -65,9 +65,9 @@ class PinchViewController: UIViewController {
     }
     
     @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
+        
         let location = sender.location(in: sender.view)
         self.zoom(point: location, animated: true)
-        
     }
     
     func zoom(point: CGPoint, animated: Bool) {

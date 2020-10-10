@@ -229,22 +229,13 @@
 		641CA5DE25238FC700AC0769 /* Viacheslav */ = {
 			isa = PBXGroup;
 			children = (
-				641AEE0A252FC3F900275227 /* Api */,
 				648425DD251FC9960039B1F1 /* ViacheslavS.storyboard */,
 				648425DA251FC9900039B1F1 /* ViacheslavViewController.swift */,
-				648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */,
-				64C992632523BCDA00676069 /* ImageStoryboard.storyboard */,
-				64C992662523BD0700676069 /* ImageViewController.swift */,
-				6420892B252870A800B9A1E1 /* avatar2.jpg */,
-				64C9927A25260B8C00676069 /* ImageScrollView.swift */,
-				64C9926B252604F000676069 /* PinchStoryboard.storyboard */,
-				642089242527489D00B9A1E1 /* PinchViewController.swift */,
-				647A9F68252B8CC800E340D1 /* ImageListViewController.swift */,
-				647A9F6B252B8CE000E340D1 /* ImageListStoryboard.storyboard */,
-				647A9F71252C951400E340D1 /* List.swift */,
-				647A9F62252B8BDE00E340D1 /* ImageCell */,
-				640B02F9252CE4A600B9D530 /* ShowImageStoryboard.storyboard */,
-				640B02FC252CE4B700B9D530 /* ShowImageViewController.swift */,
+				641AEE0A252FC3F900275227 /* Api */,
+				64C8C84F253232CD0048AD9B /* Web */,
+				64C8C851253232EA0048AD9B /* Scroll */,
+				64C8C852253232FF0048AD9B /* Pinch */,
+				64C8C854253233180048AD9B /* TableView */,
 			);
 			path = Viacheslav;
 			sourceTree = "<group>";
@@ -256,6 +247,47 @@
 				64D886ED252F8B4A0074EDBC /* ImageTableViewCell.xib */,
 			);
 			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		64C8C84F253232CD0048AD9B /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				648425E325224A4B0039B1F1 /* ViacheslavWebViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		64C8C851253232EA0048AD9B /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				64C992632523BCDA00676069 /* ImageStoryboard.storyboard */,
+				64C992662523BD0700676069 /* ImageViewController.swift */,
+				6420892B252870A800B9A1E1 /* avatar2.jpg */,
+				64C9927A25260B8C00676069 /* ImageScrollView.swift */,
+			);
+			path = Scroll;
+			sourceTree = "<group>";
+		};
+		64C8C852253232FF0048AD9B /* Pinch */ = {
+			isa = PBXGroup;
+			children = (
+				64C9926B252604F000676069 /* PinchStoryboard.storyboard */,
+				642089242527489D00B9A1E1 /* PinchViewController.swift */,
+			);
+			path = Pinch;
+			sourceTree = "<group>";
+		};
+		64C8C854253233180048AD9B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				647A9F68252B8CC800E340D1 /* ImageListViewController.swift */,
+				647A9F6B252B8CE000E340D1 /* ImageListStoryboard.storyboard */,
+				647A9F71252C951400E340D1 /* List.swift */,
+				647A9F62252B8BDE00E340D1 /* ImageCell */,
+				640B02F9252CE4A600B9D530 /* ShowImageStoryboard.storyboard */,
+				640B02FC252CE4B700B9D530 /* ShowImageViewController.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		74B29CB454077D45E9B58BC9 /* Frameworks */ = {

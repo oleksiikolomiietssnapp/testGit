@@ -34,5 +34,4 @@ class ViacheslavViewController: UIViewController {
         guard let vc = storybord.instantiateViewController(identifier: "PinchViewController") as? PinchViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

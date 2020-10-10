@@ -46,7 +46,6 @@ class ImageViewController: UIViewController {
         guard let image = UIImage(contentsOfFile: imagePath) else { return }
         
         self.imageScrollView?.set(image: image)
-
     }
     
     func setupImageScrollView() {
@@ -58,5 +57,4 @@ class ImageViewController: UIViewController {
         imageScrollView?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         imageScrollView?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-    
 }

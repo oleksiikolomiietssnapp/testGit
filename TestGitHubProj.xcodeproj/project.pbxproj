@@ -25,6 +25,8 @@
 		4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4988DA152528BA40009A7EA8 /* GoogleService-Info.plist */; };
 		640B02FA252CE4A600B9D530 /* ShowImageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640B02F9252CE4A600B9D530 /* ShowImageStoryboard.storyboard */; };
 		640B02FD252CE4B700B9D530 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B02FC252CE4B700B9D530 /* ShowImageViewController.swift */; };
+		6415F1F8253398FA0067A01F /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415F1F7253398FA0067A01F /* CircleViewController.swift */; };
+		6415F1FB2533991A0067A01F /* CircleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6415F1FA2533991A0067A01F /* CircleStoryboard.storyboard */; };
 		641AEE0C252FC42700275227 /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEE0B252FC42700275227 /* ApiViewController.swift */; };
 		641AEE10252FC43C00275227 /* ApiStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641AEE0F252FC43C00275227 /* ApiStoryboard.storyboard */; };
 		641AEE15252FC47B00275227 /* ApiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEE13252FC47B00275227 /* ApiTableViewCell.swift */; };
@@ -81,6 +83,8 @@
 		4988DA152528BA40009A7EA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		640B02F9252CE4A600B9D530 /* ShowImageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowImageStoryboard.storyboard; sourceTree = "<group>"; };
 		640B02FC252CE4B700B9D530 /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
+		6415F1F7253398FA0067A01F /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		6415F1FA2533991A0067A01F /* CircleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleStoryboard.storyboard; sourceTree = "<group>"; };
 		641AEE0B252FC42700275227 /* ApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		641AEE0F252FC43C00275227 /* ApiStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApiStoryboard.storyboard; sourceTree = "<group>"; };
 		641AEE13252FC47B00275227 /* ApiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTableViewCell.swift; sourceTree = "<group>"; };
@@ -207,6 +211,15 @@
 			path = TestGitHubProj;
 			sourceTree = "<group>";
 		};
+		6415F1FD253399200067A01F /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				6415F1F7253398FA0067A01F /* CircleViewController.swift */,
+				6415F1FA2533991A0067A01F /* CircleStoryboard.storyboard */,
+			);
+			path = Circle;
+			sourceTree = "<group>";
+		};
 		641AEE0A252FC3F900275227 /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +249,7 @@
 				64C8C851253232EA0048AD9B /* Scroll */,
 				64C8C852253232FF0048AD9B /* Pinch */,
 				64C8C854253233180048AD9B /* TableView */,
+				6415F1FD253399200067A01F /* Circle */,
 			);
 			path = Viacheslav;
 			sourceTree = "<group>";
@@ -446,6 +460,7 @@
 				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
 				64D886EF252F8B4A0074EDBC /* ImageTableViewCell.xib in Resources */,
 				647A9F6C252B8CE000E340D1 /* ImageListStoryboard.storyboard in Resources */,
+				6415F1FB2533991A0067A01F /* CircleStoryboard.storyboard in Resources */,
 				3FF531D325274C8F00B4959A /* text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +552,7 @@
 				495472EB251F191F0022AD8E /* SceneDelegate.swift in Sources */,
 				3FF531D225274C8F00B4959A /* MoreButtonState.swift in Sources */,
 				3F805227252B1DF9001B7FF7 /* RequestViewController.swift in Sources */,
+				6415F1F8253398FA0067A01F /* CircleViewController.swift in Sources */,
 				3F80522F252B20AE001B7FF7 /* NetworkingService.swift in Sources */,
 				648425E425224A4B0039B1F1 /* ViacheslavWebViewController.swift in Sources */,
 				84D5D2DD251F8DF300E854BD /* StepanViewController.swift in Sources */,

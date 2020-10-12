@@ -45,7 +45,7 @@ class CircleViewController: UIViewController {
     
     @objc func dragTheCicrle(recognaizer: UIPanGestureRecognizer) {
         
-        var someView: UIView!
+        var someView: UIView?
         
         switch recognaizer.name {
         case "panGreen":
@@ -58,18 +58,19 @@ class CircleViewController: UIViewController {
             break
         }
         
-        view.bringSubviewToFront(someView)
+        guard let resultView = someView else { return }
+        view.bringSubviewToFront(resultView)
         
-        let leftFrame = someView.frame.width / 2 + 4
-        let rightFrame = view.center.x * 2 - (someView.frame.width / 2 + 4)
+        let leftFrame = resultView.frame.width / 2 + 4
+        let rightFrame = view.center.x * 2 - (resultView.frame.width / 2 + 4)
         
-        let topFrame = topFrameView.center.y + someView.frame.height / 2 + 2
-        let leadingFrame = leadingFrameView.center.y - someView.frame.height / 2 - 2
+        let topFrame = topFrameView.center.y + resultView.frame.height / 2 + 2
+        let leadingFrame = leadingFrameView.center.y - resultView.frame.height / 2 - 2
         
         let translation = recognaizer.translation(in: self.view)
 
-        var newX = someView.center.x + translation.x
-        var newY = someView.center.y + translation.y
+        var newX = resultView.center.x + translation.x
+        var newY = resultView.center.y + translation.y
         
         if (newX - leftFrame) < 0 {
             newX = leftFrame + 1
@@ -87,10 +88,9 @@ class CircleViewController: UIViewController {
             newY = leadingFrame - 1
         }
 
-        someView.center = CGPoint(x: newX, y: newY)
+        resultView.center = CGPoint(x: newX, y: newY)
         recognaizer.setTranslation(CGPoint.zero, in: self.view)
 
         }
     
-
 }

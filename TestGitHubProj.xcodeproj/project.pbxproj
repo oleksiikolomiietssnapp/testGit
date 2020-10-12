@@ -43,6 +43,8 @@
 		64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9927A25260B8C00676069 /* ImageScrollView.swift */; };
 		64D886EE252F8B4A0074EDBC /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D886EC252F8B4A0074EDBC /* ImageTableViewCell.swift */; };
 		64D886EF252F8B4A0074EDBC /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D886ED252F8B4A0074EDBC /* ImageTableViewCell.xib */; };
+		84478A882531CF440025415C /* dragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84478A872531CF440025415C /* dragAndDrop.storyboard */; };
+		84478A8C2531D0650025415C /* dragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84478A8B2531D0650025415C /* dragAndDropViewController.swift */; };
 		846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F3D55252B89380061E242 /* UsersTableViewController.swift */; };
 		84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */; };
 		849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849019D2252B97B1000D8037 /* UsersTableViewCell.swift */; };
@@ -100,6 +102,8 @@
 		64D886EC252F8B4A0074EDBC /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		64D886ED252F8B4A0074EDBC /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		66D4F64EC17AE20B2CB5D389 /* Pods_TestGitHubProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestGitHubProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84478A872531CF440025415C /* dragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dragAndDrop.storyboard; sourceTree = "<group>"; };
+		84478A8B2531D0650025415C /* dragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragAndDropViewController.swift; sourceTree = "<group>"; };
 		846F3D55252B89380061E242 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		849019D2252B97B1000D8037 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
@@ -266,6 +270,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84478A862531CF160025415C /* DragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				84478A872531CF440025415C /* dragAndDrop.storyboard */,
+				84478A8B2531D0650025415C /* dragAndDropViewController.swift */,
+			);
+			path = DragAndDrop;
+			sourceTree = "<group>";
+		};
 		846F3D48252B885C0061E242 /* UsersTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		84D5D2DA251F3E5D00E854BD /* StepanStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				84478A862531CF160025415C /* DragAndDrop */,
 				846F3D48252B885C0061E242 /* UsersTableView */,
 				84D5D2DC251F8DF300E854BD /* StepanViewController.swift */,
 				84A84EFF251F9C6A00ACC578 /* Stepan.storyboard */,
@@ -396,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */,
+				84478A882531CF440025415C /* dragAndDrop.storyboard in Resources */,
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
 				BA54C315252F7A480067E4B4 /* SvitlanaDataBaseFirebase.storyboard in Resources */,
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,
@@ -485,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D886EE252F8B4A0074EDBC /* ImageTableViewCell.swift in Sources */,
+				84478A8C2531D0650025415C /* dragAndDropViewController.swift in Sources */,
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sqV-ND-T0E">
+            <objects>
+                <navigationController id="6HE-lT-AZc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uth-Bx-xoB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fgJ-cG-Zwf" kind="relationship" relationship="rootViewController" id="LAd-kb-vgx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lxn-7F-1xV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1367" y="-72"/>
+        </scene>
+        <!--Drag And Drop View Controller-->
+        <scene sceneID="sfC-Ka-FVN">
+            <objects>
+                <viewController storyboardIdentifier="dragAndDrop" id="fgJ-cG-Zwf" customClass="dragAndDropViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIQ-ca-UNa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOGLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-3U-bsU">
+                                <rect key="frame" x="107" y="88" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.75294117650000003" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VGF-tr-piN"/>
+                                    <constraint firstAttribute="width" constant="200" id="XLG-yU-wt5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tQt-Ti-928">
+                                <rect key="frame" x="107" y="380.5" width="200" height="135"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.75294117650000003" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8Ey-j9-ja9"/>
+                                    <constraint firstAttribute="height" constant="135" id="ljl-Ab-OeL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UiP-KK-5hg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y2W-3U-bsU" firstAttribute="top" secondItem="UiP-KK-5hg" secondAttribute="top" id="KC1-ox-uak"/>
+                            <constraint firstItem="tQt-Ti-928" firstAttribute="centerX" secondItem="jIQ-ca-UNa" secondAttribute="centerX" id="aKb-nH-ySg"/>
+                            <constraint firstItem="y2W-3U-bsU" firstAttribute="centerX" secondItem="jIQ-ca-UNa" secondAttribute="centerX" id="dyj-Lz-Z8J"/>
+                            <constraint firstItem="tQt-Ti-928" firstAttribute="centerY" secondItem="jIQ-ca-UNa" secondAttribute="centerY" id="nbQ-Ju-x4y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gPn-MU-mqw"/>
+                    <connections>
+                        <outlet property="googleUrlLabel" destination="y2W-3U-bsU" id="I35-qV-i0p"/>
+                        <outlet property="recognizerImageView" destination="tQt-Ti-928" id="h73-g0-xf1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDz-sg-q2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501.44927536231887" y="-71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

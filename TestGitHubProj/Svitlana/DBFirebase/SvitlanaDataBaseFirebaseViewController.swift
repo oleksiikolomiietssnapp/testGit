@@ -9,18 +9,35 @@ import Foundation
 import UIKit
 
 class SvitlanaDataBaseFirebaseViewController: UIViewController {
-    func showUsers(users: [User]) {
-        textView.text = "\(users)"
+    @IBOutlet weak var count: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var age: UITextField!
+    private var urlValue = ""
+    
+    @IBAction func save(_ sender: UIButton) {
+        if let dataName = name.text, let dataCount = count.text, let dataAge = age.text {
+            if !dataName.isEmpty && !dataCount.isEmpty && !dataAge.isEmpty {
+                guard let countValue = Int(dataCount) else { print("fill numeric symbols into count field")
+                    return }
+                guard let ageValue = Int(dataAge) else { print("fill numeric symbols into age field")
+                    return }
+                FirebaseService.addDataToDB(collectionName: "Users", dictionaryData: ["name" : dataName, "age" : ageValue, "count": countValue])
+            } else {
+                print("fill all fields please")
+                return
+            }
+        } else {
+            print("unexpected nil")
+            return
+        }
     }
-    @IBOutlet weak var textView: UITextView!
-    //it will be button save
-    @IBAction func runDataToFirebase(_ sender: UIButton) {
-        // for reading, not to writing below (test)
-        FirebaseService.readUsersFromDB(callback: { users in
-            print(users)
-            self.textView.text = "\(users)"
-        })
-//        FirebaseService.readDataFromDB(collectionName: "Users", documentName: "AH-34")
+    
+    @IBAction func uploadImg(_ sender: UIButton) {
+        guard let currentImg = UIImage(named: "avatar") else {return}
+        FirebaseService.uploadUserImageToDB(image: currentImg) { [weak self] url in
+            self?.urlValue = "\(url)"
+            FirebaseService.updateDataToDB(collectionName: "Users", documentName: "JNUYliBO4e4wsT5ILioG", fieldName: "avatar", value: self?.urlValue)
+            }
+        print(urlValue)
     }
-
 }

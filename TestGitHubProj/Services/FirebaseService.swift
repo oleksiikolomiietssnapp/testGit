@@ -10,9 +10,40 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
-
 final class FirebaseService {
     private static let db = Firestore.firestore()
+    private static let storage = Storage.storage()
+    
+    class func getStorageReferenceToImage(by_name: String){
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("images")
+        var imgRef = storageRef.child("images/\(by_name).jpg")
+    }
+    /// Uploading users image into DB, creating URL for it
+    class func uploadUserImageToDB(image: UIImage, callback: @escaping (URL) -> Void) {
+        let storageRef = storage.reference()
+
+        guard let data = image.jpegData(compressionQuality: 1) else { print("error"); return }
+        
+        let fileRef = storageRef.child("images/1.jpg")
+        
+        let uploadTask = fileRef.putData(data, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                print("Uh-oh, an error occurred!")
+                return
+            }
+            // Metadata contains file metadata such as size, content-type.
+            let size = metadata.size
+
+            fileRef.downloadURL { (url, error) in
+                guard let downloadURL = url else {
+                    print("Uh-oh, an error occurred!")
+                    return
+                }
+                callback(downloadURL)
+            }
+        }
+    }
     
     /// Add a new document with own ID
     class func addDataToDB(collectionName: String, documentName: String, dictionaryData: [String:Any]) {

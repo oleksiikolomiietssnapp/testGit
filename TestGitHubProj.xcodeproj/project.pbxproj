@@ -136,11 +136,11 @@
 		3F7E41E1251F401C0020F715 /* Anastasia */ = {
 			isa = PBXGroup;
 			children = (
+				3F89B4E7253097A500367C81 /* Firebase */,
+				3F0D8B1A252DE67D00C090D4 /* TextView */,
 				3F7E41DE251F40160020F715 /* Anastasia.storyboard */,
 				3FF531D025274C8F00B4959A /* AnastasiaViewController.swift */,
-				3F0D8B1A252DE67D00C090D4 /* TextView */,
 				3F805226252B1DF9001B7FF7 /* RequestViewController.swift */,
-				3F89B4E7253097A500367C81 /* Firebase */,
 			);
 			path = Anastasia;
 			sourceTree = "<group>";

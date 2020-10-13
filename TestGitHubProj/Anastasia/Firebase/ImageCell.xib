@@ -20,6 +20,7 @@
                         <rect key="frame" x="16" y="16" width="200" height="162"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="8eo-Zk-dBd"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="b8G-un-mK4"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-nX-a5a">

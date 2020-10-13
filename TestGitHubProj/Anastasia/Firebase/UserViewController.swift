@@ -16,28 +16,15 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         view.layoutSubviews()
         view.backgroundColor = .systemBackground
-    }
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+        
         guard let user = user else {
             return
         }
-        navigationItem.title = user.name
+        title = user.name
         tableView.dataSource = self
-        
         let imageCellNib = UINib(nibName: "ImageCell", bundle: .main)
         tableView.register(imageCellNib, forCellReuseIdentifier: "imageCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "infoCell")
-    }
-    
-    init(user: User) {
-        self.user = user
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        self.user = nil
-        super.init(coder: coder)
     }
 }
 

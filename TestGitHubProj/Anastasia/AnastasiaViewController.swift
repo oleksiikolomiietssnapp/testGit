@@ -10,7 +10,7 @@ import SafariServices
 
 class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    lazy private var kWikiUrl = { return "https://www.wikipedia.org" }()
+    private let kWikiUrl = "https://www.wikipedia.org"
     
     lazy private var  textBtn = { return UIButton(type: UIButton.ButtonType.custom) }()
     

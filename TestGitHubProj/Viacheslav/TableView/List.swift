@@ -24,9 +24,9 @@ class ListImages {
     
     func setup() {
         
-        for index in 1...8 {
-            guard let image = UIImage(named: "img00\(index)") else { return }
-            let images = List(image: image, nameOfImage: "storm \(index)")
+        for index in 0...7 {
+            guard let image = UIImage(named: "img00\(index + 1)") else { return }
+            let images = List(image: image, nameOfImage: "storm \(index + 1)")
             list.append(images)
         }
     }

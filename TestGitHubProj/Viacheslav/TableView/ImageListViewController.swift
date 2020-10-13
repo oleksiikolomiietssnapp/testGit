@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import Foundation
 
 class ImageListViewController: UIViewController {
 
@@ -36,15 +35,12 @@ extension ImageListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShowImageViewController", for: indexPath) as! ShowImageViewController
-        //        let list = listImages.list[indexPath.item]
-        //        cell.setupCell(list: list)
-        //        return cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as? ImageTableViewCell
         let list = listImages.list[indexPath.item]
-        cell.setupCell(list: list)
+        cell?.setupCell(list: list)
         
-        return cell
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -53,9 +49,8 @@ extension ImageListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "ShowImageStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "ShowImageViewController") as! ShowImageViewController
+        guard let vc = storyboard.instantiateViewController(identifier: "ShowImageViewController") as? ShowImageViewController else { return }
         vc.image = listImages.list[indexPath.row].image
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
 }

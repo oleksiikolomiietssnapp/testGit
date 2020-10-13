@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="1572" y="96"/>
         </scene>
-        <!--SvitlanaDataBaseFirebase-->
+        <!--CreateUser-->
         <scene sceneID="G5V-xd-vDL">
             <objects>
-                <viewControllerPlaceholder storyboardName="SvitlanaDataBaseFirebase" referencedIdentifier="SvitlanaDataBaseFirebase" id="8gN-rl-CXn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CreateUser" referencedIdentifier="CreateUser" id="8gN-rl-CXn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="UDE-sF-QCi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QS6-it-NAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

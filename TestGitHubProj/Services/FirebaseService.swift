@@ -20,12 +20,12 @@ final class FirebaseService {
         var imgRef = storageRef.child("images/\(by_name).jpg")
     }
     /// Uploading users image into DB, creating URL for it
-    class func uploadUserImageToDB(image: UIImage, callback: @escaping (URL) -> Void) {
+    class func uploadUserImageToDB(image: UIImage, callback: @escaping (URL, String) -> Void) {
         let storageRef = storage.reference()
-
-        guard let data = image.jpegData(compressionQuality: 1) else { print("error"); return }
         
-        let fileRef = storageRef.child("images/1.jpg")
+        guard let data = image.jpegData(compressionQuality: 1) else { print("error"); return }
+        let id = UUID().uuidString
+        let fileRef = storageRef.child("images/\(id).jpg")
         
         let uploadTask = fileRef.putData(data, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
@@ -34,19 +34,22 @@ final class FirebaseService {
             }
             // Metadata contains file metadata such as size, content-type.
             let size = metadata.size
-
+            
             fileRef.downloadURL { (url, error) in
                 guard let downloadURL = url else {
                     print("Uh-oh, an error occurred!")
                     return
                 }
-                callback(downloadURL)
+                callback(downloadURL, id)
             }
         }
     }
     
-    /// Add a new document with own ID
-    class func addDataToDB(collectionName: String, documentName: String, dictionaryData: [String:Any]) {
+    /// Add a new document with own user ID
+    class func addDataToDB(
+        collectionName: String,
+        documentName: String = UUID().uuidString,
+        dictionaryData: [String:Any]) {
         db.collection(collectionName).document(documentName).setData(dictionaryData)
         db.collection(collectionName).document(documentName).updateData([
             "lastUpdated": FieldValue.serverTimestamp() //by whom (username)

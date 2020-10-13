@@ -42,7 +42,7 @@ class UsersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuse", for: indexPath) as! UsersTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuse", for: indexPath) as? UsersTableViewCell else { return UITableViewCell() }
         
         let user = users[indexPath.row]
         cell.setLabels(for: user)

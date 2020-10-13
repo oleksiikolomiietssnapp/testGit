@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="194" id="KGk-i7-Jjw" customClass="ImageCell" customModule="TestGitHubProj" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icg-8g-uRm">
+                        <rect key="frame" x="16" y="16" width="200" height="162"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="8eo-Zk-dBd"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="b8G-un-mK4"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-nX-a5a">
+                        <rect key="frame" x="280" y="86" width="40" height="22"/>
+                        <state key="normal" image="trash" catalog="system"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="icg-8g-uRm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1w1-vh-A1X"/>
+                    <constraint firstAttribute="bottom" secondItem="icg-8g-uRm" secondAttribute="bottom" constant="16" id="7bq-p9-lsJ"/>
+                    <constraint firstItem="TpQ-nX-a5a" firstAttribute="leading" relation="lessThanOrEqual" secondItem="icg-8g-uRm" secondAttribute="trailing" constant="64" id="FP2-zn-PuP"/>
+                    <constraint firstItem="icg-8g-uRm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Fpl-Du-n6l"/>
+                    <constraint firstItem="TpQ-nX-a5a" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="16" id="MYk-p2-dK6"/>
+                    <constraint firstItem="icg-8g-uRm" firstAttribute="centerY" secondItem="TpQ-nX-a5a" secondAttribute="centerY" id="cax-8M-NCB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="441" y="-13"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
+    </resources>
+</document>

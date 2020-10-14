@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sqV-ND-T0E">
+            <objects>
+                <navigationController id="6HE-lT-AZc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uth-Bx-xoB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fgJ-cG-Zwf" kind="relationship" relationship="rootViewController" id="LAd-kb-vgx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lxn-7F-1xV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1367" y="-72"/>
+        </scene>
+        <!--Drag And Drop View Controller-->
+        <scene sceneID="sfC-Ka-FVN">
+            <objects>
+                <viewController storyboardIdentifier="dragAndDrop" id="fgJ-cG-Zwf" customClass="dragAndDropViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIQ-ca-UNa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lNW-Ev-GIS">
+                                <rect key="frame" x="112" y="93" width="190" height="118"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOGLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-3U-bsU">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="56.5"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.75294117650000003" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTITA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP6-4G-E7s">
+                                        <rect key="frame" x="0.0" y="61.5" width="190" height="56.5"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.75294117650000003" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="1qa-Wr-At2"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="putItHerePicture" translatesAutoresizingMaskIntoConstraints="NO" id="tQt-Ti-928">
+                                <rect key="frame" x="107" y="447.5" width="200" height="135"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8Ey-j9-ja9"/>
+                                    <constraint firstAttribute="height" constant="135" id="ljl-Ab-OeL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2x-Pk-qeR">
+                                <rect key="frame" x="157" y="802" width="100" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.60395788204804401" blue="0.79430718737309292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cVP-30-AhN"/>
+                                    <constraint firstAttribute="height" constant="60" id="wgB-oC-NSu"/>
+                                </constraints>
+                                <state key="normal" title="GOGOGO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="visitSiteButtonPressed:" destination="fgJ-cG-Zwf" eventType="touchUpInside" id="rYY-Wg-YbQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UiP-KK-5hg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lNW-Ev-GIS" firstAttribute="centerX" secondItem="jIQ-ca-UNa" secondAttribute="centerX" id="1gM-6C-37l"/>
+                            <constraint firstItem="tQt-Ti-928" firstAttribute="centerX" secondItem="jIQ-ca-UNa" secondAttribute="centerX" id="aKb-nH-ySg"/>
+                            <constraint firstItem="j2x-Pk-qeR" firstAttribute="bottom" secondItem="UiP-KK-5hg" secondAttribute="bottom" id="b3P-6e-Tip"/>
+                            <constraint firstItem="lNW-Ev-GIS" firstAttribute="top" secondItem="UiP-KK-5hg" secondAttribute="top" constant="5" id="eiE-sL-wh5"/>
+                            <constraint firstItem="tQt-Ti-928" firstAttribute="centerY" secondItem="jIQ-ca-UNa" secondAttribute="centerY" multiplier="1.15" id="nbQ-Ju-x4y"/>
+                            <constraint firstItem="j2x-Pk-qeR" firstAttribute="centerX" secondItem="jIQ-ca-UNa" secondAttribute="centerX" id="ony-iz-LPN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gPn-MU-mqw"/>
+                    <connections>
+                        <outlet property="goButton" destination="j2x-Pk-qeR" id="0HM-Lh-BPq"/>
+                        <outlet property="googleUrlLabel" destination="y2W-3U-bsU" id="I35-qV-i0p"/>
+                        <outlet property="intitaLabel" destination="QP6-4G-E7s" id="eOT-Zc-XS9"/>
+                        <outlet property="recognizerImageView" destination="tQt-Ti-928" id="h73-g0-xf1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDz-sg-q2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501.44927536231887" y="-71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="putItHerePicture" width="2502" height="3000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

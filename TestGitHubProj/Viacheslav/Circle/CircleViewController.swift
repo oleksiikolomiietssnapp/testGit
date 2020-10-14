@@ -80,8 +80,8 @@ class CircleViewController: UIViewController {
         
         view.bringSubviewToFront(resultView)
         
-        let leftFrame = resultView.frame.width / 2 + 3
-        let rightFrame = view.center.x * 2 - (resultView.frame.width / 2 + 3)
+        let leftFrame = leftFrameView.center.x + resultView.frame.width / 2 + 1
+        let rightFrame = rightFrameView.center.x - (resultView.frame.width / 2 + 1)
         
         let topFrame = topFrameView.center.y + resultView.frame.height / 2 + 1
         let leadingFrame = leadingFrameView.center.y - resultView.frame.height / 2 - 1

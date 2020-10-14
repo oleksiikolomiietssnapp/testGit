@@ -10,22 +10,27 @@ import SafariServices
 
 class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    lazy private var kWikiUrl = { return "https://www.wikipedia.org" }()
+    private let kWikiUrl = "https://www.wikipedia.org"
     
-    lazy private var  button = { return UIButton(type: UIButton.ButtonType.custom) }()
+    lazy private var  textBtn = { return UIButton(type: UIButton.ButtonType.custom) }()
     
     lazy private var requestBtn = { return UIButton(type: UIButton.ButtonType.custom) }()
+    
+    lazy private var firebaseBtn = { return UIButton(type: UIButton.ButtonType.custom) }()
     
     @IBOutlet private var textViewController: UIView!
     
     @IBOutlet weak private var wikiButton: UIButton!
     
-    @IBAction private func btnPressed(_ sender: UIButton) {
-        if sender == wikiButton {
+    @IBAction private func wikiBtnPressed(_ sender: UIButton) {
             showSafari(kWikiUrl)
-        } else if sender == button {
+    }
+    
+    @objc private func textBtnPressed() {
             self.navigationController?.pushViewController(TextViewController(), animated: true)
-        } else {
+    }
+    
+    @objc private func requestBtnPressed() {
             let vc = RequestViewController()
             guard let url = URL(string: "https://api.agify.io/?name%5B%5D=michael&name%5B%5D=matthew&name%5B%5D=jane") else {
                 return
@@ -42,6 +47,13 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
                 } catch {
                     print(error.localizedDescription)
                 }
+            })
+    }
+    
+    @objc private func firebaseBtnPressed() {
+        DispatchQueue.main.async {
+            FirebaseService.readUsersFromDB(callback: {users in
+                self.navigationController?.pushViewController(FirebaseUsersViewController(users: users), animated: true)
             })
         }
     }
@@ -74,17 +86,21 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addButton(button)
+        addButton(firebaseBtn)
+        addButton(textBtn)
         addButton(requestBtn)
-        customizeBtn(button, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8, title: "Text")
+        customizeBtn(textBtn, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8, title: "Text")
         customizeBtn(requestBtn, frameY: view.frame.midY - wikiButton.frame.height - 8, title: "Request")
-        button.addTarget(self, action: #selector(btnPressed), for: .touchUpInside)
-        requestBtn.addTarget(self, action: #selector(btnPressed), for: .touchUpInside)
+        customizeBtn(firebaseBtn, frameY: view.frame.midY + wikiButton.frame.height + 16, title: "Firebase")
+        textBtn.addTarget(self, action: #selector(textBtnPressed), for: .touchUpInside)
+        requestBtn.addTarget(self, action: #selector(requestBtnPressed), for: .touchUpInside)
+        firebaseBtn.addTarget(self, action: #selector(firebaseBtnPressed), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        changeButtonFrame(button, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8)
+        changeButtonFrame(textBtn, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8)
         changeButtonFrame(requestBtn, frameY: view.frame.midY - wikiButton.frame.height - 8)
+        changeButtonFrame(firebaseBtn, frameY: view.frame.midY + wikiButton.frame.height + 16)
     }
 }

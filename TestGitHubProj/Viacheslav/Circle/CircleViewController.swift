@@ -18,12 +18,26 @@ class CircleViewController: UIViewController {
     @IBOutlet weak var leadingFrameView: UIView!
     @IBOutlet weak var leftFrameView: UIView!
     
+    @IBOutlet var colorfulViews: [UIView]!
+    @IBOutlet var sidesOfFrames: [UIView]!
+    
+//    var coordinateGreenView: CGPoint!
+//    var coordinatesRedView: CGPoint!
+//    var coordinatesBlueView: CGPoint!
+//
+    var isTouchToFrame = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        cornerRadius(to: greenView)
-        cornerRadius(to: redView)
-        cornerRadius(to: blueView)
+     
+        for view in colorfulViews {
+            cornerRadius(to: view)
+            alphaView(to: view)
+        }
+        
+        for view in sidesOfFrames {
+            frameIsHiden(part: view)
+        }
         
         let panGreen = UIPanGestureRecognizer(target: self, action: #selector(dragTheCicrle))
         panGreen.name = "panGreen"
@@ -36,16 +50,20 @@ class CircleViewController: UIViewController {
         let panBlue = UIPanGestureRecognizer(target: self, action: #selector(dragTheCicrle))
         panBlue.name = "panBlue"
         blueView.addGestureRecognizer(panBlue)
-        
     }
     
     func cornerRadius(to circleView: UIView) {
         circleView.layer.cornerRadius = circleView.layer.frame.height / 2
+//        circleView.alpha = 0.6
+    }
+    
+    func alphaView(to circleView: UIView) {
+        circleView.alpha = 0.6
     }
     
     @objc func dragTheCicrle(recognaizer: UIPanGestureRecognizer) {
         
-        var someView: UIView!
+        var someView: UIView?
         
         switch recognaizer.name {
         case "panGreen":
@@ -58,39 +76,72 @@ class CircleViewController: UIViewController {
             break
         }
         
-        view.bringSubviewToFront(someView)
+        guard let resultView = someView else { return }
         
-        let leftFrame = someView.frame.width / 2 + 4
-        let rightFrame = view.center.x * 2 - (someView.frame.width / 2 + 4)
+        view.bringSubviewToFront(resultView)
         
-        let topFrame = topFrameView.center.y + someView.frame.height / 2 + 2
-        let leadingFrame = leadingFrameView.center.y - someView.frame.height / 2 - 2
+        let leftFrame = resultView.frame.width / 2 + 3
+        let rightFrame = view.center.x * 2 - (resultView.frame.width / 2 + 3)
+        
+        let topFrame = topFrameView.center.y + resultView.frame.height / 2 + 1
+        let leadingFrame = leadingFrameView.center.y - resultView.frame.height / 2 - 1
         
         let translation = recognaizer.translation(in: self.view)
 
-        var newX = someView.center.x + translation.x
-        var newY = someView.center.y + translation.y
+        var newX = resultView.center.x + translation.x
+        var newY = resultView.center.y + translation.y
         
-        if (newX - leftFrame) < 0 {
-            newX = leftFrame + 1
+        if (newX - leftFrame) < 1 {
+            touchToFrame(by: (newX - leftFrame), side: leftFrameView)
+            newX = leftFrame
+        } else {
+            unTouchToFrame(by: (newX - leftFrame), side: leftFrameView)
         }
         
-        if (newX - rightFrame) > 0 {
-            newX = rightFrame - 1
+        if (newX - rightFrame) > -1 {
+            touchToFrame(by: (newX - leftFrame), side: rightFrameView)
+            newX = rightFrame
+        } else {
+            unTouchToFrame(by: (newX - leftFrame), side: rightFrameView)
         }
         
-        if (newY - topFrame) < 0 {
-            newY = topFrame + 1
+        if (newY - topFrame) < 1 {
+            touchToFrame(by: (newX - leftFrame), side: topFrameView)
+            newY = topFrame
+        } else {
+            unTouchToFrame(by: (newX - leftFrame), side: topFrameView)
         }
         
-        if (newY - leadingFrame) > 0 {
-            newY = leadingFrame - 1
+        if (newY - leadingFrame) > -1 {
+            touchToFrame(by: (newX - leftFrame), side: leadingFrameView)
+            newY = leadingFrame
+        } else {
+            unTouchToFrame(by: (newX - leftFrame), side: leadingFrameView)
         }
 
-        someView.center = CGPoint(x: newX, y: newY)
+        resultView.center = CGPoint(x: newX, y: newY)
         recognaizer.setTranslation(CGPoint.zero, in: self.view)
-
         }
     
-
+    func frameIsHiden(part OfFrame: UIView) {
+        if OfFrame.isHidden {
+            OfFrame.isHidden = false
+        } else {
+            OfFrame.isHidden = true
+        }
+    }
+    
+    func touchToFrame(by: CGFloat, side: UIView) {
+        if by > 0 || by < 1 {
+            side.isHidden = false
+            isTouchToFrame = true
+        } else {
+            side.isHidden = true
+        }
+    }
+    
+    func unTouchToFrame(by: CGFloat, side: UIView) {
+            side.isHidden = true
+            isTouchToFrame = false
+    }
 }

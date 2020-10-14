@@ -48,27 +48,27 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-B1-o5Z">
-                                <rect key="frame" x="159" y="400" width="96" height="96"/>
+                                <rect key="frame" x="175" y="416" width="64" height="64"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="2cL-Pe-nme"/>
-                                    <constraint firstAttribute="width" constant="96" id="505-jV-2ja"/>
+                                    <constraint firstAttribute="height" constant="64" id="2cL-Pe-nme"/>
+                                    <constraint firstAttribute="width" constant="64" id="505-jV-2ja"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="sLQ-Z9-iQh">
-                                <rect key="frame" x="159" y="254" width="96" height="96"/>
+                                <rect key="frame" x="175" y="328" width="64" height="64"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="kx8-FL-GxA"/>
-                                    <constraint firstAttribute="width" constant="96" id="rOG-PL-a9X"/>
+                                    <constraint firstAttribute="height" constant="64" id="kx8-FL-GxA"/>
+                                    <constraint firstAttribute="width" constant="64" id="rOG-PL-a9X"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Y6F-LD-09Y">
-                                <rect key="frame" x="159" y="546" width="96" height="96"/>
+                                <rect key="frame" x="175" y="504" width="64" height="64"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="RYp-fb-VGx"/>
-                                    <constraint firstAttribute="width" constant="96" id="kgT-V9-AKO"/>
+                                    <constraint firstAttribute="height" constant="64" id="RYp-fb-VGx"/>
+                                    <constraint firstAttribute="width" constant="64" id="kgT-V9-AKO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -84,8 +84,8 @@
                             <constraint firstItem="FzR-yU-9As" firstAttribute="trailing" secondItem="FwC-pL-WaP" secondAttribute="trailing" id="Vr9-gj-REq"/>
                             <constraint firstItem="sLQ-Z9-iQh" firstAttribute="centerX" secondItem="f75-Xm-8gb" secondAttribute="centerX" id="YAT-nN-KrZ"/>
                             <constraint firstItem="Bku-mw-zde" firstAttribute="top" secondItem="FwC-pL-WaP" secondAttribute="bottom" id="YMa-kC-Pcj"/>
-                            <constraint firstItem="z1h-B1-o5Z" firstAttribute="top" secondItem="sLQ-Z9-iQh" secondAttribute="bottom" constant="50" id="YrV-BY-icG"/>
-                            <constraint firstItem="Y6F-LD-09Y" firstAttribute="top" secondItem="z1h-B1-o5Z" secondAttribute="bottom" constant="50" id="cIz-ab-Xvg"/>
+                            <constraint firstItem="z1h-B1-o5Z" firstAttribute="top" secondItem="sLQ-Z9-iQh" secondAttribute="bottom" constant="24" id="YrV-BY-icG"/>
+                            <constraint firstItem="Y6F-LD-09Y" firstAttribute="top" secondItem="z1h-B1-o5Z" secondAttribute="bottom" constant="24" id="cIz-ab-Xvg"/>
                             <constraint firstItem="FwC-pL-WaP" firstAttribute="leading" secondItem="FzR-yU-9As" secondAttribute="leading" id="kAc-gb-4PI"/>
                             <constraint firstItem="FzR-yU-9As" firstAttribute="trailing" secondItem="5b8-sj-YA3" secondAttribute="trailing" id="lEt-wl-sHa"/>
                             <constraint firstItem="Q2h-gC-rd8" firstAttribute="top" secondItem="FzR-yU-9As" secondAttribute="top" id="ldF-7u-CA6"/>
@@ -103,6 +103,13 @@
                         <outlet property="redView" destination="sLQ-Z9-iQh" id="6rB-3p-Obj"/>
                         <outlet property="rightFrameView" destination="Q2h-gC-rd8" id="c3W-T4-L77"/>
                         <outlet property="topFrameView" destination="FwC-pL-WaP" id="M5j-hY-rrZ"/>
+                        <outletCollection property="colorfulViews" destination="sLQ-Z9-iQh" collectionClass="NSMutableArray" id="oPf-Hp-iIs"/>
+                        <outletCollection property="colorfulViews" destination="z1h-B1-o5Z" collectionClass="NSMutableArray" id="0nY-NR-p0O"/>
+                        <outletCollection property="colorfulViews" destination="Y6F-LD-09Y" collectionClass="NSMutableArray" id="ig0-bz-Nkr"/>
+                        <outletCollection property="sidesOfFrames" destination="Bku-mw-zde" collectionClass="NSMutableArray" id="qV6-ck-nL1"/>
+                        <outletCollection property="sidesOfFrames" destination="Q2h-gC-rd8" collectionClass="NSMutableArray" id="3Ga-Qq-qsT"/>
+                        <outletCollection property="sidesOfFrames" destination="5b8-sj-YA3" collectionClass="NSMutableArray" id="Qov-b0-Imi"/>
+                        <outletCollection property="sidesOfFrames" destination="FwC-pL-WaP" collectionClass="NSMutableArray" id="JrM-Y0-rcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dee-Ji-YRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

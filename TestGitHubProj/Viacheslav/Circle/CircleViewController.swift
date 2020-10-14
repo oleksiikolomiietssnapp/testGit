@@ -20,11 +20,7 @@ class CircleViewController: UIViewController {
     
     @IBOutlet var colorfulViews: [UIView]!
     @IBOutlet var sidesOfFrames: [UIView]!
-    
-//    var coordinateGreenView: CGPoint!
-//    var coordinatesRedView: CGPoint!
-//    var coordinatesBlueView: CGPoint!
-//
+
     var isTouchToFrame = false
     
     override func viewDidLoad() {
@@ -54,7 +50,6 @@ class CircleViewController: UIViewController {
     
     func cornerRadius(to circleView: UIView) {
         circleView.layer.cornerRadius = circleView.layer.frame.height / 2
-//        circleView.alpha = 0.6
     }
     
     func alphaView(to circleView: UIView) {

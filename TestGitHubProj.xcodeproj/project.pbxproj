@@ -478,11 +478,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */, droppingURL
+				849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */,
 				84478A882531CF440025415C /* dragAndDrop.storyboard in Resources */,
 
 				3F89B50125309C4800367C81 /* ImageCell.xib in Resources */,
- main
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
 				BA54C315252F7A480067E4B4 /* CreateUser.storyboard in Resources */,
 				3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */,

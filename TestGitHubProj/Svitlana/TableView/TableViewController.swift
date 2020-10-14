@@ -13,12 +13,17 @@ class TableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "reuseIdentifier")
 
         FirebaseService.readUsersFromDB(callback: { [weak self] users in
             self?.users = users
         })
+
     }
 
     // MARK: - Table view data source
@@ -28,9 +33,10 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        cell.textLabel?.text = self.users[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "reuseIdentifier",
+                for: indexPath) as? UserTableViewCell else {return UITableViewCell()}
+        cell.configure(with: self.users[indexPath.row])
 
         return cell
     }

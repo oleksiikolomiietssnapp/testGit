@@ -61,6 +61,8 @@
 		BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */; };
 		BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */; };
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
+		BA2660532537026D0042C0BA /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2660512537026D0042C0BA /* UserTableViewCell.swift */; };
+		BA2660542537026D0042C0BA /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2660522537026D0042C0BA /* UserTableViewCell.xib */; };
 		BA54C314252F7A480067E4B4 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C312252F7A480067E4B4 /* CreateUserViewController.swift */; };
 		BA54C315252F7A480067E4B4 /* CreateUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA54C313252F7A480067E4B4 /* CreateUser.storyboard */; };
 		BA54C33225302BD70067E4B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C33125302BD60067E4B4 /* TableViewController.swift */; };
@@ -126,6 +128,8 @@
 		BA1AA9DA25209685001C839F /* SvitlanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaViewController.swift; sourceTree = "<group>"; };
 		BA1AA9E52520DE51001C839F /* SvitlanaTextView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaTextView.storyboard; sourceTree = "<group>"; };
 		BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaTextViewController.swift; sourceTree = "<group>"; };
+		BA2660512537026D0042C0BA /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		BA2660522537026D0042C0BA /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		BA54C312252F7A480067E4B4 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		BA54C313252F7A480067E4B4 /* CreateUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateUser.storyboard; sourceTree = "<group>"; };
 		BA54C33125302BD60067E4B4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 			isa = PBXGroup;
 			children = (
 				BA54C33125302BD60067E4B4 /* TableViewController.swift */,
+				BA2660512537026D0042C0BA /* UserTableViewCell.swift */,
+				BA2660522537026D0042C0BA /* UserTableViewCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */,
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
+				BA2660542537026D0042C0BA /* UserTableViewCell.xib in Resources */,
 				64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
 				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
@@ -565,6 +572,7 @@
 				BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */,
 				849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */,
 				64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */,
+				BA2660532537026D0042C0BA /* UserTableViewCell.swift in Sources */,
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,

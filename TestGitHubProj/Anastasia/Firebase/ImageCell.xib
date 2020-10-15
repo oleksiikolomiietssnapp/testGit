@@ -16,16 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icg-8g-uRm">
+                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icg-8g-uRm">
                         <rect key="frame" x="16" y="16" width="200" height="162"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="8eo-Zk-dBd"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="b8G-un-mK4"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="b8G-un-mK4"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-nX-a5a">
                         <rect key="frame" x="280" y="86" width="40" height="22"/>
                         <state key="normal" image="trash" catalog="system"/>
+                        <connections>
+                            <action selector="bucketButtonPressed" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lad-XG-yWb"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -38,6 +41,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bucketButton" destination="TpQ-nX-a5a" id="E7N-zF-3dZ"/>
+                <outlet property="imagePlaceholder" destination="icg-8g-uRm" id="XT3-0J-ktK"/>
+            </connections>
             <point key="canvasLocation" x="441" y="-13"/>
         </tableViewCell>
     </objects>

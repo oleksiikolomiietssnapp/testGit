@@ -7,7 +7,8 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+class UserViewController: UIViewController, ImageCellDelegate {
+    
     var user: User?
     
     @IBOutlet weak var tableView: UITableView!
@@ -42,7 +43,10 @@ extension UserViewController: UITableViewDataSource {
         }
         switch indexPath.row {
         case 0:
-            return tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as? ImageCell else { return UITableViewCell() }
+            cell.delegate = self
+            cell.configure(with: user)
+            return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
             cell.textLabel?.text = "Age: " + String(user.age)
@@ -52,5 +56,13 @@ extension UserViewController: UITableViewDataSource {
             cell.textLabel?.text = "Count: " + String(user.count)
             return cell
         }
+    }
+    
+    func imageCell() {
+        guard  let user = user else {
+            return
+        }
+        FirebaseService.removeUserImageFromDB(id: user.documentID)
+        tableView.reloadData()
     }
 }

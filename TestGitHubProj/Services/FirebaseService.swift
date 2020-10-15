@@ -12,35 +12,49 @@ import FirebaseFirestore
 
 final class FirebaseService {
     private static let db = Firestore.firestore()
-    private static let storage = Storage.storage()
+    static let storageRef = Storage.storage().reference()
     
-    class func getStorageReferenceToImage(by_name: String){
-        let storageRef = storage.reference()
-        let imagesRef = storageRef.child("images")
-        var imgRef = storageRef.child("images/\(by_name).jpg")
+    /// MAIN WAY TO SAVE DATA
+    class func saveUser(_ user: User) {
+        // Save user to cloud
+        addDataToDB(
+            collectionName: "Users",
+            documentName: user.documentID,
+            dictionaryData: [
+                "name" : user.name,
+                "age" : user.age,
+                "count": user.count
+            ])
+        // Save image to storage with the same Id as user have
+        if let image = user.image {
+            uploadUserImageToDB(image: image, id: user.documentID)
+        }
     }
     /// Uploading users image into DB, creating URL for it
-    class func uploadUserImageToDB(image: UIImage, callback: @escaping (URL, String) -> Void) {
-        let storageRef = storage.reference()
-        
-        guard let data = image.jpegData(compressionQuality: 1) else { print("error"); return }
-        let id = UUID().uuidString
+    class func uploadUserImageToDB(image: Data, id: String) {
         let fileRef = storageRef.child("images/\(id).jpg")
-        
-        let uploadTask = fileRef.putData(data, metadata: nil) { (metadata, error) in
-            guard let metadata = metadata else {
-                print("Uh-oh, an error occurred!")
+        _ = fileRef.putData(image, metadata: nil) { (metadata, error) in
+            guard metadata != nil else {
+                print("Error: \(error?.localizedDescription ?? "Uh-oh, an error occurred!")")
                 return
             }
-            // Metadata contains file metadata such as size, content-type.
-            let size = metadata.size
-            
-            fileRef.downloadURL { (url, error) in
-                guard let downloadURL = url else {
-                    print("Uh-oh, an error occurred!")
-                    return
-                }
-                callback(downloadURL, id)
+        }
+    }
+    
+    // MAIN WAY TO READ DATA
+    class func downloadUserImageFromDB(
+        id: String,
+        callback: @escaping (UIImage) -> Void) {
+        let islandRef = storageRef.child("images/\(id).jpg")
+
+        islandRef.getData(maxSize: 100 * 1024 * 1024) { data, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            } else {
+                guard let data = data,
+                      let image = UIImage(data: data) else {return}
+                
+                callback(image)
             }
         }
     }
@@ -126,7 +140,7 @@ final class FirebaseService {
                           let count = parsedData["count"] as? Int else {
                         continue
                     }
-                    users.append(User(name: name, age: age, count: count))
+                    users.append(User(name: name, age: age, count: count, documentID: document.documentID))
                 }
             }
             callback(users)
@@ -162,5 +176,17 @@ final class FirebaseService {
                     }
                 }
             }
+    }
+    
+    // MARK: Option 2
+    func showImageInView(){
+//        let reference = storageRef.child("images/\(user.documentID).jpg")
+
+        // UIImageView in your ViewController
+//        let imageView: UIImageView = self.userPhoto
+        // Placeholder image
+        let placeholderImage = UIImage(named: "userPhotoTemplate.jpg")
+        // Load the image using SDWebImage
+//        imageView.sd_setImage(with: reference, placeholderImage: placeholderImage)
     }
 }

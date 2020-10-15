@@ -25,22 +25,24 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
     }
     
     @IBAction func save(_ sender: UIButton) {
-        if let dataName = name.text, let dataCount = count.text, let dataAge = age.text {
+        if let dataName = name.text,
+           let dataCount = count.text,
+           let dataAge = age.text {
             if !dataName.isEmpty && !dataCount.isEmpty && !dataAge.isEmpty {
                 guard let countValue = Int(dataCount) else { print("fill numeric symbols into count field")
                     return }
                 guard let ageValue = Int(dataAge) else { print("fill numeric symbols into age field")
                     return }
-                let user = User(name: dataName, age: ageValue, count: countValue, photo: urlOfCurrentUserPhoto)
-                if userPhoto.image == nil {
-                    FirebaseService.addDataToDB(collectionName: "Users", documentName: user.documentID, dictionaryData: ["name" : user.name, "age" : user.age, "count": countValue, "userPhotoId": "not_loaded", "photoURL" : "not_loaded"] )
-                } else {
-                    FirebaseService.addDataToDB(collectionName: "Users", documentName: user.documentID, dictionaryData: ["name" : user.name, "age" : user.age, "count": countValue, "userPhotoId": "\(idOfCurrentUserPhoto)", "photoURL" : "\(user.photo!)" ] )
+                var user = User(name: dataName, age: ageValue, count: countValue)
+                if userPhoto.image != UIImage(named: "userPhotoTemplate") {
+                    user.image = userPhoto.image?.jpegData(compressionQuality: 100.0)
                 }
+                FirebaseService.saveUser(user)
             } else {
                 print("fill all fields please")
                 return
             }
+            dismiss(animated: true, completion: nil)
         } else {
             print("unexpected nil")
             return
@@ -51,9 +53,7 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             userPhoto.contentMode = .scaleAspectFit
             userPhoto.image = pickedImage
-            addToDB(selectedImg: pickedImage)
         }
-        
         dismiss(animated: true, completion: nil)
     }
     
@@ -64,15 +64,6 @@ class CreateUserViewController: UIViewController, UINavigationControllerDelegate
     @IBAction func uploadImg(_ sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-        
         present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func addToDB(selectedImg: UIImage) {
-        FirebaseService.uploadUserImageToDB(image: selectedImg) { [weak self] url, id in
-            self?.urlOfCurrentUserPhoto = url
-            self?.idOfCurrentUserPhoto = id
-            print("User photo was added to Firebase with ID: \(id)")
-        }
     }
 }

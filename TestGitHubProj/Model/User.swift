@@ -8,18 +8,13 @@ import Foundation
 struct User: Codable {
     let name: String
     let age, count: Int
-    var photo: URL?
+    var image: Data?
     let documentID: String
     
-    init(name: String, age: Int, count: Int, photo: URL? = nil, documentID: String? = nil) {
+    init(name: String, age: Int, count: Int, documentID: String? = nil) {
         self.name = name
         self.age = age
         self.count = count
-        if let photoURL = photo {
-            self.photo = photoURL
-        } else {
-            self.photo = nil
-        }
         if let id = documentID {
             self.documentID = id
         } else {

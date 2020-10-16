@@ -38,6 +38,8 @@
 		641AEE16252FC47B00275227 /* ApiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641AEE14252FC47B00275227 /* ApiTableViewCell.xib */; };
 		642089252527489D00B9A1E1 /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642089242527489D00B9A1E1 /* PinchViewController.swift */; };
 		6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6420892B252870A800B9A1E1 /* avatar2.jpg */; };
+		646A9E09253974160097F816 /* AnimationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646A9E08253974160097F816 /* AnimationStoryboard.storyboard */; };
+		646A9E0C2539742B0097F816 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646A9E0B2539742B0097F816 /* AnimationViewController.swift */; };
 		647A9F69252B8CC800E340D1 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A9F68252B8CC800E340D1 /* ImageListViewController.swift */; };
 		647A9F6C252B8CE000E340D1 /* ImageListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647A9F6B252B8CE000E340D1 /* ImageListStoryboard.storyboard */; };
 		647A9F72252C951400E340D1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A9F71252C951400E340D1 /* List.swift */; };
@@ -105,6 +107,8 @@
 		641AEE14252FC47B00275227 /* ApiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiTableViewCell.xib; sourceTree = "<group>"; };
 		642089242527489D00B9A1E1 /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		6420892B252870A800B9A1E1 /* avatar2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar2.jpg; sourceTree = "<group>"; };
+		646A9E08253974160097F816 /* AnimationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimationStoryboard.storyboard; sourceTree = "<group>"; };
+		646A9E0B2539742B0097F816 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		647A9F68252B8CC800E340D1 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		647A9F6B252B8CE000E340D1 /* ImageListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageListStoryboard.storyboard; sourceTree = "<group>"; };
 		647A9F71252C951400E340D1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
@@ -281,8 +285,18 @@
 				64C8C852253232FF0048AD9B /* Pinch */,
 				64C8C854253233180048AD9B /* TableView */,
 				6415F1FD253399200067A01F /* Circle */,
+				646A9E0E253974320097F816 /* Animation */,
 			);
 			path = Viacheslav;
+			sourceTree = "<group>";
+		};
+		646A9E0E253974320097F816 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				646A9E08253974160097F816 /* AnimationStoryboard.storyboard */,
+				646A9E0B2539742B0097F816 /* AnimationViewController.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		647A9F62252B8BDE00E340D1 /* ImageCell */ = {
@@ -486,7 +500,6 @@
 			files = (
 				849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */,
 				84478A882531CF440025415C /* dragAndDrop.storyboard in Resources */,
-
 				3F89B50125309C4800367C81 /* ImageCell.xib in Resources */,
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
 				BA54C315252F7A480067E4B4 /* CreateUser.storyboard in Resources */,
@@ -495,6 +508,7 @@
 				640B02FA252CE4A600B9D530 /* ShowImageStoryboard.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
 				641AEE10252FC43C00275227 /* ApiStoryboard.storyboard in Resources */,
+				646A9E09253974160097F816 /* AnimationStoryboard.storyboard in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
 				64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */,
 				6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */,
@@ -585,6 +599,7 @@
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
 				641AEE15252FC47B00275227 /* ApiTableViewCell.swift in Sources */,
+				646A9E0C2539742B0097F816 /* AnimationViewController.swift in Sources */,
 				641AEE0C252FC42700275227 /* ApiViewController.swift in Sources */,
 				BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */,
 				849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */,

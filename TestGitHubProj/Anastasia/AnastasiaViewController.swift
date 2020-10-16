@@ -61,7 +61,11 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
     }
     
     @objc private func animationBtnPressed() {
-        self.navigationController?.pushViewController(AnimationViewController(), animated: true)
+        let storyboard = UIStoryboard(name: "AnimationStoryboard", bundle: .main)
+        guard let vc = storyboard.instantiateViewController(identifier: "animationStoryboard") as? AnimationViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func showSafari(_ url: String) {

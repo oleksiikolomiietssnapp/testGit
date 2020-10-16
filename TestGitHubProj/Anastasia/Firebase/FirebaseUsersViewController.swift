@@ -55,7 +55,6 @@ extension FirebaseUsersViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "UserInfoStoryboard", bundle: .main)
         guard let vc = storyboard.instantiateViewController(identifier: "userViewController") as? UserViewController else {
-            print(storyboard.instantiateViewController(identifier: "userViewController"))
             return
         }
         vc.user = users[indexPath.row]

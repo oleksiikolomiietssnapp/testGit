@@ -76,6 +76,8 @@ class UsersTableViewController: UITableViewController {
             for index in sourceIndexPath.row..<destinationIndexPath.row {
                 users[index] = users[index + 1]
             }
+        } else if destinationIndexPath.row == sourceIndexPath.row {
+            return
         } else {
             for index in ((destinationIndexPath.row + 1)...sourceIndexPath.row).reversed() {
                 users[index] = users[index - 1]

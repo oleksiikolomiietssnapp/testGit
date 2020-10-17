@@ -50,10 +50,16 @@ class SvitlanaAnimationViewController: UIViewController {
             self.blueView.center.x = self.view.frame.width
             //            blueBox.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 0.001, y: 0.001)
             
+//            blueView.transform = CGAffineTransform(scaleX: (view.frame.width - 32)/self.blueView.frame.width, y: 1)
+//            blueView.transform = CGAffineTransform(translationX: <#T##CGFloat#>, y: <#T##CGFloat#>)
+            blueView.transform = CGAffineTransform.identity.translatedBy(x: 100, y: 0).scaledBy(x: 2, y: 1)
+            //вместо 100 высчитать по фреймам
         }
         
         animator.startAnimation()
 //        animator.pauseAnimation()
+            //старт, сразу пауз. настроить , потом по плей должна быть континью и при этом устанавливать slider.value = animator.FractionComplete \\from 0...1
+        
 //        animator.stopAnimation(<#T##withoutFinishing: Bool##Bool#>)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reverceSwitcherIsChanged), name: nil, object: nil)

@@ -29,7 +29,6 @@ class AnimationViewController: UIViewController {
     
     var startSize = CGAffineTransform(scaleX: 1, y: 1)
     var finishSize = CGAffineTransform(scaleX: 8, y: 8)
-    
     var step = 0
     var isPresedStartButton = false
     var isPresedStopButton = false
@@ -37,9 +36,15 @@ class AnimationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        horizontalSlider.addTarget(self, action: #selector(sliderChanged), for: .allEvents)
         cornerRadius(to: animatedView)
-        
+//        UIView.animate(withDuration: 3.0) {
+//            let finalWidth = self.view.frame.width - 32
+//            let scaleWidth = finalWidth / self.animatedView.frame.width
+//            self.animatedView.transform = CGAffineTransform.identity
+//                .translatedBy(x: finalWidth / 2 - 16, y: 0)
+//                .scaledBy(x: scaleWidth, y: 1)
+//        }
 //        let yrt = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 4, delay: 0, options: [.curveLinear], animations: {
 //            self.animatedView.backgroundColor = .cyan
 //        })
@@ -101,33 +106,39 @@ class AnimationViewController: UIViewController {
     }
     
     func pressedPauseButton(sender: UIButton) {
+        animator.pauseAnimation()
         
-        startButton.isEnabled = true
-        pauseButton.isEnabled = false
-        
+        percentLabel.text = "\(animator.fractionComplete)"
+        horizontalSlider.value = Float(animator.fractionComplete) * 100.0
+//        startButton.isEnabled = true
+//        pauseButton.isEnabled = false
+//
     }
     
     func pressedStopButton(sender: UIButton) {
         startButton.isEnabled = true
         pauseButton.isEnabled = true
+        
+        animator.stopAnimation(true)
     }
-    
+    var animator: UIViewPropertyAnimator!
     func animation(color: UIColor, transform: CGAffineTransform, sender: UIButton) {
         
         let duration = 2.0
-        let animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: .curveLinear, animations: {
+        animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: .curveLinear, animations: {
             self.animatedView.backgroundColor = color
             self.animatedView.transform = transform
         }, completion: { _ in
             self.touchStartButton(sender)
             
           })
-        percentLabel.text = "\(animator.fractionComplete)"
+//        animator.pauseAnimation()
         
     }
     
     @objc func sliderChanged(_ sender: UISlider) {
-//        animator.fractionComplete = CGFloat(sender.value)
+        animator?.pauseAnimation()
+        animator?.fractionComplete = CGFloat(sender.value) / 100
     }
     
 }

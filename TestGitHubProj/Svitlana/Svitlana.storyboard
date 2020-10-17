@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-yw-e88">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-yw-e88">
                                 <rect key="frame" x="0.0" y="288" width="414" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Show text view">
@@ -31,8 +31,19 @@
                                             <segue destination="elp-UP-2ey" kind="show" id="Tbe-8p-UAk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpv-bX-2W5">
+                                        <rect key="frame" x="0.0" y="95.5" width="414" height="87.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Loading animation">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="H4f-5w-1h8" kind="show" id="N7J-5H-Fsh"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
-                                        <rect key="frame" x="0.0" y="148" width="414" height="78"/>
+                                        <rect key="frame" x="0.0" y="191" width="414" height="87.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Add user">
@@ -43,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-rL-dCo">
-                                        <rect key="frame" x="0.0" y="296" width="414" height="78"/>
+                                        <rect key="frame" x="0.0" y="286.5" width="414" height="87.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Show users"/>
@@ -140,6 +151,16 @@
             </objects>
             <point key="canvasLocation" x="1936.9565217391305" y="141.96428571428569"/>
         </scene>
+        <!--SvitlanaAnimationStoryboard-->
+        <scene sceneID="xpa-zL-arj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SvitlanaAnimationStoryboard" referencedIdentifier="SvitlanaAnimationStoryboard" id="H4f-5w-1h8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="s5H-lF-ptb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bix-Q7-vZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="292"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="aUC-uj-CLu">
             <objects>
@@ -160,7 +181,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tJl-QA-6u8"/>
+        <segue reference="g3o-eS-3oY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">

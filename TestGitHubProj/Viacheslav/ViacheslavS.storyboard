@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-gv-gVa">
-                                <rect key="frame" x="24" y="128" width="366" height="370"/>
+                                <rect key="frame" x="24" y="128" width="366" height="424"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-Kb-Y2J">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="46"/>
@@ -92,6 +92,15 @@
                                             <segue destination="Hdm-hO-WW0" kind="show" id="X7s-TN-9RQ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ7-uK-A3S">
+                                        <rect key="frame" x="0.0" y="378" width="366" height="46"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="animation"/>
+                                        <connections>
+                                            <segue destination="clH-HP-GIL" kind="show" id="zGH-BD-W1n"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -121,6 +130,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFF-lH-RjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1225" y="576"/>
+        </scene>
+        <!--animationViewController-->
+        <scene sceneID="Biv-mJ-3Y6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnimationStoryboard" referencedIdentifier="animationViewController" id="clH-HP-GIL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uaw-6k-shu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTa-fK-29E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1521" y="576"/>
         </scene>
         <!--ImageStoryboard-->
         <scene sceneID="7ff-OT-O7M">

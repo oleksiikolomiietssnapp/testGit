@@ -8,22 +8,126 @@
 import UIKit
 
 class AnimationViewController: UIViewController {
-
+    
+    @IBOutlet weak var animatedView: UIView!
+    
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    @IBOutlet weak var switchRevers: UISwitch!
+    @IBOutlet weak var reversLabel: UILabel!
+    
+    @IBOutlet weak var switchReapet: UISwitch!
+    @IBOutlet weak var repeatLabel: UILabel!
+    
+    @IBOutlet weak var percentLabel: UILabel!
+    @IBOutlet weak var horizontalSlider: UISlider!
+    
+//    var minSize: CGFloat!
+//    var maxSize = UIScreen.main.bounds.width * 0.9
+    
+    var startSize = CGAffineTransform(scaleX: 1, y: 1)
+    var finishSize = CGAffineTransform(scaleX: 8, y: 8)
+    
+    var step = 0
+    var isPresedStartButton = false
+    var isPresedStopButton = false
+    var isPresedPauseButton = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cornerRadius(to: animatedView)
+        
+//        let yrt = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 4, delay: 0, options: [.curveLinear], animations: {
+//            self.animatedView.backgroundColor = .cyan
+//        })
+//
+//        yrt.addCompletion({ _ in
+//        yrt.fractionComplete = .
+//            self.percentLabel.text = "\(yrt.fractionComplete)"
+//        })
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func cornerRadius(to circleView: UIView) {
+        circleView.layer.cornerRadius = circleView.layer.frame.height / 2
     }
-    */
+    
+    @IBAction func touchPauseButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func touchStopButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func touchStartButton(_ sender: UIButton) {
 
+        switch sender.tag {
+        case 0:
+            pressedPauseButton(sender: sender)
+        case 1:
+            pressedStartButton(sender: sender)
+        case 2:
+            pressedStopButton(sender: sender)
+        default:
+            break
+        }
+        
+    }
+    
+    func pressedStartButton(sender: UIButton) {
+        
+        startButton.isEnabled = false
+//        pauseButton.isEnabled = true
+        
+        switch step {
+        case 0:
+            self.step = 1
+            animation(color: .green, transform: finishSize, sender: sender)
+        case 1:
+            self.step = 2
+            animation(color: .blue, transform: startSize, sender: sender)
+        case 2:
+            self.step = 3
+            animation(color: .yellow, transform: finishSize, sender: sender)
+        case 3:
+            self.step = 0
+            animation(color: .red, transform: startSize, sender: sender)
+        default: break
+        }
+    }
+    
+    func pressedPauseButton(sender: UIButton) {
+        
+        startButton.isEnabled = true
+        pauseButton.isEnabled = false
+        
+    }
+    
+    func pressedStopButton(sender: UIButton) {
+        startButton.isEnabled = true
+        pauseButton.isEnabled = true
+    }
+    
+    func animation(color: UIColor, transform: CGAffineTransform, sender: UIButton) {
+        
+        let duration = 2.0
+        let animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: .curveLinear, animations: {
+            self.animatedView.backgroundColor = color
+            self.animatedView.transform = transform
+        }, completion: { _ in
+            self.touchStartButton(sender)
+            
+          })
+        percentLabel.text = "\(animator.fractionComplete)"
+        
+    }
+    
+    @objc func sliderChanged(_ sender: UISlider) {
+//        animator.fractionComplete = CGFloat(sender.value)
+    }
+    
 }

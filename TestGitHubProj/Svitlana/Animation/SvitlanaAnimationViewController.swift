@@ -9,15 +9,15 @@ import UIKit
 
 class SvitlanaAnimationViewController: UIViewController {
     
-    @IBAction func showBPProgressBar(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "BezierPathStoryboard", bundle: nil)
-       guard let vc = sb.instantiateViewController(withIdentifier: "BezierPathProgressBarVC") as? BezierPathProgressBarVC else {
-            print("error")
-            return
-        }
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-    }
+//    @IBAction func showBPProgressBar(_ sender: UIButton) {
+//        let sb = UIStoryboard(name: "BezierPathStoryboard", bundle: nil)
+//       guard let vc = sb.instantiateViewController(withIdentifier: "BezierPathProgressBarVC") as? BezierPathProgressBarVC else {
+//            print("error")
+//            return
+//        }
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        
+//    }
     @IBOutlet weak var slider1: UISlider!
     @IBOutlet weak var blueViewWidth: NSLayoutConstraint! //unneed
     var animator: UIViewPropertyAnimator!

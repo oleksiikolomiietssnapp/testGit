@@ -46,7 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="BezierPath"/>
                                 <connections>
-                                    <action selector="showBPProgressBar:" destination="dEg-eu-Vdo" eventType="touchUpInside" id="7af-5X-xbP"/>
+                                    <segue destination="R7P-4X-Iad" kind="show" id="AYN-I9-54I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-kd-yO0" customClass="PlainHorizontalProgressBar" customModule="TestGitHubProj" customModuleProvider="target">
-                                <rect key="frame" x="8" y="384" width="398" height="67"/>
+                                <rect key="frame" x="8" y="428" width="398" height="23"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cw7-kP-cQ6">
@@ -133,6 +133,7 @@
                             <constraint firstItem="znJ-CA-BBA" firstAttribute="trailing" secondItem="cw7-kP-cQ6" secondAttribute="trailing" constant="16" id="WA9-Gi-YhT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4XA-mF-MKh"/>
                     <connections>
                         <outlet property="progressBarView" destination="sxT-kd-yO0" id="rPc-1g-6M9"/>
                         <outlet property="repeatSwitcher" destination="9fX-sE-FXj" id="fBS-A0-Y9C"/>

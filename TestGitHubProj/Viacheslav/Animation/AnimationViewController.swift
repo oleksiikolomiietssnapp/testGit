@@ -15,57 +15,53 @@ class AnimationViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
-    @IBOutlet weak var switchRevers: UISwitch!
-    @IBOutlet weak var reversLabel: UILabel!
-    
-    @IBOutlet weak var switchReapet: UISwitch!
-    @IBOutlet weak var repeatLabel: UILabel!
-    
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var horizontalSlider: UISlider!
     
-//    var minSize: CGFloat!
-//    var maxSize = UIScreen.main.bounds.width * 0.9
+    @IBOutlet weak var constrainStartPozition: NSLayoutConstraint!
     
-    var startSize = CGAffineTransform(scaleX: 1, y: 1)
-    var finishSize = CGAffineTransform(scaleX: 8, y: 8)
-    var step = 0
-    var isPresedStartButton = false
-    var isPresedStopButton = false
-    var isPresedPauseButton = false
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    lazy var startSize = CGAffineTransform(scaleX: 1, y: 1)
+    lazy var finishSize = CGAffineTransform(scaleX: 3, y: 3)
+    lazy var leftPosition = CGAffineTransform(translationX: 0, y: 0)
+    
+    var centerPosition: CGAffineTransform!
+    var rightPosition: CGAffineTransform!
+
+    var animator: UIViewPropertyAnimator!
+    var duration: Double!
+    
+    lazy var timer = Timer()
+    var send: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        centerPosition = CGAffineTransform(translationX: (self.view.bounds.width / 2) - 32, y: 0)
+        rightPosition = CGAffineTransform(translationX: self.view.bounds.width - 64, y: 0)
+        
         horizontalSlider.addTarget(self, action: #selector(sliderChanged), for: .allEvents)
         cornerRadius(to: animatedView)
-//        UIView.animate(withDuration: 3.0) {
-//            let finalWidth = self.view.frame.width - 32
-//            let scaleWidth = finalWidth / self.animatedView.frame.width
-//            self.animatedView.transform = CGAffineTransform.identity
-//                .translatedBy(x: finalWidth / 2 - 16, y: 0)
-//                .scaledBy(x: scaleWidth, y: 1)
-//        }
-//        let yrt = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 4, delay: 0, options: [.curveLinear], animations: {
-//            self.animatedView.backgroundColor = .cyan
-//        })
-//
-//        yrt.addCompletion({ _ in
-//        yrt.fractionComplete = .
-//            self.percentLabel.text = "\(yrt.fractionComplete)"
-//        })
 
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            centerPosition = CGAffineTransform(translationX: (self.horizontalSlider.bounds.width) - 32, y: 0)
+            rightPosition = CGAffineTransform(translationX: self.horizontalSlider.bounds.width * 2 - 32, y: 0)
+        } else {
+            centerPosition = CGAffineTransform(translationX: (self.view.bounds.width / 2) - 32, y: 0)
+            rightPosition = CGAffineTransform(translationX: self.view.bounds.width - 64, y: 0)
+        }
+    }
+
+    @objc func countUp() {
+        curentValueFractionComplete()
+        }
+    
     func cornerRadius(to circleView: UIView) {
         circleView.layer.cornerRadius = circleView.layer.frame.height / 2
-    }
-    
-    @IBAction func touchPauseButton(_ sender: Any) {
-        
-    }
-    
-    @IBAction func touchStopButton(_ sender: Any) {
-        
     }
     
     @IBAction func touchStartButton(_ sender: UIButton) {
@@ -84,34 +80,30 @@ class AnimationViewController: UIViewController {
     }
     
     func pressedStartButton(sender: UIButton) {
-        
+        send = sender
         startButton.isEnabled = false
-//        pauseButton.isEnabled = true
         
-        switch step {
-        case 0:
-            self.step = 1
-            animation(color: .green, transform: finishSize, sender: sender)
-        case 1:
-            self.step = 2
-            animation(color: .blue, transform: startSize, sender: sender)
-        case 2:
-            self.step = 3
-            animation(color: .yellow, transform: finishSize, sender: sender)
-        case 3:
-            self.step = 0
-            animation(color: .red, transform: startSize, sender: sender)
-        default: break
+        if !pauseButton.isEnabled {
+            self.animator.continueAnimation(withTimingParameters: .none, durationFactor: 1 - animator.fractionComplete)
+            pauseButton.isEnabled = true
+        } else {
+            animation()
+            animator.startAnimation()
+            timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(countUp), userInfo: nil, repeats: true)
+
         }
+
     }
     
     func pressedPauseButton(sender: UIButton) {
+        
         animator.pauseAnimation()
         
         percentLabel.text = "\(animator.fractionComplete)"
-        horizontalSlider.value = Float(animator.fractionComplete) * 100.0
-//        startButton.isEnabled = true
-//        pauseButton.isEnabled = false
+        horizontalSlider.value = Float(animator.fractionComplete)
+        
+        startButton.isEnabled = true
+        pauseButton.isEnabled = false
 //
     }
     
@@ -120,25 +112,63 @@ class AnimationViewController: UIViewController {
         pauseButton.isEnabled = true
         
         animator.stopAnimation(true)
+        animator.pauseAnimation()
+//        self.animatedView.frame = CGRect(x: 32, y: 128, width: 32, height: 32)
+
     }
-    var animator: UIViewPropertyAnimator!
-    func animation(color: UIColor, transform: CGAffineTransform, sender: UIButton) {
+    
+    func curentValueFractionComplete() {
+
+        if animator.fractionComplete >= 0.0 {
+            let text = animator.fractionComplete
+            self.percentLabel.text = "\(round(100 * text) / 100)"
+            self.horizontalSlider.value = Float(animator.fractionComplete)
+
+        }
+    }
+    
+    @IBAction func touchSegmentedControl(_ sender: UISegmentedControl) {
+
+    }
+    
+    func animation() {
         
-        let duration = 2.0
-        animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: .curveLinear, animations: {
-            self.animatedView.backgroundColor = color
-            self.animatedView.transform = transform
-        }, completion: { _ in
-            self.touchStartButton(sender)
+        self.duration = 12 / Double(segmentedControl.selectedSegmentIndex + 1)
+
+        animator = UIViewPropertyAnimator(duration: TimeInterval(self.duration), curve: .linear)
+        animator.addAnimations {
+            UIView.animateKeyframes(withDuration: self.duration, delay: 0, animations: {
+
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.animatedView.transform = self.finishSize.concatenating(self.centerPosition)
+                self.animatedView.backgroundColor = .green
+            }
             
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.5) {
+                self.animatedView.transform = self.startSize.concatenating(self.rightPosition)
+                self.animatedView.backgroundColor = .orange
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.75) {
+                self.animatedView.transform = self.finishSize.concatenating(self.centerPosition)
+                self.animatedView.backgroundColor = .blue
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 1) {
+                self.animatedView.transform = self.startSize.concatenating(self.leftPosition)
+                self.animatedView.backgroundColor = .red
+            }
+
+          }, completion: { _ in
+            self.pressedStartButton(sender: self.send)
           })
-//        animator.pauseAnimation()
-        
+        }
+
     }
     
     @objc func sliderChanged(_ sender: UISlider) {
         animator?.pauseAnimation()
-        animator?.fractionComplete = CGFloat(sender.value) / 100
+        animator?.fractionComplete = CGFloat(sender.value)
     }
     
 }

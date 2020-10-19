@@ -49,10 +49,10 @@
                                     <action selector="speedSliderMoved:" destination="xEU-uy-0By" eventType="valueChanged" id="RAP-mT-y5t"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speed me up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAS-mc-XeL">
-                                <rect key="frame" x="147" y="761" width="120" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="increase duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAS-mc-XeL">
+                                <rect key="frame" x="132" y="761" width="150" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="q7d-uu-5zB"/>
+                                    <constraint firstAttribute="width" constant="150" id="q7d-uu-5zB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -70,10 +70,23 @@
                                     <action selector="animationSwitchPressed:" destination="xEU-uy-0By" eventType="valueChanged" id="F4D-wJ-YWa"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP3-lZ-uAV">
+                                <rect key="frame" x="157" y="531" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hvk-zo-qMd"/>
+                                    <constraint firstAttribute="height" constant="30" id="vRB-vm-zEw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="xEU-uy-0By" eventType="touchUpInside" id="HMC-iY-xzv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3PK-xc-cXm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qP3-lZ-uAV" firstAttribute="top" secondItem="isu-LA-lvG" secondAttribute="bottom" constant="8" id="Adi-6s-N02"/>
                             <constraint firstItem="hRc-dl-o8m" firstAttribute="bottom" secondItem="OAS-mc-XeL" secondAttribute="bottom" constant="80" id="Js3-Ub-i9X"/>
                             <constraint firstItem="isu-LA-lvG" firstAttribute="centerX" secondItem="sLK-Wn-sf7" secondAttribute="centerX" id="JsZ-aP-qLk"/>
                             <constraint firstItem="2hx-x1-JzA" firstAttribute="centerX" secondItem="sLK-Wn-sf7" secondAttribute="centerX" id="Ke9-Ib-ZkY"/>
@@ -84,6 +97,7 @@
                             <constraint firstItem="isu-LA-lvG" firstAttribute="centerY" secondItem="sLK-Wn-sf7" secondAttribute="centerY" id="phH-gc-27e"/>
                             <constraint firstItem="Gy2-o2-STr" firstAttribute="bottom" secondItem="3PK-xc-cXm" secondAttribute="bottom" id="qNN-z2-bzW"/>
                             <constraint firstItem="3PK-xc-cXm" firstAttribute="trailing" secondItem="Gy2-o2-STr" secondAttribute="trailing" constant="22" id="qv2-rs-apP"/>
+                            <constraint firstItem="qP3-lZ-uAV" firstAttribute="centerX" secondItem="sLK-Wn-sf7" secondAttribute="centerX" id="yvP-Bd-7hg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fkc-sB-gQq"/>

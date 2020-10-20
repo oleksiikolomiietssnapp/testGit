@@ -27,6 +27,9 @@
                                             <constraint firstAttribute="height" constant="40" id="p4m-cV-9vL"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="pause.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="pauseBtnPressed" destination="2Nm-ex-Mwv" eventType="touchUpInside" id="YNj-af-Ofh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8w-ic-Odq">
                                         <rect key="frame" x="155" y="1.5" width="40" height="36.5"/>
@@ -35,6 +38,9 @@
                                             <constraint firstAttribute="height" constant="40" id="jJr-kf-5nD"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playBtnPressed" destination="2Nm-ex-Mwv" eventType="touchUpInside" id="Lvw-as-Xht"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNf-oE-gp1">
                                         <rect key="frame" x="310" y="2" width="40" height="36"/>
@@ -43,6 +49,9 @@
                                             <constraint firstAttribute="height" constant="40" id="uCT-eV-K6v"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="stop.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="stopBtnPressed" destination="2Nm-ex-Mwv" eventType="touchUpInside" id="JWX-rb-pij"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
@@ -67,13 +76,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ykx-t2-KaW" userLabel="Reversed Stack View">
-                                        <rect key="frame" x="212.5" y="0.0" width="169.5" height="33.5"/>
+                                        <rect key="frame" x="228" y="0.0" width="154" height="33.5"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3f-3v-qEZ">
                                                 <rect key="frame" x="0.0" y="1.5" width="51" height="31"/>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reversed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUL-A0-oB2">
-                                                <rect key="frame" x="57" y="0.0" width="112.5" height="33.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUL-A0-oB2">
+                                                <rect key="frame" x="57" y="0.0" width="97" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -178,6 +187,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="repaetSwitch" destination="Ipi-8e-Vs3" id="odJ-bv-TQa"/>
+                        <outlet property="reverseSwitch" destination="M3f-3v-qEZ" id="M3s-Mj-jBQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56E-5w-mQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,6 +203,7 @@
                     <view key="view" contentMode="scaleToFill" id="yLO-gD-dUO">
                         <rect key="frame" x="0.0" y="0.0" width="382" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wlg-2E-d95"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>

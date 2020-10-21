@@ -15,13 +15,13 @@ class AnimationFrameViewController: UIViewController {
     private let squareSideValue = 80.0
     
     private var xAxisMovementAnimator: UIViewPropertyAnimator {
-        return UIViewPropertyAnimator(duration: 0, curve: .linear) { [self] in
+        return UIViewPropertyAnimator(duration: animationDuration, curve: .linear) { [self] in
             square.center.x = CGFloat(squareMaxXPosition)
         }
     }
     private var yAxisMovementAnimator: UIViewPropertyAnimator {
         return UIViewPropertyAnimator(duration: animationDuration, curve: .linear) { [self] in
-            square.center.x = CGFloat(squareMaxXPosition)
+            square.center.y = CGFloat(squareMaxYPosition)
         }
     }
     
@@ -67,8 +67,10 @@ class AnimationFrameViewController: UIViewController {
 
 extension AnimationFrameViewController: AnimationDelegate {
     func startAnimation() {
-        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0, options: .curveLinear, animations: xAxisMovementAnimator.startAnimation, completion: { [self]_ in yAxisMovementAnimator.startAnimation()})
-        
+        xAxisMovementAnimator.startAnimation()
+        xAxisMovementAnimator.addCompletion({ _ in
+                                                print(11)
+                                                self.yAxisMovementAnimator.startAnimation() })
 //                UIView.animateKeyframes(withDuration: animationDuration,
 //                                        delay: 0,
 //                                        options: [.repeat, .calculationModeLinear],

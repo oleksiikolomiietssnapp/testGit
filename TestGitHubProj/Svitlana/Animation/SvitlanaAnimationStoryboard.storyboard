@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dEg-eu-Vdo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Svitlana Animation View Controller-->
+        <scene sceneID="dP6-Aq-wZE">
+            <objects>
+                <viewController storyboardIdentifier="SvitlanaAnimationStoryboard" id="dEg-eu-Vdo" customClass="SvitlanaAnimationViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kwe-Ka-CGo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reverce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAX-Rc-Y6b">
+                                <rect key="frame" x="42" y="735" width="62" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-Cx-cgh">
+                                <rect key="frame" x="112" y="735" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6K-ac-Xdk">
+                                <rect key="frame" x="0.0" y="153" width="50" height="32"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="JMc-g9-dwz"/>
+                                    <constraint firstAttribute="width" constant="50" id="jf0-8f-Yae"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtG-gk-KKb">
+                                <rect key="frame" x="72" y="418" width="270" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Better go to BezierPath ➣"/>
+                                <connections>
+                                    <segue destination="R7P-4X-Iad" kind="show" id="AYN-I9-54I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KqD-MA-248"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M6K-ac-Xdk" firstAttribute="leading" secondItem="KqD-MA-248" secondAttribute="leading" id="dbN-7v-jA3"/>
+                            <constraint firstItem="M6K-ac-Xdk" firstAttribute="top" secondItem="KqD-MA-248" secondAttribute="top" constant="65" id="q3U-wN-U07"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d0Q-l0-EdW"/>
+                    <connections>
+                        <outlet property="blueView" destination="M6K-ac-Xdk" id="VHR-Jm-7eu"/>
+                        <outlet property="reverceSwitcher" destination="aaA-Cx-cgh" id="vNp-Sz-ZSn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qs7-Ok-ajh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.40579710144937" y="-146.65178571428569"/>
+        </scene>
+        <!--Bezier Path Progress BarVC-->
+        <scene sceneID="99m-Mu-xNz">
+            <objects>
+                <viewController storyboardIdentifier="BezierPathProgressBarVC" id="R7P-4X-Iad" customClass="BezierPathProgressBarVC" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RDf-Xv-t1j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-kd-yO0" customClass="PlainHorizontalProgressBar" customModule="TestGitHubProj" customModuleProvider="target">
+                                <rect key="frame" x="8" y="428" width="398" height="23"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cw7-kP-cQ6">
+                                <rect key="frame" x="16" y="631" width="382" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njk-Gy-puf">
+                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9fX-sE-FXj">
+                                        <rect key="frame" x="55.5" y="0.0" width="50" height="31"/>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9v-sa-7vu">
+                                        <rect key="frame" x="111.5" y="0.0" width="47.5" height="31"/>
+                                        <state key="normal" title="⏸"/>
+                                        <connections>
+                                            <action selector="pause:" destination="R7P-4X-Iad" eventType="touchUpInside" id="cpw-pD-tRg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUA-iu-ZrR">
+                                        <rect key="frame" x="167" y="0.0" width="48" height="31"/>
+                                        <state key="normal" title="▶️"/>
+                                        <connections>
+                                            <action selector="play:" destination="R7P-4X-Iad" eventType="touchUpInside" id="yk4-Ek-yT4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nr-0Q-DNe">
+                                        <rect key="frame" x="223" y="0.0" width="47.5" height="31"/>
+                                        <state key="normal" title="⏹"/>
+                                        <connections>
+                                            <action selector="stop:" destination="R7P-4X-Iad" eventType="touchUpInside" id="x0j-ke-oIf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbY-H5-WOv">
+                                        <rect key="frame" x="278.5" y="0.0" width="48" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lqe-DU-YBq">
+                                        <rect key="frame" x="334.5" y="0.0" width="49.5" height="31"/>
+                                        <connections>
+                                            <action selector="reverce:" destination="R7P-4X-Iad" eventType="valueChanged" id="epp-Ko-9SD"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="znJ-CA-BBA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="znJ-CA-BBA" firstAttribute="bottom" secondItem="cw7-kP-cQ6" secondAttribute="bottom" constant="200" id="61t-gx-oTU"/>
+                            <constraint firstItem="sxT-kd-yO0" firstAttribute="leading" secondItem="znJ-CA-BBA" secondAttribute="leading" constant="8" id="6B3-UY-jI7"/>
+                            <constraint firstItem="znJ-CA-BBA" firstAttribute="trailing" secondItem="sxT-kd-yO0" secondAttribute="trailing" constant="8" id="9mg-wS-eqC"/>
+                            <constraint firstItem="cw7-kP-cQ6" firstAttribute="top" secondItem="sxT-kd-yO0" secondAttribute="bottom" constant="180" id="JKB-7C-UFT"/>
+                            <constraint firstItem="cw7-kP-cQ6" firstAttribute="leading" secondItem="znJ-CA-BBA" secondAttribute="leading" constant="16" id="Qud-7m-gIx"/>
+                            <constraint firstItem="sxT-kd-yO0" firstAttribute="top" secondItem="znJ-CA-BBA" secondAttribute="top" constant="340" id="T8d-Aj-UEg"/>
+                            <constraint firstItem="znJ-CA-BBA" firstAttribute="trailing" secondItem="cw7-kP-cQ6" secondAttribute="trailing" constant="16" id="WA9-Gi-YhT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4XA-mF-MKh"/>
+                    <connections>
+                        <outlet property="progressBarView" destination="sxT-kd-yO0" id="rPc-1g-6M9"/>
+                        <outlet property="repeatSwitcher" destination="9fX-sE-FXj" id="fBS-A0-Y9C"/>
+                        <outlet property="reverceSwitcher" destination="Lqe-DU-YBq" id="qd2-WK-e1n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kH-Y9-pTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="-147"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DRl-Rr-cwW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cWW-mY-Etr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cKz-LR-Xwg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dEg-eu-Vdo" kind="relationship" relationship="rootViewController" id="JAD-09-BF4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68N-CK-rip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221.73913043478262" y="-146.65178571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

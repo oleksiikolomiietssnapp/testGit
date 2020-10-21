@@ -107,7 +107,6 @@
                     </view>
                     <connections>
                         <outlet property="animatedView" destination="WeD-Ct-9CO" id="Mo2-i3-vES"/>
-                        <outlet property="constrainStartPozition" destination="ben-Ty-4JP" id="pZB-VD-Tkv"/>
                         <outlet property="horizontalSlider" destination="Fda-Gp-DDz" id="3i8-vB-UNr"/>
                         <outlet property="pauseButton" destination="vcT-Gc-9X5" id="7mS-dW-3iI"/>
                         <outlet property="percentLabel" destination="F1N-a7-nWH" id="ah6-fG-NK9"/>

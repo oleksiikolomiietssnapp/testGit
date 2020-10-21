@@ -18,8 +18,6 @@ class AnimationViewController: UIViewController {
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var horizontalSlider: UISlider!
     
-    @IBOutlet weak var constrainStartPozition: NSLayoutConstraint!
-    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     lazy var startSize = CGAffineTransform(scaleX: 1, y: 1)
@@ -38,12 +36,13 @@ class AnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stopButton.isEnabled = false
+        
         centerPosition = CGAffineTransform(translationX: (self.view.bounds.width / 2) - 32, y: 0)
         rightPosition = CGAffineTransform(translationX: self.view.bounds.width - 64, y: 0)
         
         horizontalSlider.addTarget(self, action: #selector(sliderChanged), for: .allEvents)
         cornerRadius(to: animatedView)
-
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -68,11 +67,11 @@ class AnimationViewController: UIViewController {
 
         switch sender.tag {
         case 0:
-            pressedPauseButton(sender: sender)
+            pressedPauseButton()
         case 1:
             pressedStartButton(sender: sender)
         case 2:
-            pressedStopButton(sender: sender)
+            pressedStopButton()
         default:
             break
         }
@@ -82,20 +81,24 @@ class AnimationViewController: UIViewController {
     func pressedStartButton(sender: UIButton) {
         send = sender
         startButton.isEnabled = false
+        stopButton.isEnabled = true
         
         if !pauseButton.isEnabled {
-            self.animator.continueAnimation(withTimingParameters: .none, durationFactor: 1 - animator.fractionComplete)
+            self.animator.continueAnimation(withTimingParameters: .none,
+                                            durationFactor: 1 - animator.fractionComplete)
             pauseButton.isEnabled = true
         } else {
             animation()
             animator.startAnimation()
-            timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(countUp), userInfo: nil, repeats: true)
-
+            timer = Timer.scheduledTimer(timeInterval: 0.05,
+                                         target: self,
+                                         selector: #selector(countUp),
+                                         userInfo: nil, repeats: true)
         }
 
     }
     
-    func pressedPauseButton(sender: UIButton) {
+    func pressedPauseButton() {
         
         animator.pauseAnimation()
         
@@ -104,17 +107,16 @@ class AnimationViewController: UIViewController {
         
         startButton.isEnabled = true
         pauseButton.isEnabled = false
-//
+
     }
     
-    func pressedStopButton(sender: UIButton) {
+    func pressedStopButton() {
+        
+        stopButton.isEnabled = false
+        animator.stopAnimation(true)
+        
         startButton.isEnabled = true
         pauseButton.isEnabled = true
-        
-        animator.stopAnimation(true)
-        animator.pauseAnimation()
-//        self.animatedView.frame = CGRect(x: 32, y: 128, width: 32, height: 32)
-
     }
     
     func curentValueFractionComplete() {
@@ -123,7 +125,6 @@ class AnimationViewController: UIViewController {
             let text = animator.fractionComplete
             self.percentLabel.text = "\(round(100 * text) / 100)"
             self.horizontalSlider.value = Float(animator.fractionComplete)
-
         }
     }
     
@@ -160,10 +161,15 @@ class AnimationViewController: UIViewController {
             }
 
           }, completion: { _ in
-            self.pressedStartButton(sender: self.send)
+            
+            if !self.stopButton.isEnabled {
+                self.animatedView.transform = CGAffineTransform(translationX: -0.01, y: 0)
+                self.animatedView.backgroundColor = .red
+            } else {
+                self.pressedStartButton(sender: self.send)
+            }
           })
         }
-
     }
     
     @objc func sliderChanged(_ sender: UISlider) {

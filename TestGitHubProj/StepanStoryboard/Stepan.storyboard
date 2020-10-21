@@ -18,6 +18,16 @@
             </objects>
             <point key="canvasLocation" x="1772" y="-447"/>
         </scene>
+        <!--Animations-->
+        <scene sceneID="7xi-bj-05n">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Animations" storyboardName="JumpingDots" referencedIdentifier="Animations" id="tDF-HU-Aax" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="doW-cS-vyV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsR-7A-W9s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861" y="-390"/>
+        </scene>
         <!--Stepan View Controller-->
         <scene sceneID="UIe-yZ-AB1">
             <objects>
@@ -27,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vgm-lQ-OsE">
-                                <rect key="frame" x="57" y="310" width="300" height="276"/>
+                                <rect key="frame" x="57" y="274" width="300" height="348"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-Wl-OKw">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
@@ -81,6 +91,19 @@
                                             <segue destination="Rpt-Ab-PS5" kind="show" id="0r9-bm-aSM"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVM-tJ-cTX">
+                                        <rect key="frame" x="0.0" y="288" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.0" alpha="0.58660637839999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="0Y3-hH-JeK"/>
+                                            <constraint firstAttribute="height" constant="60" id="LBV-sP-Uzh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="35"/>
+                                        <state key="normal" title="Animation"/>
+                                        <connections>
+                                            <segue destination="tDF-HU-Aax" kind="show" id="3dL-Z0-r6b"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -95,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpr-e7-5pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1571.0144927536232" y="47.544642857142854"/>
+            <point key="canvasLocation" x="1552" y="40"/>
         </scene>
         <!--Text View View Controller-->
         <scene sceneID="j0W-ZI-9NK">

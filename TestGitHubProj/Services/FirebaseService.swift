@@ -41,6 +41,14 @@ final class FirebaseService {
         }
     }
     
+    class func removeUserImageFromDB(id: String) {
+        let fileRef = storageRef.child("images/\(id).jpg")
+        fileRef.delete { error in
+            guard let error = error else { return }
+            print("Error: \(error.localizedDescription)")
+        }
+    }
+    
     // MAIN WAY TO READ DATA
     class func downloadUserImageFromDB(
         id: String,

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="288" width="414" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Show text view">
@@ -31,8 +31,19 @@
                                             <segue destination="elp-UP-2ey" kind="show" id="Tbe-8p-UAk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-Hg-Psf">
+                                        <rect key="frame" x="0.0" y="76.5" width="414" height="68.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Collection view">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="K0H-KB-7g1" kind="show" id="XRy-ln-cfa"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpv-bX-2W5">
-                                        <rect key="frame" x="0.0" y="95.5" width="414" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="153" width="414" height="68"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Loading animation">
@@ -43,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
-                                        <rect key="frame" x="0.0" y="191" width="414" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="229" width="414" height="68.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Add user">
@@ -54,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-rL-dCo">
-                                        <rect key="frame" x="0.0" y="286.5" width="414" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="305.5" width="414" height="68.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Show users"/>
@@ -94,6 +105,16 @@
             </objects>
             <point key="canvasLocation" x="1407.2463768115942" y="88.392857142857139"/>
         </scene>
+        <!--SvitlanaCollectionView-->
+        <scene sceneID="wdT-AQ-nFZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SvitlanaCollectionView" referencedIdentifier="SvitlanaCollectionView" id="K0H-KB-7g1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="imM-eM-1BB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVi-S1-abK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="50"/>
+        </scene>
         <!--SvitlanaTextView-->
         <scene sceneID="cb4-0b-1h6">
             <objects>
@@ -102,7 +123,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTu-bx-ZM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1989.1304347826087" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1989" y="-52"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="DWO-Kq-UXe">
@@ -149,7 +170,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QS6-it-NAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.9565217391305" y="141.96428571428569"/>
+            <point key="canvasLocation" x="1964" y="452"/>
         </scene>
         <!--SvitlanaAnimationStoryboard-->
         <scene sceneID="xpa-zL-arj">
@@ -159,7 +180,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bix-Q7-vZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="292"/>
+            <point key="canvasLocation" x="2024" y="184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aUC-uj-CLu">
@@ -181,7 +202,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tJl-QA-6u8"/>
+        <segue reference="g3o-eS-3oY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">

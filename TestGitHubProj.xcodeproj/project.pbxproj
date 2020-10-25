@@ -65,6 +65,11 @@
 		BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */; };
 		BA1CD68F2539D871003C6066 /* SvitlanaAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CD68E2539D870003C6066 /* SvitlanaAnimationViewController.swift */; };
 		BA1CD6922539D894003C6066 /* SvitlanaAnimationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1CD6912539D894003C6066 /* SvitlanaAnimationStoryboard.storyboard */; };
+		BA25282D25458B3000E606E6 /* SvitlanaCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA25282C25458B3000E606E6 /* SvitlanaCollectionView.storyboard */; };
+		BA25283025458B8900E606E6 /* SvitlanaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25282F25458B8900E606E6 /* SvitlanaCollectionViewModel.swift */; };
+		BA25283325458CB700E606E6 /* SvitlanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25283225458CB700E606E6 /* SvitlanaCollectionViewController.swift */; };
+		BA2528392545BE4C00E606E6 /* SvitlanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2528372545BE4C00E606E6 /* SvitlanaCollectionViewCell.swift */; };
+		BA25283A2545BE4C00E606E6 /* SvitlanaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2528382545BE4C00E606E6 /* SvitlanaCollectionViewCell.xib */; };
 		BA2660532537026D0042C0BA /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2660512537026D0042C0BA /* UserTableViewCell.swift */; };
 		BA2660542537026D0042C0BA /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2660522537026D0042C0BA /* UserTableViewCell.xib */; };
 		BA54C314252F7A480067E4B4 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C312252F7A480067E4B4 /* CreateUserViewController.swift */; };
@@ -138,6 +143,11 @@
 		BA1AA9E92520DF49001C839F /* SvitlanaTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaTextViewController.swift; sourceTree = "<group>"; };
 		BA1CD68E2539D870003C6066 /* SvitlanaAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaAnimationViewController.swift; sourceTree = "<group>"; };
 		BA1CD6912539D894003C6066 /* SvitlanaAnimationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaAnimationStoryboard.storyboard; sourceTree = "<group>"; };
+		BA25282C25458B3000E606E6 /* SvitlanaCollectionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaCollectionView.storyboard; sourceTree = "<group>"; };
+		BA25282F25458B8900E606E6 /* SvitlanaCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaCollectionViewModel.swift; sourceTree = "<group>"; };
+		BA25283225458CB700E606E6 /* SvitlanaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaCollectionViewController.swift; sourceTree = "<group>"; };
+		BA2528372545BE4C00E606E6 /* SvitlanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA2528382545BE4C00E606E6 /* SvitlanaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SvitlanaCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA2660512537026D0042C0BA /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		BA2660522537026D0042C0BA /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		BA54C312252F7A480067E4B4 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
@@ -386,6 +396,7 @@
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
 			isa = PBXGroup;
 			children = (
+				BA25282A25458AB400E606E6 /* CollectionView */,
 				BA54C33025302B980067E4B4 /* TableView */,
 				BA54C311252F7A480067E4B4 /* DBFirebase */,
 				BA1AA9E42520DE14001C839F /* TextView */,
@@ -414,6 +425,18 @@
 				BAB6F65D253D9D0E0048387B /* BezierPathStoryboard.storyboard */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		BA25282A25458AB400E606E6 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				BA25282C25458B3000E606E6 /* SvitlanaCollectionView.storyboard */,
+				BA25282F25458B8900E606E6 /* SvitlanaCollectionViewModel.swift */,
+				BA25283225458CB700E606E6 /* SvitlanaCollectionViewController.swift */,
+				BA2528372545BE4C00E606E6 /* SvitlanaCollectionViewCell.swift */,
+				BA2528382545BE4C00E606E6 /* SvitlanaCollectionViewCell.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		BA54C311252F7A480067E4B4 /* DBFirebase */ = {
@@ -514,7 +537,9 @@
 				640B02FA252CE4A600B9D530 /* ShowImageStoryboard.storyboard in Resources */,
 				64C9925F25239F4F00676069 /* ViacheslavS.storyboard in Resources */,
 				641AEE10252FC43C00275227 /* ApiStoryboard.storyboard in Resources */,
+				BA25283A2545BE4C00E606E6 /* SvitlanaCollectionViewCell.xib in Resources */,
 				BA1CD6922539D894003C6066 /* SvitlanaAnimationStoryboard.storyboard in Resources */,
+				BA25282D25458B3000E606E6 /* SvitlanaCollectionView.storyboard in Resources */,
 				BA1AA9E62520DE51001C839F /* SvitlanaTextView.storyboard in Resources */,
 				64C9926C252604F000676069 /* PinchStoryboard.storyboard in Resources */,
 				6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */,
@@ -604,6 +629,7 @@
 				84478A8C2531D0650025415C /* dragAndDropViewController.swift in Sources */,
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
+				BA25283325458CB700E606E6 /* SvitlanaCollectionViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
 				641AEE15252FC47B00275227 /* ApiTableViewCell.swift in Sources */,
 				BA1CD68F2539D871003C6066 /* SvitlanaAnimationViewController.swift in Sources */,
@@ -615,6 +641,7 @@
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
+				BA25283025458B8900E606E6 /* SvitlanaCollectionViewModel.swift in Sources */,
 				642089252527489D00B9A1E1 /* PinchViewController.swift in Sources */,
 				495472E9251F191F0022AD8E /* AppDelegate.swift in Sources */,
 				84F91E3A25286BC6002CD19A /* FirebaseViewController.swift in Sources */,
@@ -634,6 +661,7 @@
 				640B02FD252CE4B700B9D530 /* ShowImageViewController.swift in Sources */,
 				846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */,
 				84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */,
+				BA2528392545BE4C00E606E6 /* SvitlanaCollectionViewCell.swift in Sources */,
 				BA54C33225302BD70067E4B4 /* TableViewController.swift in Sources */,
 				BAD23AC3253B28D1005A3BC1 /* BezierPathProgressBarVC.swift in Sources */,
 				3F80522A252B1EE8001B7FF7 /* User.swift in Sources */,

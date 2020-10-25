@@ -70,7 +70,6 @@
 		BA1CD68F2539D871003C6066 /* SvitlanaAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1CD68E2539D870003C6066 /* SvitlanaAnimationViewController.swift */; };
 		BA1CD6922539D894003C6066 /* SvitlanaAnimationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1CD6912539D894003C6066 /* SvitlanaAnimationStoryboard.storyboard */; };
 		BA25284A2545F8C900E606E6 /* SvitlanaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2528452545F8C900E606E6 /* SvitlanaCollectionViewCell.xib */; };
-		BA25284B2545F8C900E606E6 /* SvitlanaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2528462545F8C900E606E6 /* SvitlanaCollectionViewModel.swift */; };
 		BA25284C2545F8C900E606E6 /* SvitlanaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2528472545F8C900E606E6 /* SvitlanaCollectionViewController.swift */; };
 		BA25284D2545F8C900E606E6 /* SvitlanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2528482545F8C900E606E6 /* SvitlanaCollectionViewCell.swift */; };
 		BA25284E2545F8C900E606E6 /* SvitlanaCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2528492545F8C900E606E6 /* SvitlanaCollectionView.storyboard */; };
@@ -152,7 +151,6 @@
 		BA1CD68E2539D870003C6066 /* SvitlanaAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvitlanaAnimationViewController.swift; sourceTree = "<group>"; };
 		BA1CD6912539D894003C6066 /* SvitlanaAnimationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SvitlanaAnimationStoryboard.storyboard; sourceTree = "<group>"; };
 		BA2528452545F8C900E606E6 /* SvitlanaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SvitlanaCollectionViewCell.xib; sourceTree = "<group>"; };
-		BA2528462545F8C900E606E6 /* SvitlanaCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvitlanaCollectionViewModel.swift; sourceTree = "<group>"; };
 		BA2528472545F8C900E606E6 /* SvitlanaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvitlanaCollectionViewController.swift; sourceTree = "<group>"; };
 		BA2528482545F8C900E606E6 /* SvitlanaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvitlanaCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA2528492545F8C900E606E6 /* SvitlanaCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SvitlanaCollectionView.storyboard; sourceTree = "<group>"; };
@@ -458,13 +456,20 @@
 		BA2528442545F8C900E606E6 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				BA2528452545F8C900E606E6 /* SvitlanaCollectionViewCell.xib */,
-				BA2528462545F8C900E606E6 /* SvitlanaCollectionViewModel.swift */,
+				BA2528502546194300E606E6 /* Cell */,
 				BA2528472545F8C900E606E6 /* SvitlanaCollectionViewController.swift */,
-				BA2528482545F8C900E606E6 /* SvitlanaCollectionViewCell.swift */,
 				BA2528492545F8C900E606E6 /* SvitlanaCollectionView.storyboard */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		BA2528502546194300E606E6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA2528452545F8C900E606E6 /* SvitlanaCollectionViewCell.xib */,
+				BA2528482545F8C900E606E6 /* SvitlanaCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BA54C311252F7A480067E4B4 /* DBFirebase */ = {
@@ -666,7 +671,6 @@
 				641AEE0C252FC42700275227 /* ApiViewController.swift in Sources */,
 				BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */,
 				849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */,
-				BA25284B2545F8C900E606E6 /* SvitlanaCollectionViewModel.swift in Sources */,
 				64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */,
 				BA2660532537026D0042C0BA /* UserTableViewCell.swift in Sources */,
 				BA25284C2545F8C900E606E6 /* SvitlanaCollectionViewController.swift in Sources */,

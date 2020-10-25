@@ -9,23 +9,28 @@ import UIKit
 
 class SvitlanaCollectionViewController: UIViewController {
     var images = [UIImage]()
-    let countCells = 2
+    let countCells = 3
     let offset: CGFloat = 2.0
     let cellId = "cell"
 
+    @IBAction func selectPhoto(_ sender: UIButton) {
+       
+//        select.isHidden = false
+//        select.image = UIImage(named: "unchecked")
+    }
     @IBOutlet weak var collectionView: UICollectionView!
     
     override  func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        for i in 0...15 {
+        for i in 0...19 {
             guard let image = UIImage(named: "image\(i)") else {return}
             images.append(image)
         }
         collectionView.register(UINib(nibName: "SvitlanaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellId)
+        
     }
-    
 }
 
 extension SvitlanaCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

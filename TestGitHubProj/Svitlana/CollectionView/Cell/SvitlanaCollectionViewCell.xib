@@ -19,20 +19,28 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J2H-G2-0vW">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KYX-fy-IMg" userLabel="Select">
+                        <rect key="frame" x="170" y="0.0" width="30" height="30"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="J2H-G2-0vW" secondAttribute="trailing" id="Qew-Ah-nbn"/>
                 <constraint firstItem="J2H-G2-0vW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RJr-qz-xf5"/>
+                <constraint firstItem="KYX-fy-IMg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WoR-rY-Jf5"/>
+                <constraint firstItem="KYX-fy-IMg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="170" id="XzN-TB-B94"/>
+                <constraint firstAttribute="bottom" secondItem="KYX-fy-IMg" secondAttribute="bottom" constant="170" id="jhZ-cf-DdM"/>
                 <constraint firstAttribute="bottom" secondItem="J2H-G2-0vW" secondAttribute="bottom" id="l4W-Px-Q4b"/>
+                <constraint firstAttribute="trailing" secondItem="KYX-fy-IMg" secondAttribute="trailing" id="syO-Fi-b4g"/>
                 <constraint firstItem="J2H-G2-0vW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zJu-0u-kCS"/>
             </constraints>
             <size key="customSize" width="202" height="161"/>
             <connections>
                 <outlet property="photoView" destination="J2H-G2-0vW" id="rJt-If-rSK"/>
+                <outlet property="select" destination="KYX-fy-IMg" id="AXN-zV-Jds"/>
             </connections>
-            <point key="canvasLocation" x="247.82608695652175" y="120.87053571428571"/>
+            <point key="canvasLocation" x="247.82608695652175" y="120.53571428571428"/>
         </collectionViewCell>
     </objects>
 </document>

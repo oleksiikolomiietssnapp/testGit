@@ -9,10 +9,11 @@ import UIKit
 
 class SvitlanaCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var select: UIImageView!
     @IBOutlet weak var photoView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        select.isHidden = true
     }
 
 }

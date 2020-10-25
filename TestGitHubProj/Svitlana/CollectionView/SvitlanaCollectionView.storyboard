@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9bF-lB-Q0g">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" red="0.83578241141162113" green="1" blue="0.94942863979782433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="0.0" id="rOW-xB-QJY">
                                     <size key="itemSize" width="235" height="189"/>
@@ -62,6 +62,35 @@
                             <constraint firstItem="9bF-lB-Q0g" firstAttribute="bottom" secondItem="9K9-Ps-REO" secondAttribute="bottom" id="mcU-cE-tdW"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="jrN-As-aOP">
+                        <rightBarButtonItems>
+                            <barButtonItem id="h9X-9p-hKc">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bj1-rX-EDJ" userLabel="addPhoto">
+                                    <rect key="frame" x="350" y="4" width="44" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Add photo">
+                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                    </state>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem id="She-fi-29t">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="98F-xp-2Vp" userLabel="selectPhoto">
+                                    <rect key="frame" x="350" y="4" width="44" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Select">
+                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="selectPhoto:" destination="gXE-Bc-Acw" eventType="touchUpInside" id="k4H-xG-Pea"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="9bF-lB-Q0g" id="UKc-MR-vKV"/>
                     </connections>
@@ -74,6 +103,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

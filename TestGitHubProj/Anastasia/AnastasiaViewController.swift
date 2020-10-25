@@ -61,7 +61,7 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
     }
     
     @objc private func animationBtnPressed() {
-        let storyboard = UIStoryboard(name: "AnimationStoryboard", bundle: .main)
+        let storyboard = UIStoryboard(name: "AnastasiiaAnimationStoryboard", bundle: .main)
         guard let vc = storyboard.instantiateViewController(identifier: "animationStoryboard") as? AnastasiiaAnimationViewController else {
             return
         }

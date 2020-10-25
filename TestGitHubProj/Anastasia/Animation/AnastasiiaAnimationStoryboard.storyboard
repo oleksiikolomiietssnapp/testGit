@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Nm-ex-Mwv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -91,11 +91,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD9-fj-WbE">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD9-fj-WbE" customClass="AnastasiiaAnimationView" customModule="TestGitHubProj" customModuleProvider="target">
                                 <rect key="frame" x="16" y="60" width="382" height="589"/>
-                                <connections>
-                                    <segue destination="BfR-9U-cBR" kind="embed" id="T7e-f8-iwr"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I7t-6H-oDK"/>
@@ -188,6 +185,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="animationFrame" destination="pD9-fj-WbE" id="qHH-Mz-SGa"/>
                         <outlet property="repaetSwitch" destination="Ipi-8e-Vs3" id="odJ-bv-TQa"/>
                         <outlet property="reverseSwitch" destination="M3f-3v-qEZ" id="M3s-Mj-jBQ"/>
                     </connections>
@@ -195,21 +193,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56E-5w-mQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="168.80000000000001" y="84.975369458128085"/>
-        </scene>
-        <!--Animation Frame View Controller-->
-        <scene sceneID="h6j-Qm-gK2">
-            <objects>
-                <viewController id="BfR-9U-cBR" customClass="AnimationFrameViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yLO-gD-dUO">
-                        <rect key="frame" x="0.0" y="0.0" width="382" height="589"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Wlg-2E-d95"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OSa-By-FUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="169" y="969"/>
         </scene>
     </scenes>
     <resources>

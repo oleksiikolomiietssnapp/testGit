@@ -13,12 +13,22 @@ class SvitlanaCollectionViewController: UIViewController {
     let offset: CGFloat = 2.0
     let cellId = "cell"
     var isSelectModeTapped = false
-    var tappedImages = [UIImage]()
+    var tappedImages = [Int]()
     
+    @IBAction func deleteImage(_ sender: UIButton) {
+        //        collectionView.deleteItems(at: tappedImages[IndexPath])
+        let indexes = tappedImages.sorted()
+        indexes.reversed().forEach { (index) in
+            images.remove(at: index)
+        }
+        tappedImages = []
+        collectionView.reloadData()
+    }
     @IBOutlet weak var selectOrCancel: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func selectPhoto(_ sender: UIButton) {
+        tappedImages = []
         isSelectModeTapped = !isSelectModeTapped
         if isSelectModeTapped {
             selectOrCancel.setTitle("Cancel", for: .normal)
@@ -27,7 +37,7 @@ class SvitlanaCollectionViewController: UIViewController {
         }
         collectionView.reloadData()
     }
-     
+    
     override  func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -48,7 +58,8 @@ extension SvitlanaCollectionViewController: UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? SvitlanaCollectionViewCell else { return UICollectionViewCell() }
         let image = images[indexPath.item]
-        cell.configure(image: image, isSelectModeTapped: isSelectModeTapped)
+        let imageWasTapped = tappedImages.contains(indexPath.row)
+        cell.configure(image: image, isSelectModeTapped: isSelectModeTapped, isImageTapped: imageWasTapped)
         return cell
     }
     
@@ -61,10 +72,9 @@ extension SvitlanaCollectionViewController: UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let image = images[indexPath.item]
-        tappedImages.append(image)
-        print(tappedImages)
-        //delete here
-        //есть ли картинка в массиве булево передать в конфигур
+        tappedImages.append(indexPath.row)
+        collectionView.reloadItems(at: [indexPath])
+        //control
+        print("indexes of tapped images \(indexPath.row)")
     }
 }

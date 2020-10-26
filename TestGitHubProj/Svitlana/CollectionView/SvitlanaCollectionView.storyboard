@@ -70,14 +70,14 @@
                                     <rect key="frame" x="350" y="4" width="44" height="36"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <state key="normal" title="Add photo">
+                                    <state key="normal" title="Add">
                                         <color key="titleColor" systemColor="systemBlueColor"/>
                                     </state>
                                 </button>
                             </barButtonItem>
                             <barButtonItem id="She-fi-29t">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="98F-xp-2Vp" userLabel="selectPhoto">
-                                    <rect key="frame" x="350" y="4" width="44" height="36"/>
+                                    <rect key="frame" x="350" y="4" width="55" height="36"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="Select">
@@ -93,6 +93,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="9bF-lB-Q0g" id="UKc-MR-vKV"/>
+                        <outlet property="selectOrCancel" destination="98F-xp-2Vp" id="139-Il-ate"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iX-rt-yjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

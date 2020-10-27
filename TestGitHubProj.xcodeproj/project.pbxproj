@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		152AB1E134BD6C2443D805B5 /* Pods_TestGitHubProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D4F64EC17AE20B2CB5D389 /* Pods_TestGitHubProj.framework */; };
+		3F445A0C25480BF000E98087 /* AnastasiiaCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F445A0B25480BF000E98087 /* AnastasiiaCollectionView.storyboard */; };
+		3F445A0F25480C3700E98087 /* AnastasiiaCollectinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F445A0E25480C3700E98087 /* AnastasiiaCollectinViewController.swift */; };
+		3F445A1525480DE100E98087 /* AnastasiiaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F445A1325480DE100E98087 /* AnastasiiaCollectionViewCell.swift */; };
+		3F445A1625480DE100E98087 /* AnastasiiaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F445A1425480DE100E98087 /* AnastasiiaCollectionViewCell.xib */; };
+		3F445A2225485DD700E98087 /* AnastasiiaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F445A2125485DD700E98087 /* AnastasiiaImage.swift */; };
 		3F74499E252F141800352A78 /* FirebaseUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74499D252F141800352A78 /* FirebaseUsersViewController.swift */; };
 		3F7449AA252F296F00352A78 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7449A9252F296F00352A78 /* UserViewController.swift */; };
 		3F7E41DF251F40160020F715 /* Anastasia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E41DE251F40160020F715 /* Anastasia.storyboard */; };
@@ -86,6 +91,11 @@
 
 /* Begin PBXFileReference section */
 		2EECAD94DBB74B58A88AFFE1 /* Pods-TestGitHubProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestGitHubProj.debug.xcconfig"; path = "Target Support Files/Pods-TestGitHubProj/Pods-TestGitHubProj.debug.xcconfig"; sourceTree = "<group>"; };
+		3F445A0B25480BF000E98087 /* AnastasiiaCollectionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnastasiiaCollectionView.storyboard; sourceTree = "<group>"; };
+		3F445A0E25480C3700E98087 /* AnastasiiaCollectinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnastasiiaCollectinViewController.swift; sourceTree = "<group>"; };
+		3F445A1325480DE100E98087 /* AnastasiiaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnastasiiaCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F445A1425480DE100E98087 /* AnastasiiaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnastasiiaCollectionViewCell.xib; sourceTree = "<group>"; };
+		3F445A2125485DD700E98087 /* AnastasiiaImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnastasiiaImage.swift; sourceTree = "<group>"; };
 		3F74499D252F141800352A78 /* FirebaseUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUsersViewController.swift; sourceTree = "<group>"; };
 		3F7449A9252F296F00352A78 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		3F7E41DE251F40160020F715 /* Anastasia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Anastasia.storyboard; sourceTree = "<group>"; };
@@ -197,12 +207,33 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
+		3F445A1125480CDA00E98087 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3F445A0B25480BF000E98087 /* AnastasiiaCollectionView.storyboard */,
+				3F445A0E25480C3700E98087 /* AnastasiiaCollectinViewController.swift */,
+				3F445A182548115B00E98087 /* Cell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		3F445A182548115B00E98087 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3F445A1325480DE100E98087 /* AnastasiiaCollectionViewCell.swift */,
+				3F445A2125485DD700E98087 /* AnastasiiaImage.swift */,
+				3F445A1425480DE100E98087 /* AnastasiiaCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3F7E41E1251F401C0020F715 /* Anastasia */ = {
 			isa = PBXGroup;
 			children = (
 				3F89B4E7253097A500367C81 /* Firebase */,
 				3F0D8B1A252DE67D00C090D4 /* TextView */,
 				3F7E41DE251F40160020F715 /* Anastasia.storyboard */,
+				3F445A1125480CDA00E98087 /* CollectionView */,
 				3FF531D025274C8F00B4959A /* AnastasiaViewController.swift */,
 				3F805226252B1DF9001B7FF7 /* RequestViewController.swift */,
 			);
@@ -565,6 +596,7 @@
 			files = (
 				849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */,
 				84478A882531CF440025415C /* dragAndDrop.storyboard in Resources */,
+				3F445A1625480DE100E98087 /* AnastasiiaCollectionViewCell.xib in Resources */,
 				3F89B50125309C4800367C81 /* ImageCell.xib in Resources */,
 				4988DA162528BA40009A7EA8 /* GoogleService-Info.plist in Resources */,
 				BA54C315252F7A480067E4B4 /* CreateUser.storyboard in Resources */,
@@ -586,6 +618,7 @@
 				BA25284A2545F8C900E606E6 /* SvitlanaCollectionViewCell.xib in Resources */,
 				BA2660542537026D0042C0BA /* UserTableViewCell.xib in Resources */,
 				64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */,
+				3F445A0C25480BF000E98087 /* AnastasiiaCollectionView.storyboard in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
 				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
 				84F8AF0E2539A4C100E562E9 /* JumpingDots.storyboard in Resources */,
@@ -668,10 +701,13 @@
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
+				3F445A0F25480C3700E98087 /* AnastasiiaCollectinViewController.swift in Sources */,
 				641AEE15252FC47B00275227 /* ApiTableViewCell.swift in Sources */,
 				646A9E0C2539742B0097F816 /* AnimationViewController.swift in Sources */,
 				BA1CD68F2539D871003C6066 /* SvitlanaAnimationViewController.swift in Sources */,
 				641AEE0C252FC42700275227 /* ApiViewController.swift in Sources */,
+				3F445A2225485DD700E98087 /* AnastasiiaImage.swift in Sources */,
+				3F445A1525480DE100E98087 /* AnastasiiaCollectionViewCell.swift in Sources */,
 				BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */,
 				849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */,
 				64C9927B25260B8C00676069 /* ImageScrollView.swift in Sources */,

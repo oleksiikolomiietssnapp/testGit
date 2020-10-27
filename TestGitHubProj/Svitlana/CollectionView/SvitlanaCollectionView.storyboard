@@ -73,6 +73,9 @@
                                     <state key="normal" title="⊕">
                                         <color key="titleColor" systemColor="systemGreenColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="addImage:" destination="gXE-Bc-Acw" eventType="touchUpInside" id="mf8-2z-nxK"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem id="Jzn-Ds-XGQ">

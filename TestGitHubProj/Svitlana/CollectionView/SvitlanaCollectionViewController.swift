@@ -7,14 +7,20 @@
 
 import UIKit
 
-class SvitlanaCollectionViewController: UIViewController {
+class SvitlanaCollectionViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     var images = [UIImage]()
     let countCells = 3
     let offset: CGFloat = 2.0
     let cellId = "cell"
     var isSelectModeTapped = false
     var tappedImages = [Int]()
+    let imagePicker = UIImagePickerController()
     
+    @IBAction func addImage(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
     @IBAction func deleteImage(_ sender: UIButton) {
         //        collectionView.deleteItems(at: tappedImages[IndexPath])
         let indexes = tappedImages.sorted()
@@ -42,11 +48,24 @@ class SvitlanaCollectionViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        imagePicker.delegate = self
         for i in 0...19 {
             guard let image = UIImage(named: "image\(i)") else {return}
             images.append(image)
         }
         collectionView.register(UINib(nibName: "SvitlanaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellId)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            images.append(pickedImage)
+            collectionView.reloadData()
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -74,7 +93,5 @@ extension SvitlanaCollectionViewController: UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         tappedImages.append(indexPath.row)
         collectionView.reloadItems(at: [indexPath])
-        //control
-        print("indexes of tapped images \(indexPath.row)")
     }
 }

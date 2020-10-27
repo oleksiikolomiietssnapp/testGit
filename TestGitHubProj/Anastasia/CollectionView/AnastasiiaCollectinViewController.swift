@@ -23,7 +23,7 @@ class AnastasiiaCollectinViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "AnastasiiaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnastasiiaCollectionViewCell")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectBtnPressed))
-        setToolbarItems([deleteBtn], animated: true)
+        setToolbarItems([UIBarButtonItem(systemItem: .flexibleSpace), deleteBtn], animated: true)
     }
     
     @objc func selectBtnPressed() {

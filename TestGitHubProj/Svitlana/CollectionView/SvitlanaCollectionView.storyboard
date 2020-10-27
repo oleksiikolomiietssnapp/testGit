@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Svitlana Collection View Controller-->
+        <scene sceneID="LpG-Vw-szf">
+            <objects>
+                <viewController storyboardIdentifier="SvitlanaCollectionView" id="gXE-Bc-Acw" customClass="SvitlanaCollectionViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmM-4J-Ix2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9bF-lB-Q0g">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" red="0.83578241141162113" green="1" blue="0.94942863979782433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="0.0" id="rOW-xB-QJY">
+                                    <size key="itemSize" width="235" height="189"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="3"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="G3T-ix-uZv" customClass="SvitlanaCollectionViewCell" customModule="TestGitHubProj" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="3" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pca-Im-o8S">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tf1-CU-t2d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tf1-CU-t2d" firstAttribute="leading" secondItem="pca-Im-o8S" secondAttribute="leading" id="QAa-z6-e2Q"/>
+                                                <constraint firstItem="Tf1-CU-t2d" firstAttribute="top" secondItem="pca-Im-o8S" secondAttribute="top" id="atx-7s-foV"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tf1-CU-t2d" secondAttribute="bottom" id="gWe-yw-qna"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tf1-CU-t2d" secondAttribute="trailing" id="wo6-gI-bOJ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="200"/>
+                                        <connections>
+                                            <outlet property="photoView" destination="Tf1-CU-t2d" id="f9e-vQ-WUn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9K9-Ps-REO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9bF-lB-Q0g" firstAttribute="top" secondItem="9K9-Ps-REO" secondAttribute="top" id="Ibh-fJ-eaQ"/>
+                            <constraint firstItem="9K9-Ps-REO" firstAttribute="trailing" secondItem="9bF-lB-Q0g" secondAttribute="trailing" id="ImP-V2-X6p"/>
+                            <constraint firstItem="9bF-lB-Q0g" firstAttribute="leading" secondItem="9K9-Ps-REO" secondAttribute="leading" id="Qa8-QR-Mgq"/>
+                            <constraint firstItem="9bF-lB-Q0g" firstAttribute="bottom" secondItem="9K9-Ps-REO" secondAttribute="bottom" id="mcU-cE-tdW"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="jrN-As-aOP">
+                        <rightBarButtonItems>
+                            <barButtonItem id="h9X-9p-hKc">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bj1-rX-EDJ" userLabel="addPhoto">
+                                    <rect key="frame" x="350" y="4" width="44" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Add">
+                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                    </state>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem id="She-fi-29t">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="98F-xp-2Vp" userLabel="selectPhoto">
+                                    <rect key="frame" x="350" y="4" width="55" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Select">
+                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="selectPhoto:" destination="gXE-Bc-Acw" eventType="touchUpInside" id="k4H-xG-Pea"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="9bF-lB-Q0g" id="UKc-MR-vKV"/>
+                        <outlet property="selectOrCancel" destination="98F-xp-2Vp" id="139-Il-ate"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7iX-rt-yjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

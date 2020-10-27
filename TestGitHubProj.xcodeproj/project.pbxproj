@@ -75,6 +75,7 @@
 		BA25284E2545F8C900E606E6 /* SvitlanaCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2528492545F8C900E606E6 /* SvitlanaCollectionView.storyboard */; };
 		BA2660532537026D0042C0BA /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2660512537026D0042C0BA /* UserTableViewCell.swift */; };
 		BA2660542537026D0042C0BA /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2660522537026D0042C0BA /* UserTableViewCell.xib */; };
+		BA3EF9D625485E39005C03E6 /* EnlargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3EF9D525485E39005C03E6 /* EnlargeImageViewController.swift */; };
 		BA54C314252F7A480067E4B4 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C312252F7A480067E4B4 /* CreateUserViewController.swift */; };
 		BA54C315252F7A480067E4B4 /* CreateUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA54C313252F7A480067E4B4 /* CreateUser.storyboard */; };
 		BA54C33225302BD70067E4B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C33125302BD60067E4B4 /* TableViewController.swift */; };
@@ -156,6 +157,7 @@
 		BA2528492545F8C900E606E6 /* SvitlanaCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SvitlanaCollectionView.storyboard; sourceTree = "<group>"; };
 		BA2660512537026D0042C0BA /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		BA2660522537026D0042C0BA /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		BA3EF9D525485E39005C03E6 /* EnlargeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargeImageViewController.swift; sourceTree = "<group>"; };
 		BA54C312252F7A480067E4B4 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		BA54C313252F7A480067E4B4 /* CreateUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateUser.storyboard; sourceTree = "<group>"; };
 		BA54C33125302BD60067E4B4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 				BA2528502546194300E606E6 /* Cell */,
 				BA2528472545F8C900E606E6 /* SvitlanaCollectionViewController.swift */,
 				BA2528492545F8C900E606E6 /* SvitlanaCollectionView.storyboard */,
+				BA3EF9D525485E39005C03E6 /* EnlargeImageViewController.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				640B02FD252CE4B700B9D530 /* ShowImageViewController.swift in Sources */,
 				846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */,
 				84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */,
+				BA3EF9D625485E39005C03E6 /* EnlargeImageViewController.swift in Sources */,
 				84F8AF0B2539A4A500E562E9 /* AnimationsViewController.swift in Sources */,
 				BA54C33225302BD70067E4B4 /* TableViewController.swift in Sources */,
 				BAD23AC3253B28D1005A3BC1 /* BezierPathProgressBarVC.swift in Sources */,

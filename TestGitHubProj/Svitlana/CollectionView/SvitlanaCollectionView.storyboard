@@ -116,6 +116,35 @@
             </objects>
             <point key="canvasLocation" x="-317.39130434782612" y="57.589285714285708"/>
         </scene>
+        <!--Enlarge Image View Controller-->
+        <scene sceneID="Rbl-dJ-R00">
+            <objects>
+                <viewController storyboardIdentifier="EnlargeImageViewController" id="OBe-qi-vgJ" customClass="EnlargeImageViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OSY-TF-1zf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCG-gi-aQX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fUh-Qx-Kbt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fUh-Qx-Kbt" firstAttribute="bottom" secondItem="HCG-gi-aQX" secondAttribute="bottom" id="5Sf-dq-A6L"/>
+                            <constraint firstItem="HCG-gi-aQX" firstAttribute="leading" secondItem="fUh-Qx-Kbt" secondAttribute="leading" id="aPJ-DY-vCo"/>
+                            <constraint firstItem="HCG-gi-aQX" firstAttribute="top" secondItem="fUh-Qx-Kbt" secondAttribute="top" id="fKE-7i-XEF"/>
+                            <constraint firstItem="fUh-Qx-Kbt" firstAttribute="trailing" secondItem="HCG-gi-aQX" secondAttribute="trailing" id="s59-je-OeQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enlargeImage" destination="HCG-gi-aQX" id="pk3-4N-vAT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yn9-ml-ySH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="58"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

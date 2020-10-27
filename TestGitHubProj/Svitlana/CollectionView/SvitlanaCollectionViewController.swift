@@ -9,7 +9,7 @@ import UIKit
 
 class SvitlanaCollectionViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     var images = [UIImage]()
-    let countCells = 3
+    let countCells = 6
     let offset: CGFloat = 2.0
     let cellId = "cell"
     var isSelectModeTapped = false
@@ -91,7 +91,18 @@ extension SvitlanaCollectionViewController: UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        tappedImages.append(indexPath.row)
-        collectionView.reloadItems(at: [indexPath])
+        if isSelectModeTapped {
+            tappedImages.append(indexPath.row)
+            collectionView.reloadItems(at: [indexPath])
+        } else {
+            let storyboard = UIStoryboard(name: "SvitlanaCollectionView", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(identifier: "EnlargeImageViewController") as? EnlargeImageViewController else {
+                print("error")
+                return
+            }
+            vc.image = images[indexPath.row]
+            self.navigationController?.present(vc, animated: true)
+            
+        }
     }
 }

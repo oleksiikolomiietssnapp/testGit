@@ -19,6 +19,7 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
     lazy private var firebaseBtn = { return UIButton(type: .custom) }()
     
     lazy private var animationBtn = { return UIButton(type: .custom) }()
+    lazy private var collectionViewBtn = { return UIButton(type: .custom) }()
     
     @IBOutlet private var textViewController: UIView!
     
@@ -66,6 +67,12 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)
+    @objc private func collectionViewBtnPressed() {
+        let storyboard = UIStoryboard(name: "AnastasiiaCollectionView", bundle: .main)
+                 guard let vc = storyboard.instantiateViewController(identifier: "anastasiiaCVC") as? AnastasiiaCollectinViewController else {
+                     return
+                 }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func showSafari(_ url: String) {
@@ -104,10 +111,16 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
         customizeBtn(requestBtn, frameY: wikiButton.frame.minY -  wikiButton.frame.height - 8, title: "Request")
         customizeBtn(firebaseBtn, frameY: textBtn.frame.maxY + 8, title: "Firebase")
         customizeBtn(animationBtn, frameY: requestBtn.frame.minY - requestBtn.frame.height - 8, title: "Animation")
+        addButton(collectionViewBtn)
+        customizeBtn(textBtn, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8, title: "Text")
+        customizeBtn(requestBtn, frameY: view.frame.midY - wikiButton.frame.height * 1.5 - 8, title: "Request")
+        customizeBtn(firebaseBtn, frameY: view.frame.midY + wikiButton.frame.height * 1.5 + 16, title: "Firebase")
+        customizeBtn(collectionViewBtn, frameY: view.frame.midY + wikiButton.frame.height * 2.5 + 24, title: "Collection View")
         textBtn.addTarget(self, action: #selector(textBtnPressed), for: .touchUpInside)
         requestBtn.addTarget(self, action: #selector(requestBtnPressed), for: .touchUpInside)
         firebaseBtn.addTarget(self, action: #selector(firebaseBtnPressed), for: .touchUpInside)
         animationBtn.addTarget(self, action: #selector(animationBtnPressed), for: .touchUpInside)
+        collectionViewBtn.addTarget(self, action: #selector(collectionViewBtnPressed), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -116,5 +129,9 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
         changeButtonFrame(requestBtn, frameY: wikiButton.frame.minY -  wikiButton.frame.height - 8)
         changeButtonFrame(firebaseBtn, frameY: textBtn.frame.maxY + 8)
         changeButtonFrame(animationBtn, frameY: requestBtn.frame.minY - requestBtn.frame.height - 8)
+        changeButtonFrame(textBtn, frameY: view.frame.midY + wikiButton.frame.height / 2 + 8)
+        changeButtonFrame(requestBtn, frameY: view.frame.midY - wikiButton.frame.height * 1.5 - 8)
+        changeButtonFrame(firebaseBtn, frameY: view.frame.midY + wikiButton.frame.height * 1.5 + 16)
+        changeButtonFrame(collectionViewBtn, frameY: view.frame.midY + wikiButton.frame.height * 2.5 + 24)
     }
 }

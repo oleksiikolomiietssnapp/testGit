@@ -67,6 +67,8 @@ class AnastasiaViewController: UIViewController, SFSafariViewControllerDelegate 
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc private func collectionViewBtnPressed() {
         let storyboard = UIStoryboard(name: "AnastasiiaCollectionView", bundle: .main)
                  guard let vc = storyboard.instantiateViewController(identifier: "anastasiiaCVC") as? AnastasiiaCollectinViewController else {

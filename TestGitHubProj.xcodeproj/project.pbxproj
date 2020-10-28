@@ -221,6 +221,8 @@
 				3FE8A0AC2544985B00AB7DB6 /* AnastasiiaAnimationView.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
 		3F445A1125480CDA00E98087 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (

@@ -14,6 +14,8 @@ class AnastasiiaCollectinViewController: UIViewController {
     
     lazy var deleteBtn = { return UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteBtnPressed))}()
     
+    lazy var shareBtn = { return UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareBtnPressed))}()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -28,7 +30,7 @@ class AnastasiiaCollectinViewController: UIViewController {
         collectionView.register(UINib(nibName: "AnastasiiaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnastasiiaCollectionViewCell")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectBtnPressed))
-        setToolbarItems([UIBarButtonItem(systemItem: .flexibleSpace), deleteBtn], animated: true)
+        setToolbarItems([shareBtn, UIBarButtonItem(systemItem: .flexibleSpace), deleteBtn], animated: true)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -40,6 +42,7 @@ class AnastasiiaCollectinViewController: UIViewController {
         images.forEach { im in
             im.selected = false
         }
+        shareBtn.isEnabled = false
         deleteBtn.isEnabled = false
         self.isAbleToSelect.toggle()
         let title = navigationItem.rightBarButtonItem?.title
@@ -57,6 +60,13 @@ class AnastasiiaCollectinViewController: UIViewController {
         images = images.filter { !$0.selected }
         collectionView.reloadData()
         selectBtnPressed()
+    }
+    
+    @objc func shareBtnPressed() {
+        let items = images.filter { return $0.selected }
+            .map { UIImage(named: $0.name) as Any }
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true, completion: selectBtnPressed)
     }
 }
 
@@ -89,12 +99,13 @@ extension AnastasiiaCollectinViewController: UICollectionViewDelegate {
             image.selected.toggle()
             collectionView.reloadData()
         }
-        var deleteIsEnabled = false
+        var selectIsEnabled = false
         for im in images where im.selected {
-            deleteIsEnabled = true
+            selectIsEnabled = true
             break
         }
-        deleteBtn.isEnabled = deleteIsEnabled
+        shareBtn.isEnabled = selectIsEnabled
+        deleteBtn.isEnabled = selectIsEnabled
     }
 }
 

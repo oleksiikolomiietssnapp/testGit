@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Parallax View Controller-->
+        <scene sceneID="a8H-3n-APY">
+            <objects>
+                <viewController storyboardIdentifier="Parallax" id="IaV-Fu-rqi" customClass="ParallaxViewController" customModule="TestGitHubProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="keM-Rr-FQm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JuP-lF-O2e">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="YhZ-xn-jEb"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="rR9-eN-dTm"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gYM-pQ-LwB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JuP-lF-O2e" firstAttribute="leading" secondItem="gYM-pQ-LwB" secondAttribute="leading" id="PU3-3j-uFO"/>
+                            <constraint firstItem="JuP-lF-O2e" firstAttribute="trailing" secondItem="gYM-pQ-LwB" secondAttribute="trailing" id="foI-rh-z0M"/>
+                            <constraint firstAttribute="bottom" secondItem="JuP-lF-O2e" secondAttribute="bottom" id="qwN-tp-foY"/>
+                            <constraint firstItem="JuP-lF-O2e" firstAttribute="top" secondItem="gYM-pQ-LwB" secondAttribute="top" id="sKq-20-Rmc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Ot-Z2-aGv"/>
+                    <connections>
+                        <outlet property="scrollView" destination="JuP-lF-O2e" id="7Hn-1k-CLT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqB-Qz-abj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

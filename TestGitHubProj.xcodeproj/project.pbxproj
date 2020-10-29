@@ -88,6 +88,7 @@
 		BAB6F65E253D9D0E0048387B /* BezierPathStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB6F65D253D9D0E0048387B /* BezierPathStoryboard.storyboard */; };
 		BACA00D7254AF00B002B84ED /* ParallaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA00D6254AF00B002B84ED /* ParallaxViewController.swift */; };
 		BACA00DA254AF054002B84ED /* Parallax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA00D9254AF054002B84ED /* Parallax.storyboard */; };
+		BACA00EA254B3DF9002B84ED /* IntitaMainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA00E9254B3DF9002B84ED /* IntitaMainScreenView.swift */; };
 		BAD23AC3253B28D1005A3BC1 /* BezierPathProgressBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD23AC2253B28D1005A3BC1 /* BezierPathProgressBarVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +178,7 @@
 		BAB6F65D253D9D0E0048387B /* BezierPathStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BezierPathStoryboard.storyboard; sourceTree = "<group>"; };
 		BACA00D6254AF00B002B84ED /* ParallaxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxViewController.swift; sourceTree = "<group>"; };
 		BACA00D9254AF054002B84ED /* Parallax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parallax.storyboard; sourceTree = "<group>"; };
+		BACA00E9254B3DF9002B84ED /* IntitaMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntitaMainScreenView.swift; sourceTree = "<group>"; };
 		BAD23AC2253B28D1005A3BC1 /* BezierPathProgressBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathProgressBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -544,6 +546,7 @@
 			children = (
 				BACA00D6254AF00B002B84ED /* ParallaxViewController.swift */,
 				BACA00D9254AF054002B84ED /* Parallax.storyboard */,
+				BACA00E9254B3DF9002B84ED /* IntitaMainScreenView.swift */,
 			);
 			path = Parallax;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				3F445A0F25480C3700E98087 /* AnastasiiaCollectinViewController.swift in Sources */,
 				641AEE15252FC47B00275227 /* ApiTableViewCell.swift in Sources */,
 				646A9E0C2539742B0097F816 /* AnimationViewController.swift in Sources */,
+				BACA00EA254B3DF9002B84ED /* IntitaMainScreenView.swift in Sources */,
 				BA1CD68F2539D871003C6066 /* SvitlanaAnimationViewController.swift in Sources */,
 				641AEE0C252FC42700275227 /* ApiViewController.swift in Sources */,
 				3F445A2225485DD700E98087 /* AnastasiiaImage.swift in Sources */,

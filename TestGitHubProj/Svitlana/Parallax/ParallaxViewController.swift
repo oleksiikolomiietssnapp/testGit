@@ -8,7 +8,9 @@
 import UIKit
 
 class ParallaxViewController: UIViewController, UIScrollViewDelegate {
+    @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var programTheFutureLabel: UILabel!
     let texts = ["We guarantee you will receive many attractive job offers after the successful completion of the course!",
                  "Don`t miss your chance to change the world! You have a great opportunity to get up-to-date and high quality education and become a professional programmer!",
                  "Would you like to become a highly qualified programmer? Make the right decision, join our educational program! We set the goals and accomplish great results!",
@@ -20,20 +22,31 @@ class ParallaxViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         setupScrollView()
         scrollView.layoutIfNeeded()
+        startBtn.layer.cornerRadius = 5.0
+        startBtn.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+        startBtn.backgroundColor = UIColor(red: 82.0/255.0, green: 117.0/255.0, blue: 160.0/255.0, alpha: 1)
     }
     
     private func setupScrollView() {
-        scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(texts.count)
         scrollView.backgroundColor = .blue
+//        let frame = CGRect(
+//            x: 0,
+//            y: self.view.frame.height/3,
+//            width: self.view.frame.width,
+//            height: self.view.frame.height/3)
+//        scrollView.frame = frame
+//        
+        scrollView.contentSize.width = self.view.frame.width * CGFloat(texts.count)
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
         scrollView.bounces = false
-        
+        scrollView.showsHorizontalScrollIndicator = false
         for (i, text) in texts.enumerated() {
-            let frame = CGRect(x: self.scrollView.frame.width * CGFloat(i),
-                                y: 0,
-                                width: self.scrollView.frame.width,
-                                height: self.scrollView.frame.height)
+            let frame = CGRect(
+                x: self.view.frame.width * CGFloat(i),
+                y: 0,
+                width: self.scrollView.frame.width,
+                height: self.scrollView.frame.height)
             
             let view = IntitaMainScreenView(frame: frame)
             

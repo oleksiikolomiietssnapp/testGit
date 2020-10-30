@@ -14,7 +14,8 @@ class IntitaMainScreenView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 40)
+        label.font = UIFont.systemFont(ofSize: 30)
+        // уменьшать если не помещается текст
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.shadowColor = .black
@@ -24,9 +25,7 @@ class IntitaMainScreenView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        layer.borderWidth = 0.5
-        layer.backgroundColor = UIColor.black.cgColor
+        layer.backgroundColor = UIColor.red.cgColor
         layer.masksToBounds = true
         backgroundColor = .green
         

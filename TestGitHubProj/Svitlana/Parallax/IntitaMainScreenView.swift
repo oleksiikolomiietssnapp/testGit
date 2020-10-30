@@ -12,15 +12,13 @@ class IntitaMainScreenView: UIView {
         let label = UILabel()
         label.backgroundColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.layer.shadowOffset = CGSize(width: 3, height: 3)
-        label.layer.shadowOpacity = 0.8
-        label.layer.shadowRadius = 2
-        label.layer.shadowColor = CGColor.init(srgbRed: 1, green: 0, blue: 0, alpha: 1)
-//        label.layer.shadowColor = CGColor.init(gray: 1, alpha: 1)
         label.textAlignment = .center
         label.textColor = .white
-        label.isHighlighted = true
-        label.highlightedTextColor = .black
+        label.font = UIFont.systemFont(ofSize: 40)
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.shadowColor = .black
+        label.shadowOffset = CGSize(width: 2, height: 2)
         return label
     }()
     

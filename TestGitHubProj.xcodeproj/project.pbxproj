@@ -86,6 +86,9 @@
 		BA54C33225302BD70067E4B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54C33125302BD60067E4B4 /* TableViewController.swift */; };
 		BAB3BBCC252A33680087DDD9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */; };
 		BAB6F65E253D9D0E0048387B /* BezierPathStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB6F65D253D9D0E0048387B /* BezierPathStoryboard.storyboard */; };
+		BACA00D7254AF00B002B84ED /* ParallaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA00D6254AF00B002B84ED /* ParallaxViewController.swift */; };
+		BACA00DA254AF054002B84ED /* Parallax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA00D9254AF054002B84ED /* Parallax.storyboard */; };
+		BACA00EA254B3DF9002B84ED /* IntitaMainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA00E9254B3DF9002B84ED /* IntitaMainScreenView.swift */; };
 		BAD23AC3253B28D1005A3BC1 /* BezierPathProgressBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD23AC2253B28D1005A3BC1 /* BezierPathProgressBarVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +176,9 @@
 		BA54C33125302BD60067E4B4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		BAB6F65D253D9D0E0048387B /* BezierPathStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BezierPathStoryboard.storyboard; sourceTree = "<group>"; };
+		BACA00D6254AF00B002B84ED /* ParallaxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxViewController.swift; sourceTree = "<group>"; };
+		BACA00D9254AF054002B84ED /* Parallax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parallax.storyboard; sourceTree = "<group>"; };
+		BACA00E9254B3DF9002B84ED /* IntitaMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntitaMainScreenView.swift; sourceTree = "<group>"; };
 		BAD23AC2253B28D1005A3BC1 /* BezierPathProgressBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathProgressBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -455,6 +461,7 @@
 		BA1AA9D82520934D001C839F /* Svitlana */ = {
 			isa = PBXGroup;
 			children = (
+				BACA00D5254AEFD1002B84ED /* Parallax */,
 				BA54C33025302B980067E4B4 /* TableView */,
 				BA54C311252F7A480067E4B4 /* DBFirebase */,
 				BA1AA9E42520DE14001C839F /* TextView */,
@@ -532,6 +539,16 @@
 				BAB3BBCB252A33680087DDD9 /* FirebaseService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BACA00D5254AEFD1002B84ED /* Parallax */ = {
+			isa = PBXGroup;
+			children = (
+				BACA00D6254AF00B002B84ED /* ParallaxViewController.swift */,
+				BACA00D9254AF054002B84ED /* Parallax.storyboard */,
+				BACA00E9254B3DF9002B84ED /* IntitaMainScreenView.swift */,
+			);
+			path = Parallax;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,6 +634,7 @@
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
 				BA25284A2545F8C900E606E6 /* SvitlanaCollectionViewCell.xib in Resources */,
 				BA2660542537026D0042C0BA /* UserTableViewCell.xib in Resources */,
+				BACA00DA254AF054002B84ED /* Parallax.storyboard in Resources */,
 				64C992642523BCDA00676069 /* ImageStoryboard.storyboard in Resources */,
 				3F445A0C25480BF000E98087 /* AnastasiiaCollectionView.storyboard in Resources */,
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
@@ -700,10 +718,12 @@
 				84478A8C2531D0650025415C /* dragAndDropViewController.swift in Sources */,
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
+				BACA00D7254AF00B002B84ED /* ParallaxViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
 				3F445A0F25480C3700E98087 /* AnastasiiaCollectinViewController.swift in Sources */,
 				641AEE15252FC47B00275227 /* ApiTableViewCell.swift in Sources */,
 				646A9E0C2539742B0097F816 /* AnimationViewController.swift in Sources */,
+				BACA00EA254B3DF9002B84ED /* IntitaMainScreenView.swift in Sources */,
 				BA1CD68F2539D871003C6066 /* SvitlanaAnimationViewController.swift in Sources */,
 				641AEE0C252FC42700275227 /* ApiViewController.swift in Sources */,
 				3F445A2225485DD700E98087 /* AnastasiiaImage.swift in Sources */,
@@ -890,7 +910,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FAJ4V9RHA6;
+				DEVELOPMENT_TEAM = G4P58KM7MY;
 				INFOPLIST_FILE = TestGitHubProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -911,7 +931,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FAJ4V9RHA6;
+				DEVELOPMENT_TEAM = G4P58KM7MY;
 				INFOPLIST_FILE = TestGitHubProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -18,10 +18,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-yw-e88">
-                                <rect key="frame" x="0.0" y="288" width="414" height="374"/>
+                                <rect key="frame" x="0.0" y="238" width="414" height="474"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJm-Gf-Cdw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Parallax effect">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tNi-1X-m3w" kind="show" id="h5c-DG-hZB"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Zv-Pph">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="80.5" width="414" height="72"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Show text view">
@@ -32,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-Hg-Psf">
-                                        <rect key="frame" x="0.0" y="76.5" width="414" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="160.5" width="414" height="72.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Collection view">
@@ -43,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpv-bX-2W5">
-                                        <rect key="frame" x="0.0" y="153" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="241" width="414" height="72.5"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Loading animation">
@@ -54,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-XZ-uvz">
-                                        <rect key="frame" x="0.0" y="229" width="414" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="321.5" width="414" height="72"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Add user">
@@ -65,7 +76,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-rL-dCo">
-                                        <rect key="frame" x="0.0" y="305.5" width="414" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="401.5" width="414" height="72.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Show users"/>
@@ -79,9 +90,9 @@
                         <viewLayoutGuide key="safeArea" id="wz7-ko-N9f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eXw-yw-e88" firstAttribute="top" secondItem="wz7-ko-N9f" secondAttribute="top" constant="200" id="ALh-zP-Z1b"/>
+                            <constraint firstItem="eXw-yw-e88" firstAttribute="top" secondItem="wz7-ko-N9f" secondAttribute="top" constant="150" id="ALh-zP-Z1b"/>
                             <constraint firstItem="wz7-ko-N9f" firstAttribute="trailing" secondItem="eXw-yw-e88" secondAttribute="trailing" id="Gb6-6w-Z1c"/>
-                            <constraint firstItem="wz7-ko-N9f" firstAttribute="bottom" secondItem="eXw-yw-e88" secondAttribute="bottom" constant="200" id="drR-sw-Dpe"/>
+                            <constraint firstItem="wz7-ko-N9f" firstAttribute="bottom" secondItem="eXw-yw-e88" secondAttribute="bottom" constant="150" id="drR-sw-Dpe"/>
                             <constraint firstItem="eXw-yw-e88" firstAttribute="leading" secondItem="wz7-ko-N9f" secondAttribute="leading" id="ee5-Hr-nXt"/>
                         </constraints>
                     </view>
@@ -114,6 +125,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVi-S1-abK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2054" y="50"/>
+        </scene>
+        <!--Parallax-->
+        <scene sceneID="8ek-2A-y3P">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Parallax" referencedIdentifier="Parallax" id="tNi-1X-m3w" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cwk-dR-sqE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAe-6F-uwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="-139"/>
         </scene>
         <!--SvitlanaTextView-->
         <scene sceneID="cb4-0b-1h6">

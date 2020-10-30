@@ -16,6 +16,7 @@ class IntitaMainScreenView: UIView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 30)
         // уменьшать если не помещается текст
+        //  vertical alignment text to bottom
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.shadowColor = .black

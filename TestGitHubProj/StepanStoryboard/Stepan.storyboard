@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +17,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZl-1w-uBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1772" y="-447"/>
+        </scene>
+        <!--PicturesCollection-->
+        <scene sceneID="tC5-0W-VbG">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Pictures" storyboardName="PicturesCollection" referencedIdentifier="PicturesCollection" id="bIv-GZ-1yg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pnW-Wl-vUf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSI-aZ-xWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1411" y="-359"/>
         </scene>
         <!--Animations-->
         <scene sceneID="7xi-bj-05n">
@@ -37,7 +47,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vgm-lQ-OsE">
-                                <rect key="frame" x="57" y="274" width="300" height="348"/>
+                                <rect key="frame" x="57" y="238" width="300" height="420"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-Wl-OKw">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
@@ -102,6 +112,19 @@
                                         <state key="normal" title="Animation"/>
                                         <connections>
                                             <segue destination="tDF-HU-Aax" kind="show" id="3dL-Z0-r6b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udE-i3-sPK">
+                                        <rect key="frame" x="0.0" y="360" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.0" alpha="0.58660637839999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="iBn-cv-7zq"/>
+                                            <constraint firstAttribute="height" constant="60" id="tZs-Fu-1r9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="35"/>
+                                        <state key="normal" title="Collection View"/>
+                                        <connections>
+                                            <segue destination="bIv-GZ-1yg" kind="show" id="izI-Qz-Rwa"/>
                                         </connections>
                                     </button>
                                 </subviews>

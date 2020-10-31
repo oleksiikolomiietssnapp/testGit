@@ -60,6 +60,11 @@
 		84478A882531CF440025415C /* dragAndDrop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84478A872531CF440025415C /* dragAndDrop.storyboard */; };
 		84478A8C2531D0650025415C /* dragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84478A8B2531D0650025415C /* dragAndDropViewController.swift */; };
 		846F3D56252B89380061E242 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F3D55252B89380061E242 /* UsersTableViewController.swift */; };
+		847285342549FFF900799F81 /* PicturesCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847285332549FFF900799F81 /* PicturesCollection.storyboard */; };
+		84728544254A032500799F81 /* PicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84728542254A032500799F81 /* PicturesCollectionViewCell.swift */; };
+		84728545254A032500799F81 /* PicturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84728543254A032500799F81 /* PicturesCollectionViewCell.xib */; };
+		8472854E254A0C2700799F81 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472854D254A0C2700799F81 /* PicturesViewController.swift */; };
+		84728568254A13A000799F81 /* CollectionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84728567254A13A000799F81 /* CollectionImage.swift */; };
 		84746823251FBAFA00F4D3E7 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */; };
 		849019D4252B97B1000D8037 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849019D2252B97B1000D8037 /* UsersTableViewCell.swift */; };
 		849019D5252B97B1000D8037 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849019D3252B97B1000D8037 /* UsersTableViewCell.xib */; };
@@ -146,6 +151,11 @@
 		84478A872531CF440025415C /* dragAndDrop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dragAndDrop.storyboard; sourceTree = "<group>"; };
 		84478A8B2531D0650025415C /* dragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragAndDropViewController.swift; sourceTree = "<group>"; };
 		846F3D55252B89380061E242 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		847285332549FFF900799F81 /* PicturesCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PicturesCollection.storyboard; sourceTree = "<group>"; };
+		84728542254A032500799F81 /* PicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		84728543254A032500799F81 /* PicturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicturesCollectionViewCell.xib; sourceTree = "<group>"; };
+		8472854D254A0C2700799F81 /* PicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
+		84728567254A13A000799F81 /* CollectionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImage.swift; sourceTree = "<group>"; };
 		84746822251FBAFA00F4D3E7 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		849019D2252B97B1000D8037 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		849019D3252B97B1000D8037 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
@@ -428,9 +438,30 @@
 			path = UsersTableView;
 			sourceTree = "<group>";
 		};
+		847285322549FFD100799F81 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				84728541254A02FB00799F81 /* PicturesCollectionViewCell */,
+				847285332549FFF900799F81 /* PicturesCollection.storyboard */,
+				8472854D254A0C2700799F81 /* PicturesViewController.swift */,
+				84728567254A13A000799F81 /* CollectionImage.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		84728541254A02FB00799F81 /* PicturesCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				84728542254A032500799F81 /* PicturesCollectionViewCell.swift */,
+				84728543254A032500799F81 /* PicturesCollectionViewCell.xib */,
+			);
+			path = PicturesCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		84D5D2DA251F3E5D00E854BD /* StepanStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				847285322549FFD100799F81 /* Collection */,
 				84F8AF092539A47F00E562E9 /* Animations */,
 				84478A862531CF160025415C /* DragAndDrop */,
 				846F3D48252B885C0061E242 /* UsersTableView */,
@@ -612,6 +643,7 @@
 				6420892C252870A800B9A1E1 /* avatar2.jpg in Resources */,
 				641AEE16252FC47B00275227 /* ApiTableViewCell.xib in Resources */,
 				BA1AA9D625209335001C839F /* Svitlana.storyboard in Resources */,
+				84728545254A032500799F81 /* PicturesCollectionViewCell.xib in Resources */,
 				BAB6F65E253D9D0E0048387B /* BezierPathStoryboard.storyboard in Resources */,
 				495472F5251F19260022AD8E /* LaunchScreen.storyboard in Resources */,
 				495472F2251F19260022AD8E /* Assets.xcassets in Resources */,
@@ -622,6 +654,7 @@
 				495472F0251F191F0022AD8E /* Main.storyboard in Resources */,
 				84A84F00251F9C6A00ACC578 /* Stepan.storyboard in Resources */,
 				84F8AF0E2539A4C100E562E9 /* JumpingDots.storyboard in Resources */,
+				847285342549FFF900799F81 /* PicturesCollection.storyboard in Resources */,
 				BA25284E2545F8C900E606E6 /* SvitlanaCollectionView.storyboard in Resources */,
 				64D886EF252F8B4A0074EDBC /* ImageTableViewCell.xib in Resources */,
 				647A9F6C252B8CE000E340D1 /* ImageListStoryboard.storyboard in Resources */,
@@ -698,8 +731,10 @@
 			files = (
 				64D886EE252F8B4A0074EDBC /* ImageTableViewCell.swift in Sources */,
 				84478A8C2531D0650025415C /* dragAndDropViewController.swift in Sources */,
+				84728544254A032500799F81 /* PicturesCollectionViewCell.swift in Sources */,
 				3FF531D425274C8F00B4959A /* AnastasiaViewController.swift in Sources */,
 				3FF531D125274C8F00B4959A /* TextViewController.swift in Sources */,
+				8472854E254A0C2700799F81 /* PicturesViewController.swift in Sources */,
 				BA1AA9EA2520DF49001C839F /* SvitlanaTextViewController.swift in Sources */,
 				3F445A0F25480C3700E98087 /* AnastasiiaCollectinViewController.swift in Sources */,
 				641AEE15252FC47B00275227 /* ApiTableViewCell.swift in Sources */,
@@ -714,6 +749,7 @@
 				BA2660532537026D0042C0BA /* UserTableViewCell.swift in Sources */,
 				BA25284C2545F8C900E606E6 /* SvitlanaCollectionViewController.swift in Sources */,
 				495472ED251F191F0022AD8E /* ViewController.swift in Sources */,
+				84728568254A13A000799F81 /* CollectionImage.swift in Sources */,
 				64C992672523BD0700676069 /* ImageViewController.swift in Sources */,
 				BA1AA9DB25209685001C839F /* SvitlanaViewController.swift in Sources */,
 				642089252527489D00B9A1E1 /* PinchViewController.swift in Sources */,
